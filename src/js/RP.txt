@@ -1,4 +1,219 @@
-const dudunitfeebd = dudunitfee.toLocaleString("bn-BD");
-const dudunitfeeword = numberToBanglaWords(dudunitfee);
-const dudunitfeebdword = `${dudunitfeebd} (${dudunitfeeword})`
-document.getElementById("duduintfee").innerHTML=dudunitfeebdword;
+<div id="ru_output" class="output">
+          <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয় </h1>
+          <div class="logoofunvi"><img src="./src/img/ru.png" class="logoofunvio" alt="ru"></div>
+
+          <table>
+            <tr>
+              <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> ফলাফল</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td style="width: 50%;text-align: justify;"> </td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td style="width: 50%; text-align: justify;"> </td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td style="width: 50%;text-align: justify;"> </td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td style="width: 50%;text-align: justify;"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>
+            <tr>
+              <td>আবেদন শুরু</td>
+              <td><span id="rudatestart"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন শেষ</td>
+              <td><span id="rudateend"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন আর বাকি আছে</td>
+              <td id="ruappdateLineId"><span></span></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td id="ruauintfee"></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td id="rubuintfee"></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="rucuintfee"></td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td id="ruruintfee"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
+            </tr>
+            <!-- application fee -->
+
+            <tr class="ruadmitdnsection">
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr  class="ruadmitdnsection" style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr class="ruadmitdnsection">
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td id="ruaunitadmitdnop"></td>
+            </tr>
+            <tr class="ruadmitdnsection">
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td id="rubunitadmitdnop"></td>
+            </tr>
+            <tr class="ruadmitdnsection">
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="rucunitadmitdnop"></td>
+            </tr>
+            <tr class="ruadmitdnsection">
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td id="rurunitadmitdnop"></td>
+            </tr>
+
+            <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td id="ruaexemop"></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td  id="rubexemop"></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td  id="rucexemop"></td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td  id="rudexemop"></td>
+            </tr>
+            <tr>
+            <tr>
+              <td>পরীক্ষার কেন্দ্র</td>
+              <td> বিভাগীয় শহরে অনুষ্টিত হবে</td>
+            </tr>
+          </table>
+          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
+          <div class="button_section">
+            <a href="./src/noticfile/ru.jpg.jpeg" target="_blank">সাধারষ নেটিশ</a>
+            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
+            <a href="">আবেদনের ওয়েবসাইটে</a>
+            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
+          </div>
+        </div>
+        const ruappstart = new Date("2026-07-15");
+const ruappsEnd = new Date("2026-08-18");
+const ruaunitfee= 1250;
+const rubunitfee= 1250;
+const rucunitfee= 1150;
+const rurunitfee= 1500;
+
+const ruaunitadmitdnstart = new Date("2026-08-19");
+const ruaunitadmitdnend = new Date("2026-08-25");
+const rubunitadmitdnstart = new Date("2026-08-22");
+const rubunitadmitdnend = new Date("2026-08-28");
+const rucunitadmitdnstart = new Date("2026-08-25");
+const rucunitadmitdnend = new Date("2026-09-01");
+const rurunitadmitdnstart = new Date("2026-08-28");
+const rurunitadmitdnend = new Date("2026-09-04");
+const ruaunitexamdate =new Date("2026-08-08");
+const ruaunitexamtime = `${am10bd}`;
+const rubunitexamdate =new Date("2026-08-15");
+const rubunitexamtime = `${am10bd}${halfbd}`;
+const rucunitexamdate =new Date("2026-08-22");
+const rucunitexamtime = `${am10bd}`;
+const rurunitexamdate =new Date("2026-08-29");
+const rurunitexamtime = `${pm04bd}`;
+
+
+
+
+const ruaunitfeebd = ruaunitfee.toLocaleString("bn-BD");
+const ruaunitfeeword = numberToBanglaWords(ruaunitfee);
+const ruaunitfeebdword = `${ruaunitfeebd} (${ruaunitfeeword})`;
+document.getElementById("ruauintfee").innerHTML=ruaunitfeebdword
+const rubunitfeebd = rubunitfee.toLocaleString("bn-BD");
+const rubunitfeeword = numberToBanglaWords(rubunitfee);
+const rubunitfeebdword = `${rubunitfeebd} (${rubunitfeeword})`
+document.getElementById("rubuintfee").innerHTML=rubunitfeebdword;
+const rucunitfeebd = rucunitfee.toLocaleString("bn-BD");
+const rucunitfeeword = numberToBanglaWords(rucunitfee);
+const rucunitfeebdword = `${rucunitfeebd} (${rucunitfeeword})`
+document.getElementById("rucuintfee").innerHTML=rucunitfeebdword;
+const rurunitfeebd = rurunitfee.toLocaleString("bn-BD");
+const rurunitfeeword = numberToBanglaWords(rurunitfee);
+const rurunitfeebdword = `${rurunitfeebd} (${rurunitfeeword})`
+document.getElementById("ruruintfee").innerHTML=rurunitfeebdword;
+// fee
+const ruappstartbd = ruappstart.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rudatestart").innerHTML=ruappstartbd;
+const ruappsEndbd = ruappsEnd.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rudateend").innerHTML=ruappsEndbd;
+const ruappruedate = Math.abs(ruappsEnd - today);
+const ruappruedatetoday = Math.floor(ruappruedate / (1000 * 60 * 60 * 24));
+const ruappruedatetodayebd = ruappruedatetoday.toLocaleString("bn-bd");
+const ruappdateLineIdStyle = document.getElementById("ruappdateLineId");
+if (ruappsEnd > today) {
+  ruappdateLine = `${ruappruedatetodayebd} দিন বাকি আছে।`;
+  ruappdateLineIdStyle.style.color = "green";
+} else if (ruappsEnd < today) {
+  ruappdateLine = `সময় অতিক্রম হয়েছে।`;
+  ruappdateLineIdStyle.style.color = "red"};
+document.getElementById("ruappdateLineId").innerHTML= ruappdateLine;
+const ruaunitadmitdnstartbd = ruaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const ruaunitadmitdnendbd = ruaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const rubunitadmitdnstartbd = rubunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const rubunitadmitdnendbd = rubunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const rucunitadmitdnstartbd = rucunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const rucunitadmitdnendbd = rucunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const rurunitadmitdnstartbd = rurunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const rurunitadmitdnendbd = rurunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const ruaunitadmitdncom = `${ruaunitadmitdnstartbd} হতে ${ruaunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("ruaunitadmitdnop").innerHTML=ruaunitadmitdncom;
+const rubunitadmitdncom = `${rubunitadmitdnstartbd} হতে ${rubunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("rubunitadmitdnop").innerHTML= rubunitadmitdncom;
+const rucunitadmitdncom = `${rucunitadmitdnstartbd} হতে ${rucunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("rucunitadmitdnop").innerHTML= rucunitadmitdncom;
+const rurunitadmitdncom = `${rurunitadmitdnstartbd} হতে ${rurunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("rurunitadmitdnop").innerHTML= rurunitadmitdncom;
+const ruaunitexamdatebd = ruaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("ruaexemop").innerHTML=ruaunitexamdatebd + ruaunitexamtime ;
+const rubunitexamdatebd = rubunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rubexemop").innerHTML=rubunitexamdatebd + rubunitexamtime ;
+const rucunitexamdatebd = rucunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rucexemop").innerHTML=rucunitexamdatebd + rucunitexamtime ;
+const rurunitexamdatebd = rurunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rudexemop").innerHTML=rurunitexamdatebd + rurunitexamtime ;

@@ -7,11 +7,17 @@
 #head,
 #banner,
 #MyInfo{
-  /* display: none !important; */
+  display: none !important;
 }
+.duadmitdnsection{
+  /* display: none; */
+}.ruadmitdnsection{
+  /* display: none; */
+}
+/* Never use display block */
 /* ?outz */
-#du_output {
-  /* display: block !important; */
+#ru_output {
+  display: block !important;
 }
 .dateactive{
   color: green;
@@ -308,12 +314,13 @@ nav#nav {
 }
 
 #info #school {
+  display: none;
 }
 #info #college {
   display: none;
 }
 #info #university {
-  display: none;
+  display: block;
 }
 #info #job {
   display: none;

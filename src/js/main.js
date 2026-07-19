@@ -6,6 +6,34 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+function convertToBanglaNumber(number) {
+    const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    
+    return number
+        .toString()
+        .replace(/\d/g, (digit) => banglaDigits[digit]);
+}
+const am10 = convertToBanglaNumber(10);
+const am10bd = ` সকাল ${am10} টা`;
+const am11 = convertToBanglaNumber(11);
+const am11bd = ` সকাল ${am11} টা`;
+// const am11 = convertToB1nglaNumber(11);
+// const am11bd = `সকাল ${am11} টা`;
+const am12 = convertToBanglaNumber(12);
+const am12bd = ` দুপুর ${am12} টা`;
+const pm04 = convertToBanglaNumber(4);
+const pm04bd = ` বিকাল ${pm04} টা`;
+const pm05 = convertToBanglaNumber(5);
+const pm05bd = ` বিকাল ${pm05} টা`;
+const pm11 = convertToBanglaNumber(11);
+const pm11bd = ` রাত ${pm11} টা`;
+const half= convertToBanglaNumber(30);
+const halfbd= `${half} মিনিট`;
+const time59m= convertToBanglaNumber(59);
+const time59mbd= `${time59m} মিনিট` ;
+const lastLine =`${pm11bd} ${time59mbd}`;
+// console.log(convertToBanglaNumber(12)); 
+console.log(lastLine); 
 // taka to word
 function numberToBanglaWords(num) {
   const units = [
@@ -387,9 +415,49 @@ const duaunitfee= 1250;
 const dubunitfee= 1250;
 const ducunitfee= 1150;
 const dudunitfee= 1500;
-const duaunitadmitdnstart = new Date("");
-const duaunitadmitdnend = new Date("");
-// ! changeable uint
+
+const duaunitadmitdnstart = new Date("2026-08-19");
+const duaunitadmitdnend = new Date("2026-08-25");
+const dubunitadmitdnstart = new Date("2026-08-22");
+const dubunitadmitdnend = new Date("2026-08-28");
+const ducunitadmitdnstart = new Date("2026-08-25");
+const ducunitadmitdnend = new Date("2026-09-01");
+const dudunitadmitdnstart = new Date("2026-08-28");
+const dudunitadmitdnend = new Date("2026-09-04");
+const duaunitexamdate =new Date("2026-08-08");
+const duaunitexamtime = `${am10bd}`;
+const dubunitexamdate =new Date("2026-08-15");
+const dubunitexamtime = `${am10bd}${halfbd}`;
+const ducunitexamdate =new Date("2026-08-22");
+const ducunitexamtime = `${am10bd}`;
+const dudunitexamdate =new Date("2026-08-29");
+const dudunitexamtime = `${pm04bd}`;
+// ?du 
+// ? ru
+const ruappstart = new Date("2026-07-15");
+const ruappsEnd = new Date("2026-07-18");
+const ruaunitfee= 1320;
+const rubunitfee= 1100;
+const rucunitfee= 1320;
+const ruaunitadmitdnstart = new Date("2026-08-19");
+const ruaunitadmitdnend = new Date("2026-08-25");
+const rubunitadmitdnstart = new Date("2026-08-22");
+const rubunitadmitdnend = new Date("2026-08-28");
+const rucunitadmitdnstart = new Date("2026-08-25");
+const rucunitadmitdnend = new Date("2026-09-01");
+const rurunitadmitdnstart = new Date("2026-08-28");
+const rurunitadmitdnend = new Date("2026-09-04");
+const ruaunitexamdate =new Date("2026-08-08");
+const ruaunitexamtime = `${am10bd}`;
+const rubunitexamdate =new Date("2026-08-15");
+const rubunitexamtime = `${am10bd}${halfbd}`;
+const rucunitexamdate =new Date("2026-08-22");
+const rucunitexamtime = `${am10bd}`;
+const rurunitexamdate =new Date("2026-08-29");
+const rurunitexamtime = `${pm04bd}`;
+
+// ? ru
+// ! changeable uint 8 15 22 29
 // free
 const duaunitfeebd = duaunitfee.toLocaleString("bn-BD");
 const duaunitfeeword = numberToBanglaWords(duaunitfee);
@@ -406,16 +474,13 @@ document.getElementById("ducuintfee").innerHTML=ducunitfeebdword;
 const dudunitfeebd = dudunitfee.toLocaleString("bn-BD");
 const dudunitfeeword = numberToBanglaWords(dudunitfee);
 const dudunitfeebdword = `${dudunitfeebd} (${dudunitfeeword})`
-// document.getElementById("")
 document.getElementById("duduintfee").innerHTML=dudunitfeebdword;
 // fee
 const duappstartbd = duappstart.toLocaleDateString("bn-BD", dateBangla);
 document.getElementById("dudatestart").innerHTML=duappstartbd;
 const duappsEndbd = duappsEnd.toLocaleDateString("bn-BD", dateBangla);
 document.getElementById("dudateend").innerHTML=duappsEndbd;
-// app date
 const duappduedate = Math.abs(duappsEnd - today);
-// Convert milliseconds to days
 const duappduedatetoday = Math.floor(duappduedate / (1000 * 60 * 60 * 24));
 const duappduedatetodayebd = duappduedatetoday.toLocaleString("bn-bd");
 const duappdateLineIdStyle = document.getElementById("duappdateLineId");
@@ -426,10 +491,84 @@ if (duappsEnd > today) {
   duappdateLine = `সময় অতিক্রম হয়েছে।`;
   duappdateLineIdStyle.style.color = "red"};
 document.getElementById("duappdateLineId").innerHTML= duappdateLine;
-// if (duappsEnd > today) {
-//   duappdateLineIdStyle.style.color = "green";
-// } else if (duappsEnd < today) {duappdateLineIdStyle.style.color = "red" };
-const duAExamDate = new Date("");
+const duaunitadmitdnstartbd = duaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const duaunitadmitdnendbd = duaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const dubunitadmitdnstartbd = dubunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const dubunitadmitdnendbd = dubunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const ducunitadmitdnstartbd = ducunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const ducunitadmitdnendbd = ducunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const dudunitadmitdnstartbd = dudunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const dudunitadmitdnendbd = dudunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const duaunitadmitdncom = `${duaunitadmitdnstartbd} হতে ${duaunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("duaunitadmitdnop").innerHTML=duaunitadmitdncom;
+const dubunitadmitdncom = `${dubunitadmitdnstartbd} হতে ${dubunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("dubunitadmitdnop").innerHTML= dubunitadmitdncom;
+const ducunitadmitdncom = `${ducunitadmitdnstartbd} হতে ${ducunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("ducunitadmitdnop").innerHTML= ducunitadmitdncom;
+const dudunitadmitdncom = `${dudunitadmitdnstartbd} হতে ${dudunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("dudunitadmitdnop").innerHTML= dudunitadmitdncom;
+const duaunitexamdatebd = duaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("duaexemop").innerHTML=duaunitexamdatebd + duaunitexamtime ;
+const dubunitexamdatebd = dubunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("dubexemop").innerHTML=dubunitexamdatebd + dubunitexamtime ;
+const ducunitexamdatebd = ducunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("ducexemop").innerHTML=ducunitexamdatebd + ducunitexamtime ;
+const dudunitexamdatebd = dudunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("dudexemop").innerHTML=dudunitexamdatebd + dudunitexamtime ;
+// ?===========================ru===================================
+const ruaunitfeebd = ruaunitfee.toLocaleString("bn-BD");
+const ruaunitfeeword = numberToBanglaWords(ruaunitfee);
+const ruaunitfeebdword = `${ruaunitfeebd} (${ruaunitfeeword})`;
+document.getElementById("ruauintfee").innerHTML=ruaunitfeebdword
+const rubunitfeebd = rubunitfee.toLocaleString("bn-BD");
+const rubunitfeeword = numberToBanglaWords(rubunitfee);
+const rubunitfeebdword = `${rubunitfeebd} (${rubunitfeeword})`
+document.getElementById("rubuintfee").innerHTML=rubunitfeebdword;
+const rucunitfeebd = rucunitfee.toLocaleString("bn-BD");
+const rucunitfeeword = numberToBanglaWords(rucunitfee);
+const rucunitfeebdword = `${rucunitfeebd} (${rucunitfeeword})`
+document.getElementById("rucuintfee").innerHTML=rucunitfeebdword;
+
+// fee
+const ruappstartbd = ruappstart.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rudatestart").innerHTML=ruappstartbd;
+const ruappsEndbd = ruappsEnd.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rudateend").innerHTML=ruappsEndbd;
+const ruappruedate = Math.abs(ruappsEnd - today);
+const ruappruedatetoday = Math.floor(ruappruedate / (1000 * 60 * 60 * 24));
+const ruappruedatetodayebd = ruappruedatetoday.toLocaleString("bn-bd");
+const ruappdateLineIdStyle = document.getElementById("ruappdateLineId");
+if (ruappsEnd > today) {
+  ruappdateLine = `${ruappruedatetodayebd} দিন বাকি আছে।`;
+  ruappdateLineIdStyle.style.color = "green";
+} else if (ruappsEnd < today) {
+  ruappdateLine = `সময় অতিক্রম হয়েছে।`;
+  ruappdateLineIdStyle.style.color = "red"};
+document.getElementById("ruappdateLineId").innerHTML= ruappdateLine;
+
+const ruaunitadmitdnstartbd = ruaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const ruaunitadmitdnendbd = ruaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const rubunitadmitdnstartbd = rubunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const rubunitadmitdnendbd = rubunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const rucunitadmitdnstartbd = rucunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const rucunitadmitdnendbd = rucunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const rurunitadmitdnstartbd = rurunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const rurunitadmitdnendbd = rurunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const ruaunitadmitdncom = `${ruaunitadmitdnstartbd} হতে ${ruaunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("ruaunitadmitdnop").innerHTML=ruaunitadmitdncom;
+const rubunitadmitdncom = `${rubunitadmitdnstartbd} হতে ${rubunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("rubunitadmitdnop").innerHTML= rubunitadmitdncom;
+const rucunitadmitdncom = `${rucunitadmitdnstartbd} হতে ${rucunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("rucunitadmitdnop").innerHTML= rucunitadmitdncom;
+const ruaunitexamdatebd = ruaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("ruaexemop").innerHTML=ruaunitexamdatebd + ruaunitexamtime ;
+const rubunitexamdatebd = rubunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rubexemop").innerHTML=rubunitexamdatebd + rubunitexamtime ;
+const rucunitexamdatebd = rucunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("rucexemop").innerHTML=rucunitexamdatebd + rucunitexamtime ;
+  // ??================================================rru +==================================
+
+
 function du() {
   const duoutput = document.getElementById("du_output");
   duoutput.style.display = "block";

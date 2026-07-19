@@ -119,7 +119,13 @@
     </div>
     <div id="school" class="Organtion">
       <h1>All School Notice</h1>
-      <div class="NotiecList">
+    </div>
+    <div id="college" class="Organtion">
+      <h1>All College Notice</h1>
+    </div>
+    <div id="university" class="Organtion">
+      <h1>All University Notice</h1>
+     <div class="NotiecList">
         <div class="nameofevent" onclick="du()"> ঢাকা বিশ্ববিদ্যালয় </div>
         <div id="du_output" class="output">
           <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয় </h1>
@@ -201,51 +207,52 @@
             </tr>
             <!-- application fee -->
 
-            <tr>
+            <tr class="duadmitdnsection">
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
-            <tr style="text-align: center;">
+            <tr  class="duadmitdnsection" style="text-align: center;">
               <td>ইউনিট</td>
               <td> তারিখ </td>
             </tr>
-            <tr>
+            <tr class="duadmitdnsection">
               <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td></td>
+              <td id="duaunitadmitdnop"></td>
             </tr>
-            <tr>
+            <tr class="duadmitdnsection">
               <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td></td>
+              <td id="dubunitadmitdnop"></td>
             </tr>
-            <tr>
+            <tr class="duadmitdnsection">
               <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td></td>
+              <td id="ducunitadmitdnop"></td>
             </tr>
-            <tr>
+            <tr class="duadmitdnsection">
               <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td></td>
+              <td id="dudunitadmitdnop"></td>
             </tr>
+
             <tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
             </tr>
-            <tr>
+            <tr style="text-align: center;">
               <td>ইউনিট</td>
               <td> তারিখ</td>
             </tr>
             <tr>
               <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td> বাংলায় তারিখ আসবে</td>
+              <td id="duaexemop"></td>
             </tr>
             <tr>
               <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td>বাংলায় তারিখ আসবে</td>
+              <td  id="dubexemop"></td>
             </tr>
             <tr>
               <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td>বাংলায় তারিখ আসবে</td>
+              <td  id="ducexemop"></td>
             </tr>
             <tr>
               <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td>বাংলায় তারিখ আসবে</td>
+              <td  id="dudexemop"></td>
             </tr>
             <tr>
             <tr>
@@ -256,10 +263,10 @@
           <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
           <div class="button_section">
             <a href="./src/noticfile/DU.jpg.jpeg" target="_blank">সাধারষ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
+            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
             <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
             <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
             <a href="">আবেদনের ওয়েবসাইটে</a>
             <a href="">অফিসিয়াল ওয়েবসাইটে</a>
           </div>
@@ -268,6 +275,132 @@
       <div class="NotiecList">
         <div class="nameofevent" onclick="ru()"> রাজশাহী বিশ্ববিদ্যালয় </div>
         <div id="ru_output" class="output">
+          <h1 class="nameofuniv"> রাজশাহী বিশ্ববিদ্যালয়</h1>
+          <div class="logoofunvi"><img src="./src/img/ru.png" class="logoofunvio" alt="du"></div>
+
+          <table>
+            <tr>
+              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
+            </tr>
+            <tr>
+              <td>ইউনিট</td>
+              <td> ফলাফল</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (মানবিক শাখা) </td>
+              <td style="width: 50%;text-align: justify;">মানবিক শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.০০ সহ মোট জিপিএ ৭.০০ পেতে হবে।</td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td style="width: 50%; text-align: justify;">বাণিজ্য শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম
+                জিপিএ ৩.০০ সহ মোট জিপিএ ৭.০০ পেতে হবে। </td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.৫০ সহ মোট জিপিএ ৮.০০ পেতে হবে। </td>
+            </tr>
+                 <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>
+            <tr>
+              <td>আবেদন শুরু</td>
+              <td><span id="rudatestart"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন শেষ</td>
+              <td><span id="rudateend"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন আর বাকি আছে</td>
+              <td id="ruappdateLineId"><span></span></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (মানবিক শাখা)</td>
+              <td id="ruauintfee"></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="rubuintfee"></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td id="rucuintfee"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
+            </tr>
+            <!-- application fee -->
+
+            <tr class="ruadmitdnsection">
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr  class="ruadmitdnsection" style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr class="ruadmitdnsection">
+              <td>ক - ইউনিট (মানবিক শাখা) </td>
+              <td id="ruaunitadmitdnop"></td>
+            </tr>
+            <tr class="ruadmitdnsection">
+              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="rubunitadmitdnop"></td>
+            </tr>
+            <tr class="ruadmitdnsection">
+              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td id="rucunitadmitdnop"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (মানবিক শাখা)</td>
+              <td id="ruaexemop"></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td  id="rubexemop"></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট  (বিজ্ঞান শাখা)</td>
+              <td  id="rucexemop"></td>
+            </tr>
+            <tr>
+            <tr>
+            <tr>
+              <td>পরীক্ষার কেন্দ্র</td>
+              <td> নিজেস্ব ক্যাম্পাস</td>
+            </tr>
+          </table>
+          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
+          <div class="button_section">
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank">সাধারষ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a>
+            <a href="">আবেদনের ওয়েবসাইটে</a>
+            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="NotiecList">
+        <div class="nameofevent" onclick="cu()"> চট্টগ্রাম বিশ্ববিদ্যালয় </div>
+        <div id="cu_output" class="output">
           <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয়</h1>
           <div class="logoofunvi"><img src="./src/img/ru.png" class="logoofunvio" alt="du"></div>
 
@@ -405,13 +538,8 @@
           </div>
 
 
+      
         </div>
-      </div>
-      <div class="NotiecList">
-        <div class="nameofevent" onclick="cu()"> চট্টগ্রাম বিশ্ববিদ্যালয় </div>
-        <div id="cu_output" class="output">চট্টগ্রাম বিশ্ববিদ্যালয় Lorem ipsum dolor sit, amet consectetur adipisicing
-          elit. Illo blanditiis, et dignissimos culpa ullam exercitationem voluptatem quidem dolorem libero
-          necessitatibus eaque quisquam illum doloribus inventore ipsam quia iusto eligendi facilis?</div>
       </div>
       <div class="NotiecList">
         <div class="nameofevent" onclick="gst()"> গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় </div>
@@ -419,12 +547,6 @@
           adipisicing elit. Illo blanditiis, et dignissimos culpa ullam exercitationem voluptatem quidem dolorem libero
           necessitatibus eaque quisquam illum doloribus inventore ipsam quia iusto eligendi facilis?</div>
       </div>
-    </div>
-    <div id="college" class="Organtion">
-      <h1>All College Notice</h1>
-    </div>
-    <div id="university" class="Organtion">
-      <h1>All University Notice</h1>
     </div>
     <div id="job" class="Organtion">
       <h1>All Job Notice</h1>
