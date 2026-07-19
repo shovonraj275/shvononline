@@ -444,7 +444,7 @@ div#hemout {
     color: #fff;
     padding: 20px 0px;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
 }  
 #head .grid {
     display: grid;
