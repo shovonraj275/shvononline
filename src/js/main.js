@@ -1,3 +1,178 @@
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+// taka to word
+function numberToBanglaWords(num) {
+  const units = [
+    "",
+    "এক",
+    "দুই",
+    "তিন",
+    "চার",
+    "পাঁচ",
+    "ছয়",
+    "সাত",
+    "আট",
+    "নয়",
+  ];
+  // const teens = ['দশ 1144444', 'এগারো', 'বারো', 'তেরো', 'চৌদ্দ', 'পনেরো', 'ষোলো', 'সতেরো', 'আঠারো', 'ঊনিশ'];q`
+  const teentdss = [
+    "",
+    "এক",
+    "দুই",
+    "তিন",
+    "চার",
+    "পাঁচ",
+    "ছয়",
+    "সাত",
+    "আট",
+    "নয়",
+    "দশ",
+    "এগারো",
+    "বারো",
+    "তেরো",
+    "চৌদ্দ",
+    "পনেরো",
+    "ষোলো",
+    "সতেরো",
+    "আঠারো",
+    "ঊনিশ",
+    "বিশ ",
+    "একুশ",
+    "বাইশ",
+    "তেইশ",
+    "চব্বিশ",
+    "পঁচিশ",
+    "ছাব্বিশ",
+    "সাতাশ",
+    "আটাশ",
+    "উনত্রিশ",
+    "ত্রিশ",
+    "একত্রিশ",
+    "বত্রিশ",
+    "তেত্রিশ",
+    "চৌত্রিশ",
+    "পঁইত্রিশ",
+    "ছত্রিশ",
+    "সাঁইত্রিশ",
+    "আটত্রিশ",
+    "উনচল্লিশ",
+    "চল্লিশ",
+    "একচল্লিশ",
+    "বিয়াল্লিশ",
+    "তেতাল্লিশ",
+    "চুয়াল্লিশ",
+    "পঁয়তাল্লিশ",
+    "ছিচল্লিশ",
+    "সাতচল্লিশ",
+    "আটচল্লিশ",
+    "উনপঞ্চাশ",
+    "পঞ্চাশ",
+    "একান্ন",
+    "বায়ান্ন",
+    "তিয়ান্ন",
+    "চুয়ান্ন",
+    "পঞ্চান্ন",
+    "ছাপান্ন",
+    "সাতান্ন",
+    "আটান্ন",
+    "উনষাট",
+    "ষাট",
+    "একষাট",
+    "বাষট্টি",
+    "তেষট্টি",
+    "চৌষট্টি",
+    "পঁইষট্টি",
+    "ছেষট্টি",
+    "সাতষট্টি",
+    "আটষট্টি",
+    "উনসত্তর",
+    "সত্তর",
+    "একাত্তর",
+    "বাহাত্তর",
+    "তিয়াত্তর",
+    "চুয়াত্তর",
+    "পঁইত্তর",
+    "ছিয়াত্তর",
+    "সাতাত্তর",
+    "আটাত্তর",
+    "উনআশি",
+    "আশি",
+    "একাশি",
+    "বিরাশি",
+    "তিরাশি",
+    "চুরাশি",
+    "পঁইরাশি",
+    "ছিয়াশি",
+    "সাতাশি",
+    "আটাশি",
+    "উননব্বই",
+    "নব্বই",
+    "একানব্বই",
+    "বিরানব্বই",
+    "তিরানব্বই",
+    "চুরানব্বই",
+    "পঁচ্চানব্বই",
+    "ছিয়ানব্বই",
+    "সাতানব্বই",
+    "আটানব্বই",
+    "নিরানব্বই",
+  ];
+
+  const tens = [
+    "",
+    "দশ",
+    "বিশ",
+    "ত্রিশ ",
+    "চল্লিশ ",
+    "পঞ্চাশ",
+    "ষাট",
+    "সত্তর",
+    "আশি",
+    "নব্বই",
+  ];
+
+  if (num === 0) return "শূন্য";
+  if (num < 100) return teentdss[num] + " টাকা মাত্র।";
+  if (num < 100)
+    return (
+      tens[Math.floor(num / 10)] +
+      (num % 10 !== 0 ? " " + units[num % 10] : "" + "  টাকা মাত্র।")
+    ); //10,20,30
+  if (num < 1000)
+    return (
+      units[Math.floor(num / 100)] +
+      "শত " +
+      (num % 100 !== 0 ? numberToBanglaWords(num % 100) : "  টাকা মাত্র।")
+    );
+  if (num < 100000)
+    return (
+      teentdss[Math.floor(num / 1000)] +
+      " হাজার    " +
+      (num % 1000 !== 0 ? numberToBanglaWords(num % 1000) : "")
+    );
+  if (num < 10000000)
+    return (
+      teentdss[Math.floor(num / 100000)] +
+      " লাক্ষ   " +
+      (num % 100000 !== 0 ? numberToBanglaWords(num % 100000) : "")
+    );
+  if (num < 1000000000)
+    return (
+      teentdss[Math.floor(num / 10000000)] +
+      " কোটি   " +
+      (num % 10000000 !== 0 ? numberToBanglaWords(num % 10000000) : "")
+    );
+
+  return num; // Extendable for thousands/lakhs
+}
+// taka to word
+
 // <!-- ========== Start Section ========== -->
 let NEWShop = "";
 const Shop = ["Select One", "Bkash", "Nogad", "Rocket", "Upay"];
@@ -40,7 +215,7 @@ function bkasss() {
   let amounts = document.getElementById("amount");
   let amount = parseFloat(amounts.value);
   let methood = document.getElementById("Shop003").value;
-  let bkfa = 1.49;
+  let bkfa = 1.395;
   let bkno = 1.85;
   let ngaps = 1.199;
   let ng = 1.5;
@@ -145,7 +320,29 @@ let year = new Date().getFullYear();
 document.getElementById("Year").innerHTML = year;
 
 // ? ===================================== noice =========================================
+// bangla date & days
+//Get the button
+// var mybutton = document.getElementById("myBtn");
 
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function () {
+//   scrollFunction();
+// };
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     mybutton.style.display = "block";
+//   } else {
+//     mybutton.style.display = "none";
+//   }
+// }
+
+// When the user clicks on the button, scroll to the top of the document
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
+// =========================================== dom ================================
 var schooldom = document.getElementById("school");
 var collegedom = document.getElementById("college");
 var universitydom = document.getElementById("university");
@@ -175,51 +372,97 @@ function job() {
   jobdom.style.display = "block";
 }
 // ? ===================================== noice =========================================
-function du() {
-  // $("#ru_output,#cu_output").each(
-  //   function(){
-  //     $(this).css("display","none")
-  //   });
-  //  // $("#ru_output,#cu_output").hide()
-  // $("#ru_output,#cu_output").css("display", "none");
 
+const dateBangla = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  weekday: "long",
+};
+const today = new Date();
+// ! changeable uint
+const duappstart = new Date("2026-07-15");
+const duappsEnd = new Date("2026-08-18");
+const duaunitfee= 1250;
+const dubunitfee= 1250;
+const ducunitfee= 1150;
+const dudunitfee= 1500;
+const duaunitadmitdnstart = new Date("");
+const duaunitadmitdnend = new Date("");
+// ! changeable uint
+// free
+const duaunitfeebd = duaunitfee.toLocaleString("bn-BD");
+const duaunitfeeword = numberToBanglaWords(duaunitfee);
+const duaunitfeebdword = `${duaunitfeebd} (${duaunitfeeword})`;
+document.getElementById("duauintfee").innerHTML=duaunitfeebdword
+const dubunitfeebd = dubunitfee.toLocaleString("bn-BD");
+const dubunitfeeword = numberToBanglaWords(dubunitfee);
+const dubunitfeebdword = `${dubunitfeebd} (${dubunitfeeword})`
+document.getElementById("dubuintfee").innerHTML=dubunitfeebdword;
+const ducunitfeebd = ducunitfee.toLocaleString("bn-BD");
+const ducunitfeeword = numberToBanglaWords(ducunitfee);
+const ducunitfeebdword = `${ducunitfeebd} (${ducunitfeeword})`
+document.getElementById("ducuintfee").innerHTML=ducunitfeebdword;
+const dudunitfeebd = dudunitfee.toLocaleString("bn-BD");
+const dudunitfeeword = numberToBanglaWords(dudunitfee);
+const dudunitfeebdword = `${dudunitfeebd} (${dudunitfeeword})`
+// document.getElementById("")
+document.getElementById("duduintfee").innerHTML=dudunitfeebdword;
+// fee
+const duappstartbd = duappstart.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("dudatestart").innerHTML=duappstartbd;
+const duappsEndbd = duappsEnd.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("dudateend").innerHTML=duappsEndbd;
+// app date
+const duappduedate = Math.abs(duappsEnd - today);
+// Convert milliseconds to days
+const duappduedatetoday = Math.floor(duappduedate / (1000 * 60 * 60 * 24));
+const duappduedatetodayebd = duappduedatetoday.toLocaleString("bn-bd");
+const duappdateLineIdStyle = document.getElementById("duappdateLineId");
+if (duappsEnd > today) {
+  duappdateLine = `${duappduedatetodayebd} দিন বাকি আছে।`;
+  duappdateLineIdStyle.style.color = "green";
+} else if (duappsEnd < today) {
+  duappdateLine = `সময় অতিক্রম হয়েছে।`;
+  duappdateLineIdStyle.style.color = "red"};
+document.getElementById("duappdateLineId").innerHTML= duappdateLine;
+// if (duappsEnd > today) {
+//   duappdateLineIdStyle.style.color = "green";
+// } else if (duappsEnd < today) {duappdateLineIdStyle.style.color = "red" };
+const duAExamDate = new Date("");
+function du() {
   const duoutput = document.getElementById("du_output");
   duoutput.style.display = "block";
-
- 
-  let du_output = `
-  
-  `
 }
-const date1 = new Date('2026-08-01');
-const dateBangla = { weekday: 'long',year: 'numeric', month: 'long', day: 'numeric',hour: '2-digit', 
-    minute: '2-digit', 
-    hourCycle: 'h23'  };
-const formattedDate = date1.toLocaleDateString('bn-BD', dateBangla);
-console.log(formattedDate);
-const date2 = new Date();
-const date2BD=  date2.toLocaleDateString('bn-BD', dateBangla);
-console.log(date2BD);
+// const date1 = new Date('2026-08-01');
+// const dateBangla = { weekday: 'long',year: 'numeric', month: 'long', day: 'numeric'};
+// const formattedDate = date1.toLocaleDateString('bn-BD', dateBangla);
+// console.log(formattedDate);
+// const date2 = new Date();
+// const date2BD=  date2.toLocaleDateString('bn-BD', dateBangla);
+// console.log(date2BD);
 
-const dateStart = new Date('2026-07-01');
-const dateend = new Date('2026-07-20')
-const today = new Date()
-const msDifference = Math.abs(dateend - today);
-// Convert milliseconds to days
-const daysDifference = Math.floor(msDifference / (1000 * 60 * 60 * 24));
-const daysDifferencebd=daysDifference.toLocaleString("bn-bd")
-if (dateStart>today){
-  console.log("you are rady")
-}else if(dateStart<today)(
-  console.log("not rady")
-)
-// Subtracting dates returns the difference in milliseconds
- 
+// const dateStart = new Date('2026-07-01');
+// const dateend = new Date('2026-07-20')
+// const msDifference = Math.abs(dateend - today);
+// // Convert milliseconds to days
+// const daysDifference = Math.floor(msDifference / (1000 * 60 * 60 * 24));
+// const daysDifferencebd=daysDifference.toLocaleString("bn-bd")
+// if (dateStart>today){
+//   console.log("you are rady")
+// }else if(dateStart<today)(
+// !//   console.log("not rady")
+// )
+// // Subtracting dates returns the difference in milliseconds
+//   // $("#ru_output,#cu_output").each(
+//   //   function(){
+//   //     $(this).css("display","none")
+//   //   });
+//   //  // $("#ru_output,#cu_output").hide()
+//   // $("#ru_output,#cu_output").css("display", "none");
 
-
-
-console.log(daysDifference); // Output: 12
-console.log(daysDifferencebd); // Output: 12
+// console.log(daysDifference); // Output: 12
+// console.log(daysDifferencebd); // Output: 12
 function ru() {
   // $("#du_output,#cu_output").css("display", "none");
   const ruoutput = document.getElementById("ru_output");
@@ -231,14 +474,13 @@ function cu() {
   cu_output.style.display = "block";
 }
 
-const button = document.getElementById("toggleBtn");
-const content = document.getElementById("content");
+// const button = document.getElementById("toggleBtn");
+// const content = document.getElementById("content");
 
-button.addEventListener("click", () => {
-  if (content.style.display === "none") {
-    content.style.display = "block"; // Shows element
-  } else {
-    content.style.display = "none"; // Hides element
-  }
-});
-
+// button.addEventListener("click", () => {
+//   if (content.style.display === "none") {
+//     content.style.display = "block"; // Shows element
+//   } else {
+//     content.style.display = "none"; // Hides element
+//   }
+// });

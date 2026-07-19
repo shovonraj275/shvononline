@@ -1,0 +1,4 @@
+const dudunitfeebd = dudunitfee.toLocaleString("bn-BD");
+const dudunitfeeword = numberToBanglaWords(dudunitfee);
+const dudunitfeebdword = `${dudunitfeebd} (${dudunitfeeword})`
+document.getElementById("duduintfee").innerHTML=dudunitfeebdword;

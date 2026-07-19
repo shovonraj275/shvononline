@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"
+			aria-hidden="true"></i></button> -->
   <!-- ========== Start Section heading section ========== -->
   <div id="head">
     <div class="grid">
@@ -24,54 +26,86 @@
         <h1>Shovon online</h1>
         <h3>A smart Online Shop</h3>
       </div>
+      <nav id="nav">
+        <div class="topnav" id="myTopnav">
+          <a href="#home" class="">Home</a>
+          <!-- <a href="#info">Recent Notice</a> -->
+          <a href="#MyInfo">Contact</a>
+          <div class="dropdown">
+            <button class="dropbtn">Recent Notice
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#school" onclick="school()">School</a>
+              <a href="#college" onclick="college()">College</a>
+              <a href="#" onclick="university()">University</a>
+              <a href="#" onclick="medical()">Medical </a>
+              <a href="#" onclick="engineering()">engineering</a>
+              <a href="#">Job</a>
+            </div>
+          </div>
+          <a href="#about">About</a>
+          <a href="#college" onclick="college()">About1</a>
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
     </div>
   </div>
+
+  <!-- <button class="button" onclick="school()">School</button>
+      <button class="button" onclick="college()">College</button>
+      <button class="button" onclick="university()">University</button>
+      <button class="button" onclick="job()">Job</button> -->
   <!-- ========== End Section heading section ========== -->
+
   <!-- ==========  banner Start Section ========== -->
   <div id="banner">
     <img src="./src/img/bannar.jpg" alt="" />
   </div>
+
   <!-- ========= banner End Section ========== -->
   <!-- =================== Contact info ======================= -->
   <section id="MyInfo">
-      <h1>My Contact</h1>
-      <div class="grid">
-        <div class="grid_content">
-          <div class="grid_2">
-            <div class="grid_2_content text_aline">
-             <span class="border_contact"><i class="iconClass fa-solid fa-location-dot"></i></span> 
-            </div>
-            <div class="grid_2_content">
-             <p> Hatemkan, karigorpar <br>North side of rajshahi City Govt. College <br/> G.P.O - 6000 Rajshahi. </p>
-            </div>
-            
-            
+    <h1>My Contact</h1>
+    <div class="grid">
+      <div class="grid_content">
+        <div class="grid_2">
+          <div class="grid_2_content text_aline">
+            <span class="border_contact"><i class="iconClass fa-solid fa-location-dot"></i></span>
           </div>
-          <div class="grid_2">
-             <div class="grid_2_content text_aline">
-              <span class="border_contact"><i class="iconClass fa-solid fa-phone"></i></span>
-            </div>
-            <div class="grid_2_content">
-              <a href="tel:+8801728284243">01728284243</a>
-            </div>
-            
+          <div class="grid_2_content">
+            <p> Hatemkan, karigorpar <br>North side of rajshahi City Govt. College <br /> G.P.O - 6000 Rajshahi. </p>
           </div>
-          <div class="grid_2">
-            <div class="grid_2_content text_aline">
-               <span class="border_contact"><i class="iconClass fa-solid fa-envelope"></i></span> 
-            </div>
-            <div class="grid_2_content">
-               <a href="mailto:shovononline275@gmail.com">shovononline275@gmail.com </a>
-            </div>
 
-            
-          </div>
+
         </div>
-        <div class="grid_content">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454.2903738336771!2d88.59661487515613!3d24.370064967023282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbefa834a89089%3A0x595f430959d4df91!2sShovon%20online!5e0!3m2!1sen!2sbd!4v1783922251759!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="grid_2">
+          <div class="grid_2_content text_aline">
+            <span class="border_contact"><i class="iconClass fa-solid fa-phone"></i></span>
+          </div>
+          <div class="grid_2_content">
+            <a href="tel:+8801728284243">01728284243</a>
+          </div>
+
+        </div>
+        <div class="grid_2">
+          <div class="grid_2_content text_aline">
+            <span class="border_contact"><i class="iconClass fa-solid fa-envelope"></i></span>
+          </div>
+          <div class="grid_2_content">
+            <a href="mailto:shovononline275@gmail.com">shovononline275@gmail.com </a>
+          </div>
+
+
         </div>
       </div>
-    </section>
+      <div class="grid_content">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454.2903738336771!2d88.59661487515613!3d24.370064967023282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbefa834a89089%3A0x595f430959d4df91!2sShovon%20online!5e0!3m2!1sen!2sbd!4v1783922251759!5m2!1sen!2sbd"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </section>
   <!-- =================== Contact info ======================= -->
   <section id="info">
     <h1>Recent Notice</h1>
@@ -79,6 +113,8 @@
       <button class="button" onclick="school()">School</button>
       <button class="button" onclick="college()">College</button>
       <button class="button" onclick="university()">University</button>
+      <button class="button" onclick="medical()">medical</button>
+      <button class="button" onclick="engineering()">engineering</button>
       <button class="button" onclick="job()">Job</button>
     </div>
     <div id="school" class="Organtion">
@@ -86,14 +122,14 @@
       <div class="NotiecList">
         <div class="nameofevent" onclick="du()"> ঢাকা বিশ্ববিদ্যালয় </div>
         <div id="du_output" class="output">
-          <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয়</h1>
+          <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয় </h1>
           <div class="logoofunvi"><img src="./src/img/du.png" class="logoofunvio" alt="du"></div>
 
           <table>
             <tr>
               <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
             </tr>
-            <tr>
+            <tr style="text-align: center;">
               <td>ইউনিট</td>
               <td> ফলাফল</td>
             </tr>
@@ -126,17 +162,68 @@
             </tr>
             <tr>
               <td>আবেদন শুরু</td>
-              <td>২৯ অক্টোবর ২০২৫ দুপুর ১২:০০ টা</td>
+              <td><span id="dudatestart"></span></td>
             </tr>
             <tr>
               <td> আবেদন শেষ</td>
-              <td>১৬ নভেম্বর ২০২৫ তারিখ রাত ১১:৫৯ মিনিট</td>
+              <td><span id="dudateend"></span></td>
             </tr>
             <tr>
               <td> আবেদন আর বাকি আছে</td>
-              <td> js diya kaj korbo</td>
+              <td id="duappdateLineId"><span></span></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td id="duauintfee"></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td id="dubuintfee"></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="ducuintfee"></td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td id="duduintfee"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
             </tr>
             <!-- application fee -->
+
+            <tr>
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td></td>
+            </tr>
             <tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
             </tr>
@@ -165,60 +252,10 @@
               <td>পরীক্ষার কেন্দ্র</td>
               <td> বিভাগীয় শহরে অনুষ্টিত হবে</td>
             </tr>
-            <tr>
-              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
-            </tr>
-            <tr>
-              <td>ইউনিট</td>
-              <td> টাকা</td>
-            </tr>
-            <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
-                প্রয়েজ্য</td>
-            </tr>
-            <tr>
-              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
-            </tr>
-            <tr>
-              <td>ইউনিট</td>
-              <td> তারিখ </td>
-            </tr>
-            <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td></td>
-            </tr>
           </table>
           <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
           <div class="button_section">
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank">সাধারষ নেটিশ</a>
+            <a href="./src/noticfile/DU.jpg.jpeg" target="_blank">সাধারষ নেটিশ</a>
             <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
             <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
             <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
@@ -226,18 +263,17 @@
             <a href="">আবেদনের ওয়েবসাইটে</a>
             <a href="">অফিসিয়াল ওয়েবসাইটে</a>
           </div>
-
         </div>
       </div>
       <div class="NotiecList">
         <div class="nameofevent" onclick="ru()"> রাজশাহী বিশ্ববিদ্যালয় </div>
-        <div id="ru_output" class="output"> 
+        <div id="ru_output" class="output">
           <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয়</h1>
           <div class="logoofunvi"><img src="./src/img/ru.png" class="logoofunvio" alt="du"></div>
 
           <table>
             <tr>
-              <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
+              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
             </tr>
             <tr>
               <td>ইউনিট</td>
@@ -368,7 +404,7 @@
             <a href="">অফিসিয়াল ওয়েবসাইটে</a>
           </div>
 
-        
+
         </div>
       </div>
       <div class="NotiecList">
