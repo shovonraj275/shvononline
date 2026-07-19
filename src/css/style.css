@@ -565,6 +565,7 @@ div#hemout {
     display: inline-grid;
     justify-content: center;
     margin: 10px 0;
+    width: 100%;
 }
 .button_section a {
     padding: 10px 15px;
