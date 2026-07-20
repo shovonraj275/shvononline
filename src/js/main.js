@@ -411,7 +411,7 @@ const today = new Date();
 // ! changeable uint
 const duappstart = new Date("2026-07-15");
 const duappsEnd = new Date("2026-08-18");
-const duaunitfee= 1250;
+const duaunitfee= 1250
 const dubunitfee= 1250;
 const ducunitfee= 1150;
 const dudunitfee= 1500;
@@ -457,6 +457,35 @@ const rurunitexamdate =new Date("2026-08-29");
 const rurunitexamtime = `${pm04bd}`;
 
 // ? ru
+// ? jun
+const jnuappstart = new Date("2026-07-15");
+const jnuappsEnd = new Date("2026-08-18");
+const jnuaunitfee= 1000 + (1000*0.01);
+const jnubunitfee= 1000 + (1000*0.01);
+const jnucunitfee= 1000 + (1000*0.01);
+const jnudununitfee= 1000 + (1000*0.01);
+const jnueununitfee= 1200 + (1200*0.01);
+const jnuaunitadmitdnstart = new Date("2026-08-19");
+const jnuaunitadmitdnend = new Date("2026-08-25");
+const jnubunitadmitdnstart = new Date("2026-08-22");
+const jnubunitadmitdnend = new Date("2026-08-28");
+const jnucunitadmitdnstart = new Date("2026-08-25");
+const jnucunitadmitdnend = new Date("2026-09-01");
+const jnudunitadmitdnstart = new Date("2026-08-28");
+const jnudunitadmitdnend = new Date("2026-09-04");
+const jnueunitadmitdnstart = new Date("2026-08-28");
+const jnueunitadmitdnend = new Date("2026-09-04");
+const jnuaunitexamdate =new Date("2026-08-08");
+const jnuaunitexamtime = `${am10bd}`;
+const jnubunitexamdate =new Date("2026-08-15");
+const jnubunitexamtime = `${am10bd}${halfbd}`;
+const jnucunitexamdate =new Date("2026-08-22");
+const jnucunitexamtime = `${am10bd}`;
+const jnudunitexamdate =new Date("2026-08-03");
+const jnudunitexamtime = `${pm04bd}`;
+const jnueunitexamdate =new Date("2026-08-29");
+const jnueunitexamtime = `${pm04bd}`;
+// ? jun
 // ! changeable uint 8 15 22 29
 // free
 const duaunitfeebd = duaunitfee.toLocaleString("bn-BD");
@@ -567,6 +596,77 @@ document.getElementById("rubexemop").innerHTML=rubunitexamdatebd + rubunitexamti
 const rucunitexamdatebd = rucunitexamdate.toLocaleDateString("bn-BD", dateBangla);
 document.getElementById("rucexemop").innerHTML=rucunitexamdatebd + rucunitexamtime ;
   // ??================================================rru +==================================
+  // ??================================================jnu +==================================
+  
+const jnuaunitfeebd = jnuaunitfee.toLocaleString("bn-BD");
+const jnuaunitfeeword = numberToBanglaWords(jnuaunitfee);
+const jnuaunitfeebdword = `${jnuaunitfeebd} (${jnuaunitfeeword})`;
+document.getElementById("jnuauintfee").innerHTML=jnuaunitfeebdword
+const jnubunitfeebd = jnubunitfee.toLocaleString("bn-BD");
+const jnubunitfeeword = numberToBanglaWords(jnubunitfee);
+const jnubunitfeebdword = `${jnubunitfeebd} (${jnubunitfeeword})`
+document.getElementById("jnubuintfee").innerHTML=jnubunitfeebdword;
+const jnucunitfeebd = jnucunitfee.toLocaleString("bn-BD");
+const jnucunitfeeword = numberToBanglaWords(jnucunitfee);
+const jnucunitfeebdword = `${jnucunitfeebd} (${jnucunitfeeword})`
+document.getElementById("jnucuintfee").innerHTML=jnucunitfeebdword;
+const jnudunitfeebd = jnudununitfee.toLocaleString("bn-BD");
+const jnudunitfeeword = numberToBanglaWords(jnudununitfee);
+const jnudunitfeebdword = `${jnudunitfeebd} (${jnudunitfeeword})`
+document.getElementById("jnudnuintfee").innerHTML=jnudunitfeebdword;
+const jnueunitfeebd = jnueununitfee.toLocaleString("bn-BD");
+const jnueunitfeeword = numberToBanglaWords(jnueununitfee);
+const jnueunitfeebdword = `${jnueunitfeebd} (${jnueunitfeeword})`
+document.getElementById("jnuenuintfee").innerHTML=jnueunitfeebdword;
+
+// fee
+const jnuappstartbd = jnuappstart.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("jnudatestart").innerHTML=jnuappstartbd;
+const jnuappsEndbd = jnuappsEnd.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("jnudateend").innerHTML=jnuappsEndbd;
+const jnuappjnuedate = Math.abs(jnuappsEnd - today);
+const jnuappjnuedatetoday = Math.floor(jnuappjnuedate / (1000 * 60 * 60 * 24));
+const jnuappjnuedatetodayebd = jnuappjnuedatetoday.toLocaleString("bn-bd");
+const jnuappdateLineIdStyle = document.getElementById("jnuappdateLineId");
+if (jnuappsEnd > today) {
+  jnuappdateLine = `${jnuappjnuedatetodayebd} দিন বাকি আছে।`;
+  jnuappdateLineIdStyle.style.color = "green";
+} else if (jnuappsEnd < today) {
+  jnuappdateLine = `সময় অতিক্রম হয়েছে।`;
+  jnuappdateLineIdStyle.style.color = "red"};
+document.getElementById("jnuappdateLineId").innerHTML= jnuappdateLine;
+const jnuaunitadmitdnstartbd = jnuaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const jnuaunitadmitdnendbd = jnuaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const jnubunitadmitdnstartbd = jnubunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const jnubunitadmitdnendbd = jnubunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const jnucunitadmitdnstartbd = jnucunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const jnucunitadmitdnendbd = jnucunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const jnudunitadmitdnstartbd = jnudunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const jnudunitadmitdnendbd = jnudunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const jnueunitadmitdnstartbd = jnudunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const jnueunitadmitdnendbd = jnudunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const jnuaunitadmitdncom = `${jnuaunitadmitdnstartbd} হতে ${jnuaunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("jnuaunitadmitdnop").innerHTML=jnuaunitadmitdncom;
+const jnubunitadmitdncom = `${jnubunitadmitdnstartbd} হতে ${jnubunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("jnubunitadmitdnop").innerHTML= jnubunitadmitdncom;
+const jnucunitadmitdncom = `${jnucunitadmitdnstartbd} হতে ${jnucunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("jnucunitadmitdnop").innerHTML= jnucunitadmitdncom;
+const jnudunitadmitdncom = `${jnudunitadmitdnstartbd} হতে ${jnudunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("jnudunitadmitdnop").innerHTML= jnudunitadmitdncom;
+const jnueunitadmitdncom = `${jnueunitadmitdnstartbd} হতে ${jnueunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("jnueunitadmitdnop").innerHTML= jnueunitadmitdncom;
+
+const jnuaunitexamdatebd = jnuaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("jnuaexemop").innerHTML=jnuaunitexamdatebd + jnuaunitexamtime ;
+const jnubunitexamdatebd = jnubunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("jnubexemop").innerHTML=jnubunitexamdatebd + jnubunitexamtime ;
+const jnucunitexamdatebd = jnucunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("jnucexemop").innerHTML=jnucunitexamdatebd + jnucunitexamtime ;
+const jnudnitexamdatebd = jnudunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("jnudexemop").innerHTML=jnudnitexamdatebd + jnudunitexamtime ;
+const jnuenitexamdatebd = jnueunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("jnueexemop").innerHTML=jnuenitexamdatebd + jnueunitexamtime ;
+  // ??================================================jnu +==================================
 
 
 function du() {
@@ -603,9 +703,12 @@ function du() {
 // console.log(daysDifference); // Output: 12
 // console.log(daysDifferencebd); // Output: 12
 function ru() {
-  // $("#du_output,#cu_output").css("display", "none");
   const ruoutput = document.getElementById("ru_output");
   ruoutput.style.display = "block";
+}
+function jnu() {
+  const jnuoutput = document.getElementById("jnu_output");
+  jnuoutput.style.display = "block";
 }
 function cu() {
   // $("#du_output,#ru_output").css("display", "none");
@@ -613,13 +716,3 @@ function cu() {
   cu_output.style.display = "block";
 }
 
-// const button = document.getElementById("toggleBtn");
-// const content = document.getElementById("content");
-
-// button.addEventListener("click", () => {
-//   if (content.style.display === "none") {
-//     content.style.display = "block"; // Shows element
-//   } else {
-//     content.style.display = "none"; // Hides element
-//   }
-// });

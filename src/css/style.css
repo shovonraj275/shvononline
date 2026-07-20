@@ -14,9 +14,12 @@
 }.ruadmitdnsection{
   /* display: none; */
 }
+.jnuadmitdnsection{
+  /* display: none; */
+}
 /* Never use display block */
 /* ?outz */
-#ru_output {
+#jnu_output {
   display: block !important;
 }
 .dateactive{
@@ -575,6 +578,7 @@ div#hemout {
     text-decoration: none;
     border-radius: 10px;
     width: 100%;
+    text-align: center;
 }
 }
 
