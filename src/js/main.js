@@ -170,31 +170,31 @@ function numberToBanglaWords(num) {
   if (num < 100)
     return (
       tens[Math.floor(num / 10)] +
-      (num % 10 !== 0 ? " " + units[num % 10] : "" + "  টাকা মাত্র।")
+      (num % 10 !== 0 ? " " + units[num % 10] : "" + " টাকা মাত্র।")
     ); //10,20,30
   if (num < 1000)
     return (
       units[Math.floor(num / 100)] +
       "শত " +
-      (num % 100 !== 0 ? numberToBanglaWords(num % 100) : "  টাকা মাত্র।")
+      (num % 100 !== 0 ? numberToBanglaWords(num % 100) : " টাকা মাত্র।")
     );
   if (num < 100000)
     return (
       teentdss[Math.floor(num / 1000)] +
       " হাজার    " +
-      (num % 1000 !== 0 ? numberToBanglaWords(num % 1000) : "")
+      (num % 1000 !== 0 ? numberToBanglaWords(num % 1000) : " টাকা মাত্র।")
     );
   if (num < 10000000)
     return (
       teentdss[Math.floor(num / 100000)] +
       " লাক্ষ   " +
-      (num % 100000 !== 0 ? numberToBanglaWords(num % 100000) : "")
+      (num % 100000 !== 0 ? numberToBanglaWords(num % 100000) : " টাকা মাত্র।")
     );
   if (num < 1000000000)
     return (
       teentdss[Math.floor(num / 10000000)] +
       " কোটি   " +
-      (num % 10000000 !== 0 ? numberToBanglaWords(num % 10000000) : "")
+      (num % 10000000 !== 0 ? numberToBanglaWords(num % 10000000) : " টাকা মাত্র।")
     );
 
   return num; // Extendable for thousands/lakhs
@@ -347,7 +347,6 @@ function bkasss() {
 let year = new Date().getFullYear();
 document.getElementById("Year").innerHTML = year;
 
-// ? ===================================== noice =========================================
 // bangla date & days
 //Get the button
 // var mybutton = document.getElementById("myBtn");
@@ -370,6 +369,8 @@ document.getElementById("Year").innerHTML = year;
 //   document.body.scrollTop = 0;
 //   document.documentElement.scrollTop = 0;
 // }
+// ? ===================================== Onclick =========================================
+
 // =========================================== dom ================================
 var schooldom = document.getElementById("school");
 var collegedom = document.getElementById("college");
@@ -399,6 +400,40 @@ function job() {
   universitydom.style.display = "none";
   jobdom.style.display = "block";
 }
+
+function du() {  
+  const duoutput = document.getElementById("du_output");
+  const duIcon = document.getElementById("du_icon");
+    if (duoutput.style.display === 'none') {
+    duoutput.style.display = 'block'; 
+    duIcon.classList.remove('fa-plus');
+    duIcon.classList.add('fa-minus');
+  } else {
+    duoutput.style.display = 'none'; 
+    duIcon.classList.remove('fa-minus');
+    duIcon.classList.add('fa-plus');
+  }
+}
+function ru() {
+  const ruoutput = document.getElementById("ru_output");
+  ruoutput.style.display = "block";
+}
+function jnu() {
+  const jnuoutput = document.getElementById("jnu_output");
+  jnuoutput.style.display = "block";
+}
+function gst() {
+  const jnuoutput = document.getElementById("gst_output");
+  jnuoutput.style.display = "block";
+}
+function cu() {
+  // $("#du_output,#ru_output").css("display", "none");
+  const cu_output = document.getElementById("cu_output");
+  cu_output.style.display = "block";
+}
+
+
+// ? ===================================== Onclick =========================================
 // ? ===================================== noice =========================================
 
 const dateBangla = {
@@ -486,6 +521,29 @@ const jnudunitexamtime = `${pm04bd}`;
 const jnueunitexamdate =new Date("2026-08-29");
 const jnueunitexamtime = `${pm04bd}`;
 // ? jun
+
+const gstappstart = new Date("2026-07-15");
+const gstappsEnd = new Date("2026-08-18");
+const gstaunitfee= 1000;
+const gstbunitfee= 1000;
+const gstcunitfee= 1000;
+const gstaunitadmitdnstart = new Date("2026-08-19");
+const gstaunitadmitdnend = new Date("2026-08-25");
+const gstbunitadmitdnstart = new Date("2026-08-22");
+const gstbunitadmitdnend = new Date("2026-08-28");
+const gstcunitadmitdnstart = new Date("2026-08-25");
+const gstcunitadmitdnend = new Date("2026-09-01");
+const gstaunitexamdate =new Date("2026-08-08");
+const gstaunitexamtime = `${am10bd}`;
+const gstbunitexamdate =new Date("2026-08-15");
+const gstbunitexamtime = `${am10bd}${halfbd}`;
+const gstcunitexamdate =new Date("2026-08-22");
+const gstcunitexamtime = `${am10bd}`;
+
+
+
+
+
 // ! changeable uint 8 15 22 29
 // free
 const duaunitfeebd = duaunitfee.toLocaleString("bn-BD");
@@ -618,8 +676,6 @@ const jnueunitfeebd = jnueununitfee.toLocaleString("bn-BD");
 const jnueunitfeeword = numberToBanglaWords(jnueununitfee);
 const jnueunitfeebdword = `${jnueunitfeebd} (${jnueunitfeeword})`
 document.getElementById("jnuenuintfee").innerHTML=jnueunitfeebdword;
-
-// fee
 const jnuappstartbd = jnuappstart.toLocaleDateString("bn-BD", dateBangla);
 document.getElementById("jnudatestart").innerHTML=jnuappstartbd;
 const jnuappsEndbd = jnuappsEnd.toLocaleDateString("bn-BD", dateBangla);
@@ -655,7 +711,6 @@ const jnudunitadmitdncom = `${jnudunitadmitdnstartbd} হতে ${jnudunitadmitd
 document.getElementById("jnudunitadmitdnop").innerHTML= jnudunitadmitdncom;
 const jnueunitadmitdncom = `${jnueunitadmitdnstartbd} হতে ${jnueunitadmitdnendbd} পর্যন্ত।`;
 document.getElementById("jnueunitadmitdnop").innerHTML= jnueunitadmitdncom;
-
 const jnuaunitexamdatebd = jnuaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
 document.getElementById("jnuaexemop").innerHTML=jnuaunitexamdatebd + jnuaunitexamtime ;
 const jnubunitexamdatebd = jnubunitexamdate.toLocaleDateString("bn-BD", dateBangla);
@@ -668,11 +723,59 @@ const jnuenitexamdatebd = jnueunitexamdate.toLocaleDateString("bn-BD", dateBangl
 document.getElementById("jnueexemop").innerHTML=jnuenitexamdatebd + jnueunitexamtime ;
   // ??================================================jnu +==================================
 
+    // ??================================================gst +==================================
+const gstaunitfeebd = gstaunitfee.toLocaleString("bn-BD");
+const gstaunitfeeword = numberToBanglaWords(gstaunitfee);
+const gstaunitfeebdword = `${gstaunitfeebd} (${gstaunitfeeword})`;
+document.getElementById("gstauintfee").innerHTML=gstaunitfeebdword
+const gstbunitfeebd = gstbunitfee.toLocaleString("bn-BD");
+const gstbunitfeeword = numberToBanglaWords(gstbunitfee);
+const gstbunitfeebdword = `${gstbunitfeebd} (${gstbunitfeeword})`
+document.getElementById("gstbuintfee").innerHTML=gstbunitfeebdword;
+const gstcunitfeebd = gstcunitfee.toLocaleString("bn-BD");
+const gstcunitfeeword = numberToBanglaWords(gstcunitfee);
+const gstcunitfeebdword = `${gstcunitfeebd} (${gstcunitfeeword})`
+document.getElementById("gstcuintfee").innerHTML=gstcunitfeebdword;
+// fee
+const gstappstartbd = gstappstart.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstdatestart").innerHTML=gstappstartbd;
+const gstappsEndbd = gstappsEnd.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstdateend").innerHTML=gstappsEndbd;
+const gstappgstedate = Math.abs(gstappsEnd - today);
+const gstappgstedatetoday = Math.floor(gstappgstedate / (1000 * 60 * 60 * 24));
+const gstappgstedatetodayebd = gstappgstedatetoday.toLocaleString("bn-bd");
+const gstappdateLineIdStyle = document.getElementById("gstappdateLineId");
+if (gstappsEnd > today) {
+  gstappdateLine = `${gstappgstedatetodayebd} দিন বাকি আছে।`;
+  gstappdateLineIdStyle.style.color = "green";
+} else if (gstappsEnd < today) {
+  gstappdateLine = `সময় অতিক্রম হয়েছে।`;
+  gstappdateLineIdStyle.style.color = "red"};
+document.getElementById("gstappdateLineId").innerHTML= gstappdateLine;
+const gstaunitadmitdnstartbd = gstaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gstaunitadmitdnendbd = gstaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gstbunitadmitdnstartbd = gstbunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gstbunitadmitdnendbd = gstbunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gstcunitadmitdnstartbd = gstcunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gstcunitadmitdnendbd = gstcunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gstaunitadmitdncom = `${gstaunitadmitdnstartbd} হতে ${gstaunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gstaunitadmitdnop").innerHTML=gstaunitadmitdncom;
+const gstbunitadmitdncom = `${gstbunitadmitdnstartbd} হতে ${gstbunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gstbunitadmitdnop").innerHTML= gstbunitadmitdncom;
+const gstcunitadmitdncom = `${gstcunitadmitdnstartbd} হতে ${gstcunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gstcunitadmitdnop").innerHTML= gstcunitadmitdncom;
+const gstaunitexamdatebd = gstaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstaexemop").innerHTML=gstaunitexamdatebd + gstaunitexamtime ;
+const gstbunitexamdatebd = gstbunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstbexemop").innerHTML=gstbunitexamdatebd + gstbunitexamtime ;
+const gstcunitexamdatebd = gstcunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstcexemop").innerHTML=gstcunitexamdatebd + gstcunitexamtime ;
+  // ??================================================gst +==================================
 
-function du() {
-  const duoutput = document.getElementById("du_output");
-  duoutput.style.display = "block";
-}
+
+
+
+
 // const date1 = new Date('2026-08-01');
 // const dateBangla = { weekday: 'long',year: 'numeric', month: 'long', day: 'numeric'};
 // const formattedDate = date1.toLocaleDateString('bn-BD', dateBangla);
@@ -702,17 +805,3 @@ function du() {
 
 // console.log(daysDifference); // Output: 12
 // console.log(daysDifferencebd); // Output: 12
-function ru() {
-  const ruoutput = document.getElementById("ru_output");
-  ruoutput.style.display = "block";
-}
-function jnu() {
-  const jnuoutput = document.getElementById("jnu_output");
-  jnuoutput.style.display = "block";
-}
-function cu() {
-  // $("#du_output,#ru_output").css("display", "none");
-  const cu_output = document.getElementById("cu_output");
-  cu_output.style.display = "block";
-}
-

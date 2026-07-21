@@ -125,12 +125,16 @@
     </div>
     <div id="university" class="Organtion">
       <h1>All University Notice</h1>
-     <div class="NotiecList">
-        <div class="nameofevent" onclick="du()"> ঢাকা বিশ্ববিদ্যালয় </div>
-        <div id="du_output" class="output">
+      <div class="NotiecList">
+        <div class="nameofevent" onclick="du()"> 
+          <div class="nameofevent_content icons"><i id="du_icon" class="fa-solid fa-plus"> </i></div> 
+          <div class="nameofevent_content">ঢাকা বিশ্ববিদ্যালয়</div> 
+          
+        </div>
+        <div id="du_output" style="display: none;">
           <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয় </h1>
           <div class="logoofunvi"><img src="./src/img/du.png" class="logoofunvio" alt="du"></div>
-
+<!--  -->
           <table>
             <tr>
               <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
@@ -210,7 +214,7 @@
             <tr class="duadmitdnsection">
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
-            <tr  class="duadmitdnsection" style="text-align: center;">
+            <tr class="duadmitdnsection" style="text-align: center;">
               <td>ইউনিট</td>
               <td> তারিখ </td>
             </tr>
@@ -244,15 +248,15 @@
             </tr>
             <tr>
               <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td  id="dubexemop"></td>
+              <td id="dubexemop"></td>
             </tr>
             <tr>
               <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td  id="ducexemop"></td>
+              <td id="ducexemop"></td>
             </tr>
             <tr>
               <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td  id="dudexemop"></td>
+              <td id="dudexemop"></td>
             </tr>
             <tr>
             <tr>
@@ -284,20 +288,23 @@
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিট</td>
-              <td> ফলাফল</td>
+              <td> যোগ্যতা</td>
             </tr>
             <tr>
               <td>ক - ইউনিট (মানবিক শাখা) </td>
-              <td style="width: 50%;text-align: justify;">মানবিক শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.০০ সহ মোট জিপিএ ৭.০০ পেতে হবে।</td>
+              <td style="width: 50%;text-align: justify;">মানবিক শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও
+                এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.০০ সহ মোট জিপিএ ৭.০০ পেতে হবে।</td>
             </tr>
             <tr>
               <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td style="width: 50%; text-align: justify;">বাণিজ্য শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম
+              <td style="width: 50%; text-align: justify;">বাণিজ্য শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও
+                এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম
                 জিপিএ ৩.০০ সহ মোট জিপিএ ৭.০০ পেতে হবে। </td>
             </tr>
             <tr>
               <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.৫০ সহ মোট জিপিএ ৮.০০ পেতে হবে। </td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও
+                এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.৫০ সহ মোট জিপিএ ৮.০০ পেতে হবে। </td>
             </tr>
             <tr>
               <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
@@ -342,7 +349,7 @@
             <tr class="ruadmitdnsection">
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
-            <tr  class="ruadmitdnsection" style="text-align: center;">
+            <tr class="ruadmitdnsection" style="text-align: center;">
               <td>ইউনিট</td>
               <td> তারিখ </td>
             </tr>
@@ -371,11 +378,11 @@
             </tr>
             <tr>
               <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td  id="rubexemop"></td>
+              <td id="rubexemop"></td>
             </tr>
             <tr>
-              <td>গ - ইউনিট  (বিজ্ঞান শাখা)</td>
-              <td  id="rucexemop"></td>
+              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td id="rucexemop"></td>
             </tr>
             <tr>
             <tr>
@@ -410,29 +417,39 @@
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিট</td>
-              <td> ফলাফল</td>
+              <td> যোগ্যতা</td>
             </tr>
             <tr>
               <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ) এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.২৫ এর কম নয়।</td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ) এসএসসি/সমমান ও
+                এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.২৫ এর কম নয়।
+              </td>
             </tr>
             <tr>
               <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td style="width: 50%; text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
+              <td style="width: 50%; text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
+                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
+                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
             </tr>
             <tr>
               <td> ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
+                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
+                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
             </tr>
             <tr>
               <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়। </td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
+                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
+                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়। </td>
             </tr>
             <tr>
               <td>ইউনিট —E (চারুকলা অনুষদ)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়। </td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
+                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
+                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়। </td>
             </tr>
-          <tr>
+            <tr>
               <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
             </tr>
             <tr>
@@ -484,7 +501,7 @@
             <tr class="jnuadmitdnsection">
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
-            <tr  class="jnuadmitdnsection" style="text-align: center;">
+            <tr class="jnuadmitdnsection" style="text-align: center;">
               <td>ইউনিট</td>
               <td> তারিখ </td>
             </tr>
@@ -522,19 +539,19 @@
             </tr>
             <tr>
               <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td  id="jnubexemop"></td>
+              <td id="jnubexemop"></td>
             </tr>
             <tr>
               <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td  id="jnucexemop"></td>
+              <td id="jnucexemop"></td>
             </tr>
             <tr>
               <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td  id="jnudexemop"></td>
+              <td id="jnudexemop"></td>
             </tr>
             <tr>
               <td>ইউনিট— E (চারুকলা অনুষদ)</td>
-              <td  id="jnueexemop"></td>
+              <td id="jnueexemop"></td>
             </tr>
             <tr>
             <tr>
@@ -554,7 +571,7 @@
           </div>
 
 
-      
+
         </div>
       </div>
       <div class="NotiecList">
@@ -697,11 +714,143 @@
           </div>
 
 
-      
+
         </div>
       </div>
       <div class="NotiecList">
         <div class="nameofevent" onclick="gst()"> গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় </div>
+        <div id="gst_output" class="output">
+          <h1 class="nameofuniv">গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয়</h1>
+          <!-- <div class="logoofunvi"><img src="./src/img/gst.png" class="logoofunvio" alt="Jagannath University"></div> -->
+
+          <table>
+            <tr>
+              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> যোগ্যতা</td>
+            </tr>
+            <tr>
+              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ) এসএসসি/সমমান ও
+                এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.২৫ এর কম নয়।
+              </td>
+            </tr>
+            <tr>
+              <td>ইউনিট—B (মানবিক শাখা)</td>
+              <td style="width: 50%; text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
+                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
+                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
+            </tr>
+            <tr>
+              <td> ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
+              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
+                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
+                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
+            </tr>
+          
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>
+            <tr>
+              <td>আবেদন শুরু</td>
+              <td><span id="gstdatestart"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন শেষ</td>
+              <td><span id="gstdateend"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন আর বাকি আছে</td>
+              <td id="gstappdateLineId"><span></span></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>
+            <tr>
+              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
+              <td id="gstauintfee"></td>
+            </tr>
+            <tr>
+              <td>ইউনিট—B (মানবিক শাখা)</td>
+              <td id="gstbuintfee"></td>
+            </tr>
+            <tr>
+              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="gstcuintfee"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
+            </tr>
+            <!-- application fee -->
+
+            <tr class="gstadmitdnsection">
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr class="gstadmitdnsection" style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr class="gstadmitdnsection">
+              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
+              <td id="gstaunitadmitdnop"></td>
+            </tr>
+            <tr class="gstadmitdnsection">
+              <td>ইউনিট—B (মানবিক শাখা)</td>
+              <td id="gstbunitadmitdnop"></td>
+            </tr>
+            <tr class="gstadmitdnsection">
+              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="gstcunitadmitdnop"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ</td>
+            </tr>
+            <tr>
+              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
+              <td id="gstaexemop"></td>
+            </tr>
+            <tr>
+              <td>ইউনিট—B (মানবিক শাখা)</td>
+              <td id="gstbexemop"></td>
+            </tr>
+            <tr>
+              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
+              <td id="gstcexemop"></td>
+            </tr>
+            <tr>
+              <td>পরীক্ষার কেন্দ্র</td>
+              <td> গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় গুলোত অনুষ্ঠিত হবে </td>
+            </tr>
+          </table>
+          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
+          <div class="button_section">
+            <a href="./src/noticfile/gst.pdf" target="_blank">সাধারণ নেটিশ</a>
+            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
+            <a href="">আবেদনের ওয়েবসাইটে</a>
+            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
+          </div>
+
+
+
+        </div>
+
+      </div>
+      <div class="NotiecList">
+        <div class="nameofevent" onclick="gstd()"> গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় </div>
         <div id="gst_output" class="output">গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় Lorem ipsum dolor sit, amet consectetur
           adipisicing elit. Illo blanditiis, et dignissimos culpa ullam exercitationem voluptatem quidem dolorem libero
           necessitatibus eaque quisquam illum doloribus inventore ipsam quia iusto eligendi facilis?</div>

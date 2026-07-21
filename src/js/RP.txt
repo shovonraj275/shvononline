@@ -22,9 +22,9 @@ General, Science and Technology
 19 পিরোজপুর বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, পিরোজপুর pu
 
 
-<div id="jnu_output" class="output">
+<div id="gst_output" class="output">
           <h1 class="nameofuniv"> জগন্নাথ বিশ্ববিদ্যালয়, ঢাকা</h1>
-          <div class="logoofunvi"><img src="./src/img/jnu.png" class="logoofunvio" alt="Jagannath University"></div>
+          <div class="logoofunvi"><img src="./src/img/gst.png" class="logoofunvio" alt="Jagannath University"></div>
 
           <table>
             <tr>
@@ -32,7 +32,7 @@ General, Science and Technology
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিট</td>
-              <td> ফলাফল</td>
+              <td> যোগ্যতা</td>
             </tr>
             <tr>
               <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
@@ -59,15 +59,15 @@ General, Science and Technology
             </tr>
             <tr>
               <td>আবেদন শুরু</td>
-              <td><span id="jnudatestart"></span></td>
+              <td><span id="gstdatestart"></span></td>
             </tr>
             <tr>
               <td> আবেদন শেষ</td>
-              <td><span id="jnudateend"></span></td>
+              <td><span id="gstdateend"></span></td>
             </tr>
             <tr>
               <td> আবেদন আর বাকি আছে</td>
-              <td id="jnuappdateLineId"><span></span></td>
+              <td id="gstappdateLineId"><span></span></td>
             </tr>
             <tr>
               <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
@@ -78,24 +78,24 @@ General, Science and Technology
             </tr>
             <tr>
               <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td id="jnuauintfee"></td>
+              <td id="gstauintfee"></td>
             </tr>
             <tr>
               <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td id="jnubuintfee"></td>
+              <td id="gstbuintfee"></td>
             </tr>
             <tr>
               <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="jnucuintfee"></td>
+              <td id="gstcuintfee"></td>
             </tr>
             <tr>
               <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td id="jnudnuintfee"></td>
+              <td id="gstdnuintfee"></td>
             </tr>
             <tr>
             <tr>
               <td>ইউনিট— E (চারুকলা অনুষদ)</td>
-              <td id="jnuenuintfee"></td>
+              <td id="gstenuintfee"></td>
             </tr>
             <tr>
               <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
@@ -103,32 +103,32 @@ General, Science and Technology
             </tr>
             <!-- application fee -->
 
-            <tr class="jnuadmitdnsection">
+            <tr class="gstadmitdnsection">
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
-            <tr  class="jnuadmitdnsection" style="text-align: center;">
+            <tr  class="gstadmitdnsection" style="text-align: center;">
               <td>ইউনিট</td>
               <td> তারিখ </td>
             </tr>
-            <tr class="jnuadmitdnsection">
+            <tr class="gstadmitdnsection">
               <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td id="jnuaunitadmitdnop"></td>
+              <td id="gstaunitadmitdnop"></td>
             </tr>
-            <tr class="jnuadmitdnsection">
+            <tr class="gstadmitdnsection">
               <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td id="jnubunitadmitdnop"></td>
+              <td id="gstbunitadmitdnop"></td>
             </tr>
-            <tr class="jnuadmitdnsection">
+            <tr class="gstadmitdnsection">
               <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="jnucunitadmitdnop"></td>
+              <td id="gstcunitadmitdnop"></td>
             </tr>
-            <tr class="jnuadmitdnsection">
+            <tr class="gstadmitdnsection">
               <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td id="jnudunitadmitdnop"></td>
+              <td id="gstdunitadmitdnop"></td>
             </tr>
-            <tr class="jnuadmitdnsection">
+            <tr class="gstadmitdnsection">
               <td>ইউনিট— E (চারুকলা অনুষদ)</td>
-              <td id="jnueunitadmitdnop"></td>
+              <td id="gsteunitadmitdnop"></td>
             </tr>
 
             <tr>
@@ -140,23 +140,23 @@ General, Science and Technology
             </tr>
             <tr>
               <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td id="jnuaexemop"></td>
+              <td id="gstaexemop"></td>
             </tr>
             <tr>
               <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td  id="jnubexemop"></td>
+              <td  id="gstbexemop"></td>
             </tr>
             <tr>
               <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td  id="jnucexemop"></td>
+              <td  id="gstcexemop"></td>
             </tr>
             <tr>
               <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td  id="jnudexemop"></td>
+              <td  id="gstdexemop"></td>
             </tr>
             <tr>
               <td>ইউনিট— E (চারুকলা অনুষদ)</td>
-              <td  id="jnueexemop"></td>
+              <td  id="gsteexemop"></td>
             </tr>
             <tr>
             <tr>
@@ -166,7 +166,7 @@ General, Science and Technology
           </table>
           <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
           <div class="button_section">
-            <a href="./src/noticfile/JNU.pdf" target="_blank">সাধারণ নেটিশ</a>
+            <a href="./src/noticfile/gst.pdf" target="_blank">সাধারণ নেটিশ</a>
             <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
             <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
             <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
@@ -180,107 +180,106 @@ General, Science and Technology
         </div>
 
 
-// ? jun // ??================================================jnu +==================================
+// ? jun // ??================================================gst +==================================
 
-const jnuappstart = new Date("2026-07-15");
-const jnuappsEnd = new Date("2026-08-18");
-const jnuaunitfee= 1000 + (1000*0.01);
-const jnubunitfee= 1000 + (1000*0.01);
-const jnucunitfee= 1000 + (1000*0.01);
-const jnudununitfee= 1000 + (1000*0.01);
-const jnueununitfee= 1200 + (1200*0.01);
-const jnuaunitadmitdnstart = new Date("2026-08-19");
-const jnuaunitadmitdnend = new Date("2026-08-25");
-const jnubunitadmitdnstart = new Date("2026-08-22");
-const jnubunitadmitdnend = new Date("2026-08-28");
-const jnucunitadmitdnstart = new Date("2026-08-25");
-const jnucunitadmitdnend = new Date("2026-09-01");
-const jnudunitadmitdnstart = new Date("2026-08-28");
-const jnudunitadmitdnend = new Date("2026-09-04");
-const jnueunitadmitdnstart = new Date("2026-08-28");
-const jnueunitadmitdnend = new Date("2026-09-04");
-const jnuaunitexamdate =new Date("2026-08-08");
-const jnuaunitexamtime = `${am10bd}`;
-const jnubunitexamdate =new Date("2026-08-15");
-const jnubunitexamtime = `${am10bd}${halfbd}`;
-const jnucunitexamdate =new Date("2026-08-22");
-const jnucunitexamtime = `${am10bd}`;
-const jnudunitexamdate =new Date("2026-08-03");
-const jnudunitexamtime = `${pm04bd}`;
-const jnueunitexamdate =new Date("2026-08-29");
-const jnueunitexamtime = `${pm04bd}`;
- // ??================================================jnu +==================================
+const gstappstart = new Date("2026-07-15");
+const gstappsEnd = new Date("2026-08-18");
+const gstaunitfee= 1000 + (1000gst0.01);
+const gstbunitfee= 1000 + (1000gst0.01);
+const gstcunitfee= 1000 + (1000gst0.01);
+const gstdununitfee= 1000 + (1000gst0.01);
+const gsteununitfee= 1200 + (1200gst0.01);
+const gstaunitadmitdnstart = new Date("2026-08-19");
+const gstaunitadmitdnend = new Date("2026-08-25");
+const gstbunitadmitdnstart = new Date("2026-08-22");
+const gstbunitadmitdnend = new Date("2026-08-28");
+const gstcunitadmitdnstart = new Date("2026-08-25");
+const gstcunitadmitdnend = new Date("2026-09-01");
+const gstdunitadmitdnstart = new Date("2026-08-28");
+const gstdunitadmitdnend = new Date("2026-09-04");
+const gsteunitadmitdnstart = new Date("2026-08-28");
+const gsteunitadmitdnend = new Date("2026-09-04");
+const gstaunitexamdate =new Date("2026-08-08");
+const gstaunitexamtime = `${am10bd}`;
+const gstbunitexamdate =new Date("2026-08-15");
+const gstbunitexamtime = `${am10bd}${halfbd}`;
+const gstcunitexamdate =new Date("2026-08-22");
+const gstcunitexamtime = `${am10bd}`;
+const gstdunitexamdate =new Date("2026-08-03");
+const gstdunitexamtime = `${pm04bd}`;
+const gsteunitexamdate =new Date("2026-08-29");
+const gsteunitexamtime = `${pm04bd}`;
+ // ??================================================gst +==================================
 
 
-  // ??================================================jnu +==================================
-
-const jnuaunitfeebd = jnuaunitfee.toLocaleString("bn-BD");
-const jnuaunitfeeword = numberToBanglaWords(jnuaunitfee);
-const jnuaunitfeebdword = `${jnuaunitfeebd} (${jnuaunitfeeword})`;
-document.getElementById("jnuauintfee").innerHTML=jnuaunitfeebdword
-const jnubunitfeebd = jnubunitfee.toLocaleString("bn-BD");
-const jnubunitfeeword = numberToBanglaWords(jnubunitfee);
-const jnubunitfeebdword = `${jnubunitfeebd} (${jnubunitfeeword})`
-document.getElementById("jnubuintfee").innerHTML=jnubunitfeebdword;
-const jnucunitfeebd = jnucunitfee.toLocaleString("bn-BD");
-const jnucunitfeeword = numberToBanglaWords(jnucunitfee);
-const jnucunitfeebdword = `${jnucunitfeebd} (${jnucunitfeeword})`
-document.getElementById("jnucuintfee").innerHTML=jnucunitfeebdword;
-const jnudunitfeebd = jnudununitfee.toLocaleString("bn-BD");
-const jnudunitfeeword = numberToBanglaWords(jnudununitfee);
-const jnudunitfeebdword = `${jnudunitfeebd} (${jnudunitfeeword})`
-document.getElementById("jnudnuintfee").innerHTML=jnudunitfeebdword;
-const jnueunitfeebd = jnueununitfee.toLocaleString("bn-BD");
-const jnueunitfeeword = numberToBanglaWords(jnueununitfee);
-const jnueunitfeebdword = `${jnueunitfeebd} (${jnueunitfeeword})`
-document.getElementById("jnuenuintfee").innerHTML=jnueunitfeebdword;
+  // ??================================================gst +==================================
+const gstaunitfeebd = gstaunitfee.toLocaleString("bn-BD");
+const gstaunitfeeword = numberToBanglaWords(gstaunitfee);
+const gstaunitfeebdword = `${gstaunitfeebd} (${gstaunitfeeword})`;
+document.getElementById("gstauintfee").innerHTML=gstaunitfeebdword
+const gstbunitfeebd = gstbunitfee.toLocaleString("bn-BD");
+const gstbunitfeeword = numberToBanglaWords(gstbunitfee);
+const gstbunitfeebdword = `${gstbunitfeebd} (${gstbunitfeeword})`
+document.getElementById("gstbuintfee").innerHTML=gstbunitfeebdword;
+const gstcunitfeebd = gstcunitfee.toLocaleString("bn-BD");
+const gstcunitfeeword = numberToBanglaWords(gstcunitfee);
+const gstcunitfeebdword = `${gstcunitfeebd} (${gstcunitfeeword})`
+document.getElementById("gstcuintfee").innerHTML=gstcunitfeebdword;
+const gstdunitfeebd = gstdununitfee.toLocaleString("bn-BD");
+const gstdunitfeeword = numberToBanglaWords(gstdununitfee);
+const gstdunitfeebdword = `${gstdunitfeebd} (${gstdunitfeeword})`
+document.getElementById("gstdnuintfee").innerHTML=gstdunitfeebdword;
+const gsteunitfeebd = gsteununitfee.toLocaleString("bn-BD");
+const gsteunitfeeword = numberToBanglaWords(gsteununitfee);
+const gsteunitfeebdword = `${gsteunitfeebd} (${gsteunitfeeword})`
+document.getElementById("gstenuintfee").innerHTML=gsteunitfeebdword;
 
 // fee
-const jnuappstartbd = jnuappstart.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("jnudatestart").innerHTML=jnuappstartbd;
-const jnuappsEndbd = jnuappsEnd.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("jnudateend").innerHTML=jnuappsEndbd;
-const jnuappjnuedate = Math.abs(jnuappsEnd - today);
-const jnuappjnuedatetoday = Math.floor(jnuappjnuedate / (1000 * 60 * 60 * 24));
-const jnuappjnuedatetodayebd = jnuappjnuedatetoday.toLocaleString("bn-bd");
-const jnuappdateLineIdStyle = document.getElementById("jnuappdateLineId");
-if (jnuappsEnd > today) {
-  jnuappdateLine = `${jnuappjnuedatetodayebd} দিন বাকি আছে।`;
-  jnuappdateLineIdStyle.style.color = "green";
-} else if (jnuappsEnd < today) {
-  jnuappdateLine = `সময় অতিক্রম হয়েছে।`;
-  jnuappdateLineIdStyle.style.color = "red"};
-document.getElementById("jnuappdateLineId").innerHTML= jnuappdateLine;
-const jnuaunitadmitdnstartbd = jnuaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const jnuaunitadmitdnendbd = jnuaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const jnubunitadmitdnstartbd = jnubunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const jnubunitadmitdnendbd = jnubunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const jnucunitadmitdnstartbd = jnucunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const jnucunitadmitdnendbd = jnucunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const jnudunitadmitdnstartbd = jnudunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const jnudunitadmitdnendbd = jnudunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const jnueunitadmitdnstartbd = jnudunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const jnueunitadmitdnendbd = jnudunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const jnuaunitadmitdncom = `${jnuaunitadmitdnstartbd} হতে ${jnuaunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("jnuaunitadmitdnop").innerHTML=jnuaunitadmitdncom;
-const jnubunitadmitdncom = `${jnubunitadmitdnstartbd} হতে ${jnubunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("jnubunitadmitdnop").innerHTML= jnubunitadmitdncom;
-const jnucunitadmitdncom = `${jnucunitadmitdnstartbd} হতে ${jnucunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("jnucunitadmitdnop").innerHTML= jnucunitadmitdncom;
-const jnudunitadmitdncom = `${jnudunitadmitdnstartbd} হতে ${jnudunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("jnudunitadmitdnop").innerHTML= jnudunitadmitdncom;
-const jnueunitadmitdncom = `${jnueunitadmitdnstartbd} হতে ${jnueunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("jnueunitadmitdnop").innerHTML= jnueunitadmitdncom;
+const gstappstartbd = gstappstart.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstdatestart").innerHTML=gstappstartbd;
+const gstappsEndbd = gstappsEnd.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstdateend").innerHTML=gstappsEndbd;
+const gstappgstedate = Math.abs(gstappsEnd - today);
+const gstappgstedatetoday = Math.floor(gstappgstedate / (1000 gst 60 gst 60 gst 24));
+const gstappgstedatetodayebd = gstappgstedatetoday.toLocaleString("bn-bd");
+const gstappdateLineIdStyle = document.getElementById("gstappdateLineId");
+if (gstappsEnd > today) {
+  gstappdateLine = `${gstappgstedatetodayebd} দিন বাকি আছে।`;
+  gstappdateLineIdStyle.style.color = "green";
+} else if (gstappsEnd < today) {
+  gstappdateLine = `সময় অতিক্রম হয়েছে।`;
+  gstappdateLineIdStyle.style.color = "red"};
+document.getElementById("gstappdateLineId").innerHTML= gstappdateLine;
+const gstaunitadmitdnstartbd = gstaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gstaunitadmitdnendbd = gstaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gstbunitadmitdnstartbd = gstbunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gstbunitadmitdnendbd = gstbunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gstcunitadmitdnstartbd = gstcunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gstcunitadmitdnendbd = gstcunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gstdunitadmitdnstartbd = gstdunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gstdunitadmitdnendbd = gstdunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gsteunitadmitdnstartbd = gstdunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
+const gsteunitadmitdnendbd = gstdunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
+const gstaunitadmitdncom = `${gstaunitadmitdnstartbd} হতে ${gstaunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gstaunitadmitdnop").innerHTML=gstaunitadmitdncom;
+const gstbunitadmitdncom = `${gstbunitadmitdnstartbd} হতে ${gstbunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gstbunitadmitdnop").innerHTML= gstbunitadmitdncom;
+const gstcunitadmitdncom = `${gstcunitadmitdnstartbd} হতে ${gstcunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gstcunitadmitdnop").innerHTML= gstcunitadmitdncom;
+const gstdunitadmitdncom = `${gstdunitadmitdnstartbd} হতে ${gstdunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gstdunitadmitdnop").innerHTML= gstdunitadmitdncom;
+const gsteunitadmitdncom = `${gsteunitadmitdnstartbd} হতে ${gsteunitadmitdnendbd} পর্যন্ত।`;
+document.getElementById("gsteunitadmitdnop").innerHTML= gsteunitadmitdncom;
 
-const jnuaunitexamdatebd = jnuaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("jnuaexemop").innerHTML=jnuaunitexamdatebd + jnuaunitexamtime ;
-const jnubunitexamdatebd = jnubunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("jnubexemop").innerHTML=jnubunitexamdatebd + jnubunitexamtime ;
-const jnucunitexamdatebd = jnucunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("jnucexemop").innerHTML=jnucunitexamdatebd + jnucunitexamtime ;
-const jnudnitexamdatebd = jnudunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("jnudexemop").innerHTML=jnudnitexamdatebd + jnudunitexamtime ;
-const jnuenitexamdatebd = jnueunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("jnueexemop").innerHTML=jnuenitexamdatebd + jnueunitexamtime ;
-  // ??================================================jnu +==================================
+const gstaunitexamdatebd = gstaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstaexemop").innerHTML=gstaunitexamdatebd + gstaunitexamtime ;
+const gstbunitexamdatebd = gstbunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstbexemop").innerHTML=gstbunitexamdatebd + gstbunitexamtime ;
+const gstcunitexamdatebd = gstcunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstcexemop").innerHTML=gstcunitexamdatebd + gstcunitexamtime ;
+const gstdnitexamdatebd = gstdunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gstdexemop").innerHTML=gstdnitexamdatebd + gstdunitexamtime ;
+const gstenitexamdatebd = gsteunitexamdate.toLocaleDateString("bn-BD", dateBangla);
+document.getElementById("gsteexemop").innerHTML=gstenitexamdatebd + gsteunitexamtime ;
+  // ??================================================gst +==================================
 
