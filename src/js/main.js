@@ -416,7 +416,16 @@ function du() {
 }
 function ru() {
   const ruoutput = document.getElementById("ru_output");
-  ruoutput.style.display = "block";
+  const ruIcon = document.getElementById("ru_icon");
+    if (ruoutput.style.display === 'none') {
+    ruoutput.style.display = 'block'; 
+    ruIcon.classList.remove('fa-plus');
+    ruIcon.classList.add('fa-minus');
+  } else {
+    ruoutput.style.display = 'none'; 
+    ruIcon.classList.remove('fa-minus');
+    ruIcon.classList.add('fa-plus');
+  }
 }
 function jnu() {
   const jnuoutput = document.getElementById("jnu_output");
