@@ -429,11 +429,29 @@ function ru() {
 }
 function jnu() {
   const jnuoutput = document.getElementById("jnu_output");
-  jnuoutput.style.display = "block";
+  const jnuIcon = document.getElementById("jnu_icon");
+    if (jnuoutput.style.display === 'none') {
+    jnuoutput.style.display = 'block'; 
+    jnuIcon.classList.remove('fa-plus');
+    jnuIcon.classList.add('fa-minus');
+  } else {
+    jnuoutput.style.display = 'none'; 
+    jnuIcon.classList.remove('fa-minus');
+    jnuIcon.classList.add('fa-plus');
+  }
 }
 function gst() {
-  const jnuoutput = document.getElementById("gst_output");
-  jnuoutput.style.display = "block";
+  const gstoutput = document.getElementById("gst_output");
+  const gstIcon = document.getElementById("gst_icon");
+    if (gstoutput.style.display === 'none') {
+    gstoutput.style.display = 'block'; 
+    gstIcon.classList.remove('fa-plus');
+    gstIcon.classList.add('fa-minus');
+  } else {
+    gstoutput.style.display = 'none'; 
+    gstIcon.classList.remove('fa-minus');
+    gstIcon.classList.add('fa-plus');
+  }
 }
 function cu() {
   // $("#du_output,#ru_output").css("display", "none");

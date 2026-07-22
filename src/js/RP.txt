@@ -283,3 +283,20 @@ const gstenitexamdatebd = gsteunitexamdate.toLocaleDateString("bn-BD", dateBangl
 document.getElementById("gsteexemop").innerHTML=gstenitexamdatebd + gsteunitexamtime ;
   // ??================================================gst +==================================
 
+
+
+
+
+function gst() {
+  const gstoutput = document.getElementById("gst_output");
+  const gstIcon = document.getElementById("gst_icon");
+    if (gstoutput.style.display === 'none') {
+    gstoutput.style.display = 'block'; 
+    gstIcon.classList.remove('fa-plus');
+    gstIcon.classList.add('fa-minus');
+  } else {
+    gstoutput.style.display = 'none'; 
+    gstIcon.classList.remove('fa-minus');
+    gstIcon.classList.add('fa-plus');
+  }
+}
