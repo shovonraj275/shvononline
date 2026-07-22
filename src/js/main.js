@@ -472,7 +472,7 @@ const dateBangla = {
 const today = new Date();
 // ! changeable uint
 const duappstart = new Date("2026-07-15");
-const duappsEnd = new Date("2026-08-18");
+const duappsEnd = new Date("2026-08-03");
 const duaunitfee= 1250
 const dubunitfee= 1250;
 const ducunitfee= 1150;
@@ -521,7 +521,7 @@ const rurunitexamtime = `${pm04bd}`;
 // ? ru
 // ? jun
 const jnuappstart = new Date("2026-07-15");
-const jnuappsEnd = new Date("2026-08-18");
+const jnuappsEnd = new Date("2026-08-05");
 const jnuaunitfee= 1000 + (1000*0.01);
 const jnubunitfee= 1000 + (1000*0.01);
 const jnucunitfee= 1000 + (1000*0.01);
@@ -550,7 +550,7 @@ const jnueunitexamtime = `${pm04bd}`;
 // ? jun
 
 const gstappstart = new Date("2026-07-15");
-const gstappsEnd = new Date("2026-08-18");
+const gstappsEnd = new Date("2026-08-10");
 const gstaunitfee= 1000;
 const gstbunitfee= 1000;
 const gstcunitfee= 1000;
