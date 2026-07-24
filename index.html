@@ -128,12 +128,12 @@
       <div class="NotiecList">
         <div class="nameofevent" onclick="du()"> 
           <div class="nameofevent_content icons"><i id="du_icon" class="fa-solid fa-plus"> </i></div> 
-          <div class="nameofevent_content">ঢাকা বিশ্ববিদ্যালয়</div> 
+          <div class="nameofevent_content" id="DUNmaeEng"></div> 
           
         </div>
         <div id="du_output" style="display: none;">
-          <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয় </h1>
-          <div class="logoofunvi"><img src="./src/img/du.png" class="logoofunvio" alt="du"></div>
+          <h1 class="nameofuniv" id="DUNmaeBng"></h1>
+          <div class="logoofunvi" id="DUImg"></div>
 <!--  -->
           <table>
             <tr>
@@ -144,28 +144,22 @@
               <td> ফলাফল</td>
             </tr>
             <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ বিজ্ঞান বিভাগ হতে ন্যূনতম ৩.৫০ এবং্রাপ্ত জিপিএ-দ্বয়ের যোগফল
-                ন্যূনতম ৮.০ হতে হবে। </td>
+              <td class="DUunitA"></td>
+              <td style="width: 50%;text-align: justify;" id="DUunitAresult"
+              > </td>
             </tr>
             <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td style="width: 50%; text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ মানবিক বিভাগ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল
-                ন্যূনতম ৮.০ হতে হবে। </td>
+              <td class="DUunitB"></td>
+              <!-- <td>খ - ইউনিট (মানবিক শাখা)</td> -->
+              <td style="width: 50%; text-align: justify;" id="DUunitBresult"></td>
             </tr>
             <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ব্যবসায় শিক্ষা শাখা হতে এবং প্রপ্ত জিপিএ-দ্বয়ের
-                যোগফল ন্যূনতম ৮.০ হতে হবে। </td>
+              <td class="DUunitC"></td>
+              <td style="width: 50%;text-align: justify;" id="DUunitCresult"></td>
             </tr>
             <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল ন্যূনতম ৮.০ হতে
-                হবে। উলেখ্য সকল বিভাগে শিক্ষার্থী আবেদন করতে পাবে </td>
+              <td class="DUunitD"></td>
+              <td style="width: 50%;text-align: justify;" id="DUunitDresult"></td>
             </tr>
             <tr>
               <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
@@ -176,11 +170,11 @@
             </tr>
             <tr>
               <td> আবেদন শেষ</td>
-              <td><span id="dudateend"></span></td>
+              <td><span id="DUstyle"> <span id="dudateend"></span></span></span></td>
             </tr>
             <tr>
-              <td> আবেদন আর বাকি আছে</td>
-              <td id="duappdateLineId"><span></span></td>
+              <td>আবেদন আর বাকি আছে</td>
+              <td id="timedu"></td>
             </tr>
             <tr>
               <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
@@ -190,20 +184,20 @@
               <td> টাকার পরিমাণ</td>
             </tr>
             <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td id="duauintfee"></td>
+              <td class="DUunitA"></td>
+              <td id="DUunitAFee"></td>
             </tr>
             <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td id="dubuintfee"></td>
+              <td class="DUunitB"></td>
+              <td id="DUunitBFee"></td>
             </tr>
             <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="ducuintfee"></td>
+              <td class="DUunitC"></td>
+              <td id="DUunitCFee"></td>
             </tr>
             <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td id="duduintfee"></td>
+              <td class="DUunitD"></td>
+              <td id="DUunitDFee"></td>
             </tr>
             <tr>
               <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
@@ -219,20 +213,20 @@
               <td> তারিখ </td>
             </tr>
             <tr class="duadmitdnsection">
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td id="duaunitadmitdnop"></td>
+              <td class="DUunitA"></td>
+              <td id="DUunitAadmitdn"></td>
+            </tr>
+            <tr class="duadmitdnsection"> 
+              <td class="DUunitB"></td>
+              <td id="DUunitBadmitdn"></td>
             </tr>
             <tr class="duadmitdnsection">
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td id="dubunitadmitdnop"></td>
+              <td class="DUunitC"></td>
+              <td id="DUunitCadmitdn"></td>
             </tr>
             <tr class="duadmitdnsection">
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="ducunitadmitdnop"></td>
-            </tr>
-            <tr class="duadmitdnsection">
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td id="dudunitadmitdnop"></td>
+              <td class="DUunitD"></td>
+              <td id="DUunitDadmitdn"></td>
             </tr>
 
             <tr>
@@ -243,20 +237,20 @@
               <td> তারিখ</td>
             </tr>
             <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td id="duaexemop"></td>
+              <td class="DUunitA"></td>
+              <td id="DUunitAExam"></td>
             </tr>
             <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td id="dubexemop"></td>
+              <td class="DUunitB"></td>
+              <td id="DUunitBExam"></td>
             </tr>
             <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="ducexemop"></td>
+              <td class="DUunitC"></td>
+              <td id="DUunitCExam"></td>
             </tr>
             <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td id="dudexemop"></td>
+              <td class="DUunitD"></td>
+              <td id="DUunitDExam"></td>
             </tr>
             <tr>
             <tr>
@@ -265,15 +259,7 @@
             </tr>
           </table>
           <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
-          <div class="button_section">
-            <a href="./src/noticfile/DU.jpg.jpeg" target="_blank">সাধারষ নেটিশ</a>
-            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
-            <a href="">আবেদনের ওয়েবসাইটে</a>
-            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
-          </div>
+          <div class="button_section" id="DUNotice"></div>
         </div>
       </div>
       <div class="NotiecList">

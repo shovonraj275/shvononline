@@ -1,302 +1,48 @@
-General, Science and Technology
 
-
-1 ইসলামী বিশ্ববিদ্যালয়, কুষ্টিয়া
-2 মাওলানা ভাসানী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, টাঙ্গাইল
-৩ পটুয়াখালী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, পটুয়াখালী
-4 নোয়াখালী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, নোয়াখালী
-5 জাতীয় কবি কাজী নজরুল ইসলাম বিশ্ববিদ্যালয়, ময়মনসিংহ
-6 যশোর বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, যশোর
-7 পাবনা বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, পাবনা
-8 বেগম রোকেয়া বিশ্ববিদ্যালয়, রংপুর
-9 গোপালগঞ্জ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, গোপালগঞ্জ
-10 বরিশাল বিশ্ববিদ্যালয়, বরিশাল
-11 রাঙ্গামাটি বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, রাঙ্গামাটি
-12 রবীন্দ্র বিশ্ববিদ্যালয়, সিরাজগঞ্জ
-13 গাজীপুর ডিজিটাল ইউনিভার্সিটি, গাজীপুর
-14 নেত্রকোনা বিশ্ববিদ্যালয়, নেত্রকোনা
-15 জামালপুর বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, জামালপুর
-১৬ চাঁদপুর বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, চাঁদপুর
-17 কিশোরগঞ্জ বিশ্ববিদ্যালয়, কিশোরগঞ্জ
-18 সুনামগঞ্জ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, সুনামগঞ্জ
-19 পিরোজপুর বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, পিরোজপুর pu
-
-
-<div id="gst_output" class="output">
-          <h1 class="nameofuniv"> জগন্নাথ বিশ্ববিদ্যালয়, ঢাকা</h1>
-          <div class="logoofunvi"><img src="./src/img/gst.png" class="logoofunvio" alt="Jagannath University"></div>
-
-          <table>
-            <tr>
-              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> যোগ্যতা</td>
-            </tr>
-            <tr>
-              <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ) এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.২৫ এর কম নয়।</td>
-            </tr>
-            <tr>
-              <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td style="width: 50%; text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
-            </tr>
-            <tr>
-              <td> ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
-            </tr>
-            <tr>
-              <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়। </td>
-            </tr>
-            <tr>
-              <td>ইউনিট —E (চারুকলা অনুষদ)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়। </td>
-            </tr>
-          <tr>
-              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
-            </tr>
-            <tr>
-              <td>আবেদন শুরু</td>
-              <td><span id="gstdatestart"></span></td>
-            </tr>
-            <tr>
-              <td> আবেদন শেষ</td>
-              <td><span id="gstdateend"></span></td>
-            </tr>
-            <tr>
-              <td> আবেদন আর বাকি আছে</td>
-              <td id="gstappdateLineId"><span></span></td>
-            </tr>
-            <tr>
-              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> টাকার পরিমাণ</td>
-            </tr>
-            <tr>
-              <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td id="gstauintfee"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td id="gstbuintfee"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="gstcuintfee"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td id="gstdnuintfee"></td>
-            </tr>
-            <tr>
-            <tr>
-              <td>ইউনিট— E (চারুকলা অনুষদ)</td>
-              <td id="gstenuintfee"></td>
-            </tr>
-            <tr>
-              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
-                প্রয়েজ্য</td>
-            </tr>
-            <!-- application fee -->
-
-            <tr class="gstadmitdnsection">
-              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
-            </tr>
-            <tr  class="gstadmitdnsection" style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> তারিখ </td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td id="gstaunitadmitdnop"></td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td id="gstbunitadmitdnop"></td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="gstcunitadmitdnop"></td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td id="gstdunitadmitdnop"></td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট— E (চারুকলা অনুষদ)</td>
-              <td id="gsteunitadmitdnop"></td>
-            </tr>
-
-            <tr>
-              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> তারিখ</td>
-            </tr>
-            <tr>
-              <td>ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)</td>
-              <td id="gstaexemop"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট—B (কলা ও আইন অনুষদ)</td>
-              <td  id="gstbexemop"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td  id="gstcexemop"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ)</td>
-              <td  id="gstdexemop"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট— E (চারুকলা অনুষদ)</td>
-              <td  id="gsteexemop"></td>
-            </tr>
-            <tr>
-            <tr>
-              <td>পরীক্ষার কেন্দ্র</td>
-              <td> ঢাকা রাজশাহী ও কুমিল্লা </td>
-            </tr>
-          </table>
-          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
-          <div class="button_section">
-            <a href="./src/noticfile/gst.pdf" target="_blank">সাধারণ নেটিশ</a>
-            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
-            <a href="">আবেদনের ওয়েবসাইটে</a>
-            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
-          </div>
-
-
-      
-        </div>
-
-
-// ? jun // ??================================================gst +==================================
-
-const gstappstart = new Date("2026-07-15");
-const gstappsEnd = new Date("2026-08-18");
-const gstaunitfee= 1000 + (1000gst0.01);
-const gstbunitfee= 1000 + (1000gst0.01);
-const gstcunitfee= 1000 + (1000gst0.01);
-const gstdununitfee= 1000 + (1000gst0.01);
-const gsteununitfee= 1200 + (1200gst0.01);
-const gstaunitadmitdnstart = new Date("2026-08-19");
-const gstaunitadmitdnend = new Date("2026-08-25");
-const gstbunitadmitdnstart = new Date("2026-08-22");
-const gstbunitadmitdnend = new Date("2026-08-28");
-const gstcunitadmitdnstart = new Date("2026-08-25");
-const gstcunitadmitdnend = new Date("2026-09-01");
-const gstdunitadmitdnstart = new Date("2026-08-28");
-const gstdunitadmitdnend = new Date("2026-09-04");
-const gsteunitadmitdnstart = new Date("2026-08-28");
-const gsteunitadmitdnend = new Date("2026-09-04");
-const gstaunitexamdate =new Date("2026-08-08");
-const gstaunitexamtime = `${am10bd}`;
-const gstbunitexamdate =new Date("2026-08-15");
-const gstbunitexamtime = `${am10bd}${halfbd}`;
-const gstcunitexamdate =new Date("2026-08-22");
-const gstcunitexamtime = `${am10bd}`;
-const gstdunitexamdate =new Date("2026-08-03");
-const gstdunitexamtime = `${pm04bd}`;
-const gsteunitexamdate =new Date("2026-08-29");
-const gsteunitexamtime = `${pm04bd}`;
- // ??================================================gst +==================================
-
-
-  // ??================================================gst +==================================
-const gstaunitfeebd = gstaunitfee.toLocaleString("bn-BD");
-const gstaunitfeeword = numberToBanglaWords(gstaunitfee);
-const gstaunitfeebdword = `${gstaunitfeebd} (${gstaunitfeeword})`;
-document.getElementById("gstauintfee").innerHTML=gstaunitfeebdword
-const gstbunitfeebd = gstbunitfee.toLocaleString("bn-BD");
-const gstbunitfeeword = numberToBanglaWords(gstbunitfee);
-const gstbunitfeebdword = `${gstbunitfeebd} (${gstbunitfeeword})`
-document.getElementById("gstbuintfee").innerHTML=gstbunitfeebdword;
-const gstcunitfeebd = gstcunitfee.toLocaleString("bn-BD");
-const gstcunitfeeword = numberToBanglaWords(gstcunitfee);
-const gstcunitfeebdword = `${gstcunitfeebd} (${gstcunitfeeword})`
-document.getElementById("gstcuintfee").innerHTML=gstcunitfeebdword;
-const gstdunitfeebd = gstdununitfee.toLocaleString("bn-BD");
-const gstdunitfeeword = numberToBanglaWords(gstdununitfee);
-const gstdunitfeebdword = `${gstdunitfeebd} (${gstdunitfeeword})`
-document.getElementById("gstdnuintfee").innerHTML=gstdunitfeebdword;
-const gsteunitfeebd = gsteununitfee.toLocaleString("bn-BD");
-const gsteunitfeeword = numberToBanglaWords(gsteununitfee);
-const gsteunitfeebdword = `${gsteunitfeebd} (${gsteunitfeeword})`
-document.getElementById("gstenuintfee").innerHTML=gsteunitfeebdword;
-
-// fee
-const gstappstartbd = gstappstart.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("gstdatestart").innerHTML=gstappstartbd;
-const gstappsEndbd = gstappsEnd.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("gstdateend").innerHTML=gstappsEndbd;
-const gstappgstedate = Math.abs(gstappsEnd - today);
-const gstappgstedatetoday = Math.floor(gstappgstedate / (1000 gst 60 gst 60 gst 24));
-const gstappgstedatetodayebd = gstappgstedatetoday.toLocaleString("bn-bd");
-const gstappdateLineIdStyle = document.getElementById("gstappdateLineId");
-if (gstappsEnd > today) {
-  gstappdateLine = `${gstappgstedatetodayebd} দিন বাকি আছে।`;
-  gstappdateLineIdStyle.style.color = "green";
-} else if (gstappsEnd < today) {
-  gstappdateLine = `সময় অতিক্রম হয়েছে।`;
-  gstappdateLineIdStyle.style.color = "red"};
-document.getElementById("gstappdateLineId").innerHTML= gstappdateLine;
-const gstaunitadmitdnstartbd = gstaunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const gstaunitadmitdnendbd = gstaunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const gstbunitadmitdnstartbd = gstbunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const gstbunitadmitdnendbd = gstbunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const gstcunitadmitdnstartbd = gstcunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const gstcunitadmitdnendbd = gstcunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const gstdunitadmitdnstartbd = gstdunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const gstdunitadmitdnendbd = gstdunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const gsteunitadmitdnstartbd = gstdunitadmitdnstart.toLocaleDateString("bn-BD", dateBangla);
-const gsteunitadmitdnendbd = gstdunitadmitdnend.toLocaleDateString("bn-BD", dateBangla);
-const gstaunitadmitdncom = `${gstaunitadmitdnstartbd} হতে ${gstaunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("gstaunitadmitdnop").innerHTML=gstaunitadmitdncom;
-const gstbunitadmitdncom = `${gstbunitadmitdnstartbd} হতে ${gstbunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("gstbunitadmitdnop").innerHTML= gstbunitadmitdncom;
-const gstcunitadmitdncom = `${gstcunitadmitdnstartbd} হতে ${gstcunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("gstcunitadmitdnop").innerHTML= gstcunitadmitdncom;
-const gstdunitadmitdncom = `${gstdunitadmitdnstartbd} হতে ${gstdunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("gstdunitadmitdnop").innerHTML= gstdunitadmitdncom;
-const gsteunitadmitdncom = `${gsteunitadmitdnstartbd} হতে ${gsteunitadmitdnendbd} পর্যন্ত।`;
-document.getElementById("gsteunitadmitdnop").innerHTML= gsteunitadmitdncom;
-
-const gstaunitexamdatebd = gstaunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("gstaexemop").innerHTML=gstaunitexamdatebd + gstaunitexamtime ;
-const gstbunitexamdatebd = gstbunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("gstbexemop").innerHTML=gstbunitexamdatebd + gstbunitexamtime ;
-const gstcunitexamdatebd = gstcunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("gstcexemop").innerHTML=gstcunitexamdatebd + gstcunitexamtime ;
-const gstdnitexamdatebd = gstdunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("gstdexemop").innerHTML=gstdnitexamdatebd + gstdunitexamtime ;
-const gstenitexamdatebd = gsteunitexamdate.toLocaleDateString("bn-BD", dateBangla);
-document.getElementById("gsteexemop").innerHTML=gstenitexamdatebd + gsteunitexamtime ;
-  // ??================================================gst +==================================
-
-
-
-
-
-function gst() {
-  const gstoutput = document.getElementById("gst_output");
-  const gstIcon = document.getElementById("gst_icon");
-    if (gstoutput.style.display === 'none') {
-    gstoutput.style.display = 'block'; 
-    gstIcon.classList.remove('fa-plus');
-    gstIcon.classList.add('fa-minus');
-  } else {
-    gstoutput.style.display = 'none'; 
-    gstIcon.classList.remove('fa-minus');
-    gstIcon.classList.add('fa-plus');
-  }
-}
+document.querySelectorAll('.DUunitA').forEach(element =>{
+  element.innerHTML= DUInfo.UnitA[0].NameofUnit;
+}) //A uint 
+document.getElementById("DUunitAresult").innerHTML = DUInfo.UnitA[0].result;
+document.getElementById("DUunitAFee").innerHTML = `${DUInfo.UnitA[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitA[0].applyfeebd})` ; //fee
+document.getElementById("DUunitAadmitdn").innerHTML =  `${DUInfo.UnitA[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitA[0].admitdnstartTtime} হতে ${DUInfo.UnitA[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitA[0].admitdnendTime} পর্যন্ত `; //a admit 
+document.getElementById("DUunitAExam").innerHTML = `${DUInfo.UnitA[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+// B uint
+document.querySelectorAll('.DUunitB').forEach(element =>{
+  element.innerHTML= DUInfo.UnitB[0].NameofUnit;
+})
+document.getElementById("DUunitBresult").innerHTML = DUInfo.UnitB[0].result;
+document.getElementById("DUunitBFee").innerHTML = `${DUInfo.UnitB[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitB[0].applyfeebd})` ; //fee
+document.getElementById("DUunitBadmitdn").innerHTML =  `${DUInfo.UnitB[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitB[0].admitdnstartTtime} হতে ${DUInfo.UnitB[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitB[0].admitdnendTime} পর্যন্ত `; //a admit
+document.getElementById("DUunitBExam").innerHTML = `${DUInfo.UnitB[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+document.querySelectorAll('.DUunitC').forEach(element =>{
+  element.innerHTML= DUInfo.UnitC[0].NameofUnit;
+})
+document.getElementById("DUunitCresult").innerHTML = DUInfo.UnitC[0].result;
+document.getElementById("DUunitCFee").innerHTML = `${DUInfo.UnitC[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitC[0].applyfeebd})` ; //fee
+document.getElementById("DUunitCadmitdn").innerHTML =  `${DUInfo.UnitC[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitC[0].admitdnstartTtime} হতে ${DUInfo.UnitC[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitC[0].admitdnendTime} পর্যন্ত `; //a admit
+document.getElementById("DUunitCExam").innerHTML = `${DUInfo.UnitC[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+document.querySelectorAll('.DUunitD').forEach(element =>{
+  element.innerHTML= DUInfo.UnitD[0].NameofUnit;
+})
+document.getElementById("DUunitDresult").innerHTML = DUInfo.UnitD[0].result;
+document.getElementById("DUunitDFee").innerHTML = `${DUInfo.UnitD[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitD[0].applyfeebd})` ; //fee
+document.getElementById("DUunitDadmitdn").innerHTML =  `${DUInfo.UnitD[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitD[0].admitdnstartTtime} হতে ${DUInfo.UnitD[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitD[0].admitdnendTime} পর্যন্ত `; //a admit
+document.getElementById("DUunitDExam").innerHTML = `${DUInfo.UnitD[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+const dudateendstyle = document.getElementById("timedu");
+const DUendDate =universityName.DU[0].appDateend.toISOString().split('T')[0];
+const dustingtodate =new Date(DUendDate);
+const DUDaysEng = Math.abs(dustingtodate  - today);
+const DUDaysEngs = Math.floor(DUDaysEng / (1000 * 60 * 60 * 24) +1);
+const DUDaysEngbd = DUDaysEngs.toLocaleString("bn-bd");
+if (DUendDate > todays) {
+  gstappdateLine = ` আবেদন চলমাান এবং ${DUDaysEngbd} দিন বাকি আছে।  `;
+  dudateendstyle.style.color = "green";
+} else if (DUendDate === todays) {
+  gstappdateLine = ` আজকেই শেষ দিন।`;
+  dudateendstyle.style.color = "red"}
+   else if (DUendDate < todays) {
+  gstappdateLine  = ` সময় অতিক্রম হয়েছে।`;
+  dudateendstyle.style.color = "black";
+  dudateendstyle.style.textDecoration = "line-through red";
+  };
+  document.getElementById("timedu").innerHTML =gstappdateLine;
