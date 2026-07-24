@@ -20,7 +20,7 @@
 /* Never use display block */
 /* ?outz */
 #du_output {
-  display: block !important;
+  /* display: block !important; */
 }
 /* #du_output {
   display: none;
