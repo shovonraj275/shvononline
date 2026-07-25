@@ -255,7 +255,7 @@
             <tr>
             <tr>
               <td>পরীক্ষার কেন্দ্র</td>
-              <td> বিভাগীয় শহরে অনুষ্টিত হবে</td>
+              <td id="duexamcenter"></td>
             </tr>
           </table>
           <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
@@ -265,36 +265,34 @@
       <div class="NotiecList">
         <div class="nameofevent" onclick="ru()"> 
           <div class="nameofevent_content icons"><i id="ru_icon" class="fa-solid fa-plus"> </i></div> 
-          <div class="nameofevent_content">রাজশাহী বিশ্ববিদ্যালয় </div> 
+          <div class="nameofevent_content" id="RUNmaeEng"> </div> 
           
           </div>
         <div id="ru_output" style="display: none;" class="output">
-          <h1 class="nameofuniv"> রাজশাহী বিশ্ববিদ্যালয়</h1>
-          <div class="logoofunvi"><img src="./src/img/ru.png" class="logoofunvio" alt="du"></div>
+          <h1 class="nameofuniv" id="RUNmaeBng"></h1>
+          <div class="logoofunvi" id="RUImg"></div>
 
-          <table>
+           <table>
             <tr>
-              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
+              <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিট</td>
-              <td> যোগ্যতা</td>
+              <td> ফলাফল</td>
             </tr>
             <tr>
-              <td>ক - ইউনিট (মানবিক শাখা) </td>
-              <td style="width: 50%;text-align: justify;">মানবিক শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও
-                এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.০০ সহ মোট জিপিএ ৭.০০ পেতে হবে।</td>
+              <td class="RUunitA"></td>
+              <td style="width: 50%;text-align: justify;" id="RUunitAresult"
+              > </td>
             </tr>
             <tr>
-              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td style="width: 50%; text-align: justify;">বাণিজ্য শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও
-                এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম
-                জিপিএ ৩.০০ সহ মোট জিপিএ ৭.০০ পেতে হবে। </td>
+              <td class="RUunitB"></td>
+              <!-- <td>খ - ইউনিট (মানবিক শাখা)</td> -->
+              <td style="width: 50%; text-align: justify;" id="RUunitBresult"></td>
             </tr>
             <tr>
-              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান শাখা থেকে উত্তীর্ণ আবেদনকারীদের এসএসসি/সমমান ও
-                এইচএসসি/সমমান উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.৫০ সহ মোট জিপিএ ৮.০০ পেতে হবে। </td>
+              <td class="RUunitC"></td>
+              <td style="width: 50%;text-align: justify;" id="RUunitCresult"></td>
             </tr>
             <tr>
               <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
@@ -305,11 +303,11 @@
             </tr>
             <tr>
               <td> আবেদন শেষ</td>
-              <td><span id="rudateend"></span></td>
+              <td><span id="RUstyle"> <span id="rudateend"></span></span></span></td>
             </tr>
             <tr>
-              <td> আবেদন আর বাকি আছে</td>
-              <td id="ruappdateLineId"><span></span></td>
+              <td>আবেদন আর বাকি আছে</td>
+              <td id="timeru"></td>
             </tr>
             <tr>
               <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
@@ -319,16 +317,16 @@
               <td> টাকার পরিমাণ</td>
             </tr>
             <tr>
-              <td>ক - ইউনিট (মানবিক শাখা)</td>
-              <td id="ruauintfee"></td>
+              <td class="RUunitA"></td>
+              <td id="RUunitAFee"></td>
             </tr>
             <tr>
-              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="rubuintfee"></td>
+              <td class="RUunitB"></td>
+              <td id="RUunitBFee"></td>
             </tr>
             <tr>
-              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td id="rucuintfee"></td>
+              <td class="RUunitC"></td>
+              <td id="RUunitCFee"></td>
             </tr>
             <tr>
               <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
@@ -344,16 +342,16 @@
               <td> তারিখ </td>
             </tr>
             <tr class="ruadmitdnsection">
-              <td>ক - ইউনিট (মানবিক শাখা) </td>
-              <td id="ruaunitadmitdnop"></td>
+              <td class="RUunitA"></td>
+              <td id="RUunitAadmitdn"></td>
+            </tr>
+            <tr class="ruadmitdnsection"> 
+              <td class="RUunitB"></td>
+              <td id="RUunitBadmitdn"></td>
             </tr>
             <tr class="ruadmitdnsection">
-              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="rubunitadmitdnop"></td>
-            </tr>
-            <tr class="ruadmitdnsection">
-              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td id="rucunitadmitdnop"></td>
+              <td class="RUunitC"></td>
+              <td id="RUunitCadmitdn"></td>
             </tr>
             <tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
@@ -363,34 +361,24 @@
               <td> তারিখ</td>
             </tr>
             <tr>
-              <td>ক - ইউনিট (মানবিক শাখা)</td>
-              <td id="ruaexemop"></td>
+              <td class="RUunitA"></td>
+              <td id="RUunitAExam"></td>
             </tr>
             <tr>
-              <td>খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="rubexemop"></td>
+              <td class="RUunitB"></td>
+              <td id="RUunitBExam"></td>
             </tr>
             <tr>
-              <td>গ - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td id="rucexemop"></td>
+              <td class="RUunitC"></td>
+              <td id="RUunitCExam"></td>
             </tr>
-            <tr>
-            <tr>
             <tr>
               <td>পরীক্ষার কেন্দ্র</td>
-              <td> নিজেস্ব ক্যাম্পাস</td>
+              <td id="ruexamcenter"></td>
             </tr>
           </table>
           <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
-          <div class="button_section">
-            <a href="./src/noticfile/RU.pdf" target="_blank">সাধারণ নেটিশ</a>
-            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
-            <a href="">আবেদনের ওয়েবসাইটে</a>
-            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
-          </div>
+          <div class="button_section" id="RUNotice"></div>
 
 
         </div>
@@ -398,10 +386,139 @@
       <div class="NotiecList">
         <div class="nameofevent" onclick="jnu()">
           <div class="nameofevent_content icons"><i id="jnu_icon" class="fa-solid fa-plus"> </i></div> 
-          <div class="nameofevent_content">জগন্নাথ বিশ্ববিদ্যালয় </div>   
+          <div class="nameofevent_content" id="JNUNmaeEng"> </div>   
         </div>
         
         <div id="jnu_output" style="display: none;" class="output">
+          <h1 class="nameofuniv" id="JNUNmaeBng"> জগন্নাথ বিশ্ববিদ্যালয়, ঢাকা</h1>
+          <div class="logoofunvi" id="JNUImg"></div>
+            <table>
+            <tr>
+              <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> ফলাফল</td>
+            </tr>
+            <tr>
+              <td class="JNUunitA"></td>
+              <td style="width: 50%;text-align: justify;" id="JNUunitAresult"
+              > </td>
+            </tr>
+            <tr>
+              <td class="JNUunitB"></td>
+              <!-- <td>খ - ইউনিট (মানবিক শাখা)</td> -->
+              <td style="width: 50%; text-align: justify;" id="JNUunitBresult"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitC"></td>
+              <td style="width: 50%;text-align: justify;" id="JNUunitCresult"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitD"></td>
+              <td style="width: 50%;text-align: justify;" id="JNUunitDresult"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>
+            <tr>
+              <td>আবেদন শুরু</td>
+              <td><span id="jnudatestart"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন শেষ</td>
+              <td><span id="JNUstyle"> <span id="jnudateend"></span></span></span></td>
+            </tr>
+            <tr>
+              <td>আবেদন আর বাকি আছে</td>
+              <td id="timejnu"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>
+            <tr>
+              <td class="JNUunitA"></td>
+              <td id="JNUunitAFee"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitB"></td>
+              <td id="JNUunitBFee"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitC"></td>
+              <td id="JNUunitCFee"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitD"></td>
+              <td id="JNUunitDFee"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
+            </tr>
+            <!-- application fee -->
+
+            <tr class="jnuadmitdnsection">
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr class="jnuadmitdnsection" style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr class="jnuadmitdnsection">
+              <td class="JNUunitA"></td>
+              <td id="JNUunitAadmitdn"></td>
+            </tr>
+            <tr class="jnuadmitdnsection"> 
+              <td class="JNUunitB"></td>
+              <td id="JNUunitBadmitdn"></td>
+            </tr>
+            <tr class="jnuadmitdnsection">
+              <td class="JNUunitC"></td>
+              <td id="JNUunitCadmitdn"></td>
+            </tr>
+            <tr class="jnuadmitdnsection">
+              <td class="JNUunitD"></td>
+              <td id="JNUunitDadmitdn"></td>
+            </tr>
+
+            <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ</td>
+            </tr>
+            <tr>
+              <td class="JNUunitA"></td>
+              <td id="JNUunitAExam"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitB"></td>
+              <td id="JNUunitBExam"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitC"></td>
+              <td id="JNUunitCExam"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitD"></td>
+              <td id="JNUunitDExam"></td>
+            </tr>
+            <tr>
+            <tr>
+              <td>পরীক্ষার কেন্দ্র</td>
+              <td id="jnuexamcenter"></td>
+            </tr>
+          </table>
+          <div class="button_section" id="JNUNotice"></div>
+
+        </div>
+        <div  style="display: none;" class="output">
           <h1 class="nameofuniv"> জগন্নাথ বিশ্ববিদ্যালয়, ঢাকা</h1>
           <div class="logoofunvi"><img src="./src/img/jnu.png" class="logoofunvio" alt="Jagannath University"></div>
 
@@ -554,15 +671,6 @@
             </tr>
           </table>
           <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
-          <div class="button_section">
-            <a href="./src/noticfile/JNU.pdf" target="_blank">সাধারণ নেটিশ</a>
-            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
-            <a href="">আবেদনের ওয়েবসাইটে</a>
-            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
-          </div>
 
 
 

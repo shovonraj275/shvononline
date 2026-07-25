@@ -1,48 +1,180 @@
+  <table>
+            <tr>
+              <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> ফলাফল</td>
+            </tr>
+            <tr>
+              <td class="JNUunitA"></td>
+              <td style="width: 50%;text-align: justify;" id="JNUunitAresult"
+              > </td>
+            </tr>
+            <tr>
+              <td class="JNUunitB"></td>
+              <!-- <td>খ - ইউনিট (মানবিক শাখা)</td> -->
+              <td style="width: 50%; text-align: justify;" id="JNUunitBresult"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitC"></td>
+              <td style="width: 50%;text-align: justify;" id="JNUunitCresult"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitD"></td>
+              <td style="width: 50%;text-align: justify;" id="JNUunitDresult"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>
+            <tr>
+              <td>আবেদন শুরু</td>
+              <td><span id="jnudatestart"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন শেষ</td>
+              <td><span id="JNUstyle"> <span id="jnudateend"></span></span></span></td>
+            </tr>
+            <tr>
+              <td>আবেদন আর বাকি আছে</td>
+              <td id="timejnu"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>
+            <tr>
+              <td class="JNUunitA"></td>
+              <td id="JNUunitAFee"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitB"></td>
+              <td id="JNUunitBFee"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitC"></td>
+              <td id="JNUunitCFee"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitD"></td>
+              <td id="JNUunitDFee"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
+            </tr>
+            <!-- application fee -->
 
-document.querySelectorAll('.DUunitA').forEach(element =>{
-  element.innerHTML= DUInfo.UnitA[0].NameofUnit;
-}) //A uint 
-document.getElementById("DUunitAresult").innerHTML = DUInfo.UnitA[0].result;
-document.getElementById("DUunitAFee").innerHTML = `${DUInfo.UnitA[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitA[0].applyfeebd})` ; //fee
-document.getElementById("DUunitAadmitdn").innerHTML =  `${DUInfo.UnitA[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitA[0].admitdnstartTtime} হতে ${DUInfo.UnitA[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitA[0].admitdnendTime} পর্যন্ত `; //a admit 
-document.getElementById("DUunitAExam").innerHTML = `${DUInfo.UnitA[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+            <tr class="jnuadmitdnsection">
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr class="jnuadmitdnsection" style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr class="jnuadmitdnsection">
+              <td class="JNUunitA"></td>
+              <td id="JNUunitAadmitdn"></td>
+            </tr>
+            <tr class="jnuadmitdnsection"> 
+              <td class="JNUunitB"></td>
+              <td id="JNUunitBadmitdn"></td>
+            </tr>
+            <tr class="jnuadmitdnsection">
+              <td class="JNUunitC"></td>
+              <td id="JNUunitCadmitdn"></td>
+            </tr>
+            <tr class="jnuadmitdnsection">
+              <td class="JNUunitD"></td>
+              <td id="JNUunitDadmitdn"></td>
+            </tr>
+
+            <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ</td>
+            </tr>
+            <tr>
+              <td class="JNUunitA"></td>
+              <td id="JNUunitAExam"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitB"></td>
+              <td id="JNUunitBExam"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitC"></td>
+              <td id="JNUunitCExam"></td>
+            </tr>
+            <tr>
+              <td class="JNUunitD"></td>
+              <td id="JNUunitDExam"></td>
+            </tr>
+            <tr>
+            <tr>
+              <td>পরীক্ষার কেন্দ্র</td>
+              <td id="jnuexamcenter"></td>
+            </tr>
+          </table>
+
+document.getElementById("JNUNmaeEng").innerHTML = universityName.JNU[0].NameEng;//main name  jnu
+document.getElementById("JNUNmaeBng").innerHTML = universityName.JNU[0].NameBng; // outp name  jnu
+document.getElementById("JNUImg").innerHTML = `<img src="./src/img/${universityName.JNU[0].Images}" class="logoofunvio" alt="jnu">`;//img jnu
+document.getElementById("jnudatestart").innerHTML = universityName.JNU[0].appDateStart.toLocaleDateString("bn-BD", dateBangla) + am10bd + halfbd; //time start jnu
+document.getElementById("jnudateend").innerHTML = universityName.JNU[0].appDateend.toLocaleDateString("bn-BD", dateBangla) +lastLine; //time end jnu
+document.getElementById("jnuexamcenter").innerHTML = universityName.JNU[0].examCenter;
+document.getElementById("JNUNotice").innerHTML =`<a href="./src/noticfile/${universityName.JNU[0].notice}" target="_blank"> নেটিশ</a><a href="${universityName.JNU[0].appweb}">আবেদনের ওয়েবসাইটে</a><a href="${universityName.JNU[0].mainweb}">অফিসিয়াল ওয়েবসাইটে</a>`; //link section jnu
+
+
+document.querySelectorAll('.JNUunitA').forEach(element =>{
+  element.innerHTML= JNUInfo.UnitA[0].NameofUnit;
+}) //A uint  name jnu
+document.getElementById("JNUunitAresult").innerHTML = JNUInfo.UnitA[0].result; // a unit resu;t
+document.getElementById("JNUunitAFee").innerHTML = `${JNUInfo.UnitA[0].applyfee.toLocaleString("bn-BD")}  (${JNUInfo.UnitA[0].applyfeebd})` ; // a unit fee fee
+document.getElementById("JNUunitAadmitdn").innerHTML =  `${JNUInfo.UnitA[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitA[0].admitdnstartTtime} হতে ${JNUInfo.UnitA[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitA[0].admitdnendTime} পর্যন্ত।`; //a admit  jnu 
+document.getElementById("JNUunitAExam").innerHTML = `${JNUInfo.UnitA[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`; // a unit exam date
 // B uint
-document.querySelectorAll('.DUunitB').forEach(element =>{
-  element.innerHTML= DUInfo.UnitB[0].NameofUnit;
+document.querySelectorAll('.JNUunitB').forEach(element =>{
+  element.innerHTML= JNUInfo.UnitB[0].NameofUnit; // b unit name jnu 
 })
-document.getElementById("DUunitBresult").innerHTML = DUInfo.UnitB[0].result;
-document.getElementById("DUunitBFee").innerHTML = `${DUInfo.UnitB[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitB[0].applyfeebd})` ; //fee
-document.getElementById("DUunitBadmitdn").innerHTML =  `${DUInfo.UnitB[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitB[0].admitdnstartTtime} হতে ${DUInfo.UnitB[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitB[0].admitdnendTime} পর্যন্ত `; //a admit
-document.getElementById("DUunitBExam").innerHTML = `${DUInfo.UnitB[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
-document.querySelectorAll('.DUunitC').forEach(element =>{
-  element.innerHTML= DUInfo.UnitC[0].NameofUnit;
-})
-document.getElementById("DUunitCresult").innerHTML = DUInfo.UnitC[0].result;
-document.getElementById("DUunitCFee").innerHTML = `${DUInfo.UnitC[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitC[0].applyfeebd})` ; //fee
-document.getElementById("DUunitCadmitdn").innerHTML =  `${DUInfo.UnitC[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitC[0].admitdnstartTtime} হতে ${DUInfo.UnitC[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitC[0].admitdnendTime} পর্যন্ত `; //a admit
-document.getElementById("DUunitCExam").innerHTML = `${DUInfo.UnitC[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
-document.querySelectorAll('.DUunitD').forEach(element =>{
-  element.innerHTML= DUInfo.UnitD[0].NameofUnit;
-})
-document.getElementById("DUunitDresult").innerHTML = DUInfo.UnitD[0].result;
-document.getElementById("DUunitDFee").innerHTML = `${DUInfo.UnitD[0].applyfee.toLocaleString("bn-BD")}  (${DUInfo.UnitD[0].applyfeebd})` ; //fee
-document.getElementById("DUunitDadmitdn").innerHTML =  `${DUInfo.UnitD[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitD[0].admitdnstartTtime} হতে ${DUInfo.UnitD[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${DUInfo.UnitD[0].admitdnendTime} পর্যন্ত `; //a admit
-document.getElementById("DUunitDExam").innerHTML = `${DUInfo.UnitD[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
-const dudateendstyle = document.getElementById("timedu");
-const DUendDate =universityName.DU[0].appDateend.toISOString().split('T')[0];
-const dustingtodate =new Date(DUendDate);
-const DUDaysEng = Math.abs(dustingtodate  - today);
-const DUDaysEngs = Math.floor(DUDaysEng / (1000 * 60 * 60 * 24) +1);
-const DUDaysEngbd = DUDaysEngs.toLocaleString("bn-bd");
-if (DUendDate > todays) {
-  gstappdateLine = ` আবেদন চলমাান এবং ${DUDaysEngbd} দিন বাকি আছে।  `;
-  dudateendstyle.style.color = "green";
-} else if (DUendDate === todays) {
-  gstappdateLine = ` আজকেই শেষ দিন।`;
-  dudateendstyle.style.color = "red"}
-   else if (DUendDate < todays) {
-  gstappdateLine  = ` সময় অতিক্রম হয়েছে।`;
-  dudateendstyle.style.color = "black";
-  dudateendstyle.style.textDecoration = "line-through red";
+document.getElementById("JNUunitBresult").innerHTML = JNUInfo.UnitB[0].result; //b unit resutlt jnu 
+document.getElementById("JNUunitBFee").innerHTML = `${JNUInfo.UnitB[0].applyfee.toLocaleString("bn-BD")}  (${JNUInfo.UnitB[0].applyfeebd})` ; //b unit fee  jnu
+document.getElementById("JNUunitBadmitdn").innerHTML =  `${JNUInfo.UnitB[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitB[0].admitdnstartTtime} হতে ${JNUInfo.UnitB[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitB[0].admitdnendTime} পর্যন্ত।`; //b unit admit jnu
+document.getElementById("JNUunitBExam").innerHTML = `${JNUInfo.UnitB[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`; //b unit exam date jnu
+document.querySelectorAll('.JNUunitC').forEach(element =>{
+  element.innerHTML= JNUInfo.UnitC[0].NameofUnit;
+}) // c unit name jnu 
+document.getElementById("JNUunitCresult").innerHTML = JNUInfo.UnitC[0].result; // c unit result  jnu 
+document.getElementById("JNUunitCFee").innerHTML = `${JNUInfo.UnitC[0].applyfee.toLocaleString("bn-BD")}  (${JNUInfo.UnitC[0].applyfeebd})` ; // c unit  fee
+document.getElementById("JNUunitCadmitdn").innerHTML =  `${JNUInfo.UnitC[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitC[0].admitdnstartTtime} হতে ${JNUInfo.UnitC[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitC[0].admitdnendTime} পর্যন্ত।`; // C unit admit jnu
+document.getElementById("JNUunitCExam").innerHTML = `${JNUInfo.UnitC[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`; // C unit exam time
+document.querySelectorAll('.JNUunitD').forEach(element =>{
+  element.innerHTML= JNUInfo.UnitD[0].NameofUnit;
+}) // d unit
+document.getElementById("JNUunitDresult").innerHTML = JNUInfo.UnitD[0].result; // d unit 
+document.getElementById("JNUunitDFee").innerHTML = `${JNUInfo.UnitD[0].applyfee.toLocaleString("bn-BD")}  (${JNUInfo.UnitD[0].applyfeebd})` ; // d unit  fee
+document.getElementById("JNUunitDadmitdn").innerHTML =  `${JNUInfo.UnitD[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitD[0].admitdnstartTtime} হতে ${JNUInfo.UnitD[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitD[0].admitdnendTime} পর্যন্ত `; //a admit
+document.getElementById("JNUunitDExam").innerHTML = `${JNUInfo.UnitD[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+const jnudateendstyle = document.getElementById("timejnu"); //html dom 
+const JNUendDate =universityName.JNU[0].appDateend.toISOString().split('T')[0]; // object outupt to string 
+const jnustingtodate =new Date(JNUendDate); // into a date
+const JNUDaysEng = Math.abs(jnustingtodate  - today); // find out days
+const JNUDaysEngs = Math.floor(JNUDaysEng / (1000 * 60 * 60 * 24) +1); // convate to date
+const JNUDaysEngbd = JNUDaysEngs.toLocaleString("bn-bd"); // convate into bangla 
+if (JNUendDate > todays) {
+  jnuappdateLine = ` আবেদন চলমাান এবং ${JNUDaysEngbd} দিন বাকি আছে।  `;
+  jnudateendstyle.style.color = "green";
+} else if (JNUendDate === todays) {
+  jnuappdateLine = ` আজকেই শেষ দিন।`;
+  jnudateendstyle.style.color = "red"}
+   else if (JNUendDate < todays) {
+  jnuappdateLine  = ` সময় অতিক্রম হয়েছে।`;
+  jnudateendstyle.style.color = "black";
+  jnudateendstyle.style.textDecoration = "line-through red";
   };
-  document.getElementById("timedu").innerHTML =gstappdateLine;
+  document.getElementById("timejnu").innerHTML =jnuappdateLine;
