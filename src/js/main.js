@@ -507,13 +507,27 @@ const universityName = {
       // 0
       NameEng: "Jagannath  university",
       NameBng: "জগন্নাথ  বিশ্ববিদ্যালয়",
-      Images: "JNU.png",
+      Images: "jnu.png",
       appDateStart: new Date("2026-07-16"),
       appDateend: new Date("2026-08-03"),
       examCenter: "নিজেস্ব ক্যাম্পাস",
       mainweb: "",
       appweb: "",
-      notice: "RU.pdf",
+      notice: "JNU.pdf",
+    },
+  ],
+  GST: [
+    {
+      // 0
+      NameEng: "General, Science and Technology",
+      NameBng: " সাধারণ, বিজ্ঞান এবং প্রযুক্তি",
+      Images: "jnu.png",
+      appDateStart: new Date("2026-07-16"),
+      appDateend: new Date("2026-08-03"),
+      examCenter: "নিজেস্ব ক্যাম্পাস",
+      mainweb: "",
+      appweb: "",
+      notice: "JNU.pdf",
     },
   ],
 };
@@ -565,6 +579,16 @@ document.getElementById("jnuexamcenter").innerHTML =
   universityName.JNU[0].examCenter;
 document.getElementById("JNUNotice").innerHTML =
   `<a href="./src/noticfile/${universityName.JNU[0].notice}" target="_blank"> নেটিশ</a><a href="${universityName.JNU[0].appweb}">আবেদনের ওয়েবসাইটে</a><a href="${universityName.JNU[0].mainweb}">অফিসিয়াল ওয়েবসাইটে</a>`; //link section jnu
+
+  // ============================================
+  
+document.getElementById("GSTNmaeEng").innerHTML = universityName.GST[0].NameEng;//main name  gst
+document.getElementById("GSTNmaeBng").innerHTML = universityName.GST[0].NameBng; // outp name  gst
+// document.getElementById("GSTImg").innerHTML = `<img src="./src/img/${universityName.GST[0].Images}" class="logoofunvio" alt="gst">`;//img gst
+document.getElementById("gstdatestart").innerHTML = universityName.GST[0].appDateStart.toLocaleDateString("bn-BD", dateBangla) + am10bd + halfbd; //time start gst
+document.getElementById("gstdateend").innerHTML = universityName.GST[0].appDateend.toLocaleDateString("bn-BD", dateBangla) +lastLine; //time end gst
+document.getElementById("gstexamcenter").innerHTML = universityName.GST[0].examCenter;
+document.getElementById("GSTNotice").innerHTML =`<a href="./src/noticfile/${universityName.GST[0].notice}" target="_blank"> নেটিশ</a><a href="${universityName.GST[0].appweb}">আবেদনের ওয়েবসাইটে</a><a href="${universityName.GST[0].mainweb}">অফিসিয়াল ওয়েবসাইটে</a>`; //link section gst
 
 const DUInfo = {
   UnitA: [
@@ -687,8 +711,8 @@ const RUInfo = {
 const JNUInfo = {
   UnitA: [
     {
-      NameofUnit: "ক - ইউনিট (বিজ্ঞান শাখা)",
-      result:"মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ         মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ বিজ্ঞান বিভাগ হতে ন্যূনতম ৩.৫০ এবং্রাপ্ত জিপিএ-দ্বয়ের যোগফল ন্যূনতম ৮.০ হতে হবে।", //result
+      NameofUnit: "ইউনিট—A (বিজ্ঞান ও লাইফ এন্ড আর্থ সায়েন্স অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)",
+      result:"বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ) এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.২৫ এর কম নয়।", //result
       applyfee: 1100,
       applyfeebd: numberToBanglaWords(1100),
       admitdnstart: new Date("2026-08-03"),
@@ -702,9 +726,8 @@ const JNUInfo = {
   ],
   UnitB: [
     {
-      NameofUnit: "খ - ইউনিট (মানবিক শাখা)",
-      result:
-        "মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ মানবিক বিভাগ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল ন্যূনতম ৮.০ হতে হবে।", //result
+      NameofUnit: "ইউনিট—B (কলা ও আইন অনুষদ)",
+      result: "বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
       applyfee: 1100,
       applyfeebd: numberToBanglaWords(1100),
       admitdnstart: new Date("2026-08-03"),
@@ -718,9 +741,8 @@ const JNUInfo = {
   ],
   UnitC: [
     {
-      NameofUnit: "গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)",
-      result:
-        "মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ব্যবসায় শিক্ষা শাখা হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল ন্যূনতম ৮.০ হতে হবে।", //result
+      NameofUnit: "ইউনিট - C (ব্যবসায় শিক্ষা শাখা)",
+      result:"বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
       applyfee: 1100,
       applyfeebd: numberToBanglaWords(1100),
       admitdnstart: new Date("2026-08-03"),
@@ -734,9 +756,101 @@ const JNUInfo = {
   ],
   UnitD: [
     {
-      NameofUnit: "ঘ - ইউনিট (বিভাগ পরিবর্তন) ",
-      result:
-        "মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল ন্যূনতম ৮.০ হতে হবে। উলেখ্য সকল বিভাগে শিক্ষার্থী আবেদন করতে পাবে।", //result
+      NameofUnit: "ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ) ",
+      result:"বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
+      applyfee: 1100,
+      applyfeebd: numberToBanglaWords(1100),
+      admitdnstart: new Date("2026-08-03"),
+      admitdnstartTtime: "",
+      // admitdnstartTtime : `${pm04bd} ${halfbd}`,
+      admitdnend: new Date("2026-08-05"),
+      admitdnendTime: `${lastLine} `,
+      examdate: new Date("2026-08-15"),
+      examtime: `${am10bd}${halfbd}`,
+    },
+  ],
+  UnitE: [
+    {
+      NameofUnit: "ইউনিট —E (চারুকলা অনুষদ) ",
+      result:"বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
+      applyfee: 1100,
+      applyfeebd: numberToBanglaWords(1100),
+      admitdnstart: new Date("2026-08-03"),
+      admitdnstartTtime: "",
+      // admitdnstartTtime : `${pm04bd} ${halfbd}`,
+      admitdnend: new Date("2026-08-05"),
+      admitdnendTime: `${lastLine} `,
+      examdate: new Date("2026-08-15"),
+      examtime: `${am10bd}${halfbd}`,
+    },
+  ],
+};
+// ?? ======================================
+const GSTInfo = {
+  UnitA: [
+    {
+      NameofUnit: "ইউনিট—A (বিজ্ঞান অনুষদ) বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ)",
+      result:"বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ) এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.২৫ এর কম নয়।", //result
+      applyfee: 1100,
+      applyfeebd: numberToBanglaWords(1100),
+      admitdnstart: new Date("2026-08-03"),
+      admitdnstartTtime: "",
+      // admitdnstartTtime : `${pm04bd} ${halfbd}`,
+      admitdnend: new Date("2026-08-05"),
+      admitdnendTime: `${lastLine}`,
+      examdate: new Date("2026-08-15"),
+      examtime: `${am10bd}${halfbd}`,
+    },
+  ],
+  UnitB: [
+    {
+      NameofUnit: "ইউনিট—B (কলা ও আইন অনুষদ)",
+      result: "বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
+      applyfee: 1100,
+      applyfeebd: numberToBanglaWords(1100),
+      admitdnstart: new Date("2026-08-03"),
+      admitdnstartTtime: "",
+      // admitdnstartTtime : `${pm04bd} ${halfbd}`,
+      admitdnend: new Date("2026-08-05"),
+      admitdnendTime: `${lastLine}`,
+      examdate: new Date("2026-08-15"),
+      examtime: `${am10bd}${halfbd}`,
+    },
+  ],
+  UnitC: [
+    {
+      NameofUnit: "ইউনিট - C (ব্যবসায় শিক্ষা শাখা)",
+      result:"বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
+      applyfee: 1100,
+      applyfeebd: numberToBanglaWords(1100),
+      admitdnstart: new Date("2026-08-03"),
+      admitdnstartTtime: "",
+      // admitdnstartTtime : `${pm04bd} ${halfbd}`,
+      admitdnend: new Date("2026-08-05"),
+      admitdnendTime: `${lastLine}`,
+      examdate: new Date("2026-08-20"),
+      examtime: `${am10bd}${halfbd}`,
+    },
+  ],
+  UnitD: [
+    {
+      NameofUnit: "ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ) ",
+      result:"বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
+      applyfee: 1100,
+      applyfeebd: numberToBanglaWords(1100),
+      admitdnstart: new Date("2026-08-03"),
+      admitdnstartTtime: "",
+      // admitdnstartTtime : `${pm04bd} ${halfbd}`,
+      admitdnend: new Date("2026-08-05"),
+      admitdnendTime: `${lastLine} `,
+      examdate: new Date("2026-08-15"),
+      examtime: `${am10bd}${halfbd}`,
+    },
+  ],
+  UnitE: [
+    {
+      NameofUnit: "ইউনিট —E (চারুকলা অনুষদ) ",
+      result:"বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।", //result
       applyfee: 1100,
       applyfeebd: numberToBanglaWords(1100),
       admitdnstart: new Date("2026-08-03"),
@@ -895,6 +1009,13 @@ document.getElementById("JNUunitDresult").innerHTML = JNUInfo.UnitD[0].result; /
 document.getElementById("JNUunitDFee").innerHTML = `${JNUInfo.UnitD[0].applyfee.toLocaleString("bn-BD")}  (${JNUInfo.UnitD[0].applyfeebd})` ; // d unit  fee
 document.getElementById("JNUunitDadmitdn").innerHTML =  `${JNUInfo.UnitD[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitD[0].admitdnstartTtime} হতে ${JNUInfo.UnitD[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitD[0].admitdnendTime} পর্যন্ত `; //a admit
 document.getElementById("JNUunitDExam").innerHTML = `${JNUInfo.UnitD[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+document.querySelectorAll('.JNUunitE').forEach(element =>{
+  element.innerHTML= JNUInfo.UnitE[0].NameofUnit;
+}) // e unit
+document.getElementById("JNUunitEresult").innerHTML = JNUInfo.UnitE[0].result; // d unit 
+document.getElementById("JNUunitEFee").innerHTML = `${JNUInfo.UnitE[0].applyfee.toLocaleString("bn-BD")}  (${JNUInfo.UnitE[0].applyfeebd})` ; // d unit  fee
+document.getElementById("JNUunitEadmitdn").innerHTML =  `${JNUInfo.UnitE[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitE[0].admitdnstartTtime} হতে ${JNUInfo.UnitE[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${JNUInfo.UnitE[0].admitdnendTime} পর্যন্ত `; //a admit
+document.getElementById("JNUunitEExam").innerHTML = `${JNUInfo.UnitD[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
 const jnudateendstyle = document.getElementById("timejnu"); //html dom 
 const JNUendDate =universityName.JNU[0].appDateend.toISOString().split('T')[0]; // object outupt to string 
 const jnustingtodate =new Date(JNUendDate); // into a date
@@ -913,3 +1034,53 @@ if (JNUendDate > todays) {
   jnudateendstyle.style.textDecoration = "line-through red";
   };
   document.getElementById("timejnu").innerHTML =jnuappdateLine;
+
+  
+document.querySelectorAll('.GSTunitA').forEach(element =>{
+  element.innerHTML= GSTInfo.UnitA[0].NameofUnit;
+}) //A uint  name gst
+document.getElementById("GSTunitAresult").innerHTML = GSTInfo.UnitA[0].result; // a unit resu;t
+document.getElementById("GSTunitAFee").innerHTML = `${GSTInfo.UnitA[0].applyfee.toLocaleString("bn-BD")}  (${GSTInfo.UnitA[0].applyfeebd})` ; // a unit fee fee
+document.getElementById("GSTunitAadmitdn").innerHTML =  `${GSTInfo.UnitA[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitA[0].admitdnstartTtime} হতে ${GSTInfo.UnitA[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitA[0].admitdnendTime} পর্যন্ত।`; //a admit  gst 
+document.getElementById("GSTunitAExam").innerHTML = `${GSTInfo.UnitA[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`; // a unit exam date
+// B uint
+document.querySelectorAll('.GSTunitB').forEach(element =>{
+  element.innerHTML= GSTInfo.UnitB[0].NameofUnit; // b unit name gst 
+})
+document.getElementById("GSTunitBresult").innerHTML = GSTInfo.UnitB[0].result; //b unit resutlt gst 
+document.getElementById("GSTunitBFee").innerHTML = `${GSTInfo.UnitB[0].applyfee.toLocaleString("bn-BD")}  (${GSTInfo.UnitB[0].applyfeebd})` ; //b unit fee  gst
+document.getElementById("GSTunitBadmitdn").innerHTML =  `${GSTInfo.UnitB[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitB[0].admitdnstartTtime} হতে ${GSTInfo.UnitB[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitB[0].admitdnendTime} পর্যন্ত।`; //b unit admit gst
+document.getElementById("GSTunitBExam").innerHTML = `${GSTInfo.UnitB[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`; //b unit exam date gst
+document.querySelectorAll('.GSTunitC').forEach(element =>{
+  element.innerHTML= GSTInfo.UnitC[0].NameofUnit;
+}) // c unit name gst 
+document.getElementById("GSTunitCresult").innerHTML = GSTInfo.UnitC[0].result; // c unit result  gst 
+document.getElementById("GSTunitCFee").innerHTML = `${GSTInfo.UnitC[0].applyfee.toLocaleString("bn-BD")}  (${GSTInfo.UnitC[0].applyfeebd})` ; // c unit  fee
+document.getElementById("GSTunitCadmitdn").innerHTML =  `${GSTInfo.UnitC[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitC[0].admitdnstartTtime} হতে ${GSTInfo.UnitC[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitC[0].admitdnendTime} পর্যন্ত।`; // C unit admit gst
+document.getElementById("GSTunitCExam").innerHTML = `${GSTInfo.UnitC[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`; // C unit exam time
+document.querySelectorAll('.GSTunitD').forEach(element =>{
+  element.innerHTML= GSTInfo.UnitD[0].NameofUnit;
+}) // d unit
+document.getElementById("GSTunitDresult").innerHTML = GSTInfo.UnitD[0].result; // d unit 
+document.getElementById("GSTunitDFee").innerHTML = `${GSTInfo.UnitD[0].applyfee.toLocaleString("bn-BD")}  (${GSTInfo.UnitD[0].applyfeebd})` ; // d unit  fee
+document.getElementById("GSTunitDadmitdn").innerHTML =  `${GSTInfo.UnitD[0].admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitD[0].admitdnstartTtime} হতে ${GSTInfo.UnitD[0].admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${GSTInfo.UnitD[0].admitdnendTime} পর্যন্ত `; //a admit
+document.getElementById("GSTunitDExam").innerHTML = `${GSTInfo.UnitD[0].examdate.toLocaleDateString("bn-BD", dateBangla)}`;
+const gstdateendstyle = document.getElementById("timegst"); //html dom 
+const GSTendDate =universityName.GST[0].appDateend.toISOString().split('T')[0]; // object outupt to string 
+const gststingtodate =new Date(GSTendDate); // into a date
+const GSTDaysEng = Math.abs(gststingtodate  - today); // find out days
+const GSTDaysEngs = Math.floor(GSTDaysEng / (1000 * 60 * 60 * 24) +1); // convate to date
+const GSTDaysEngbd = GSTDaysEngs.toLocaleString("bn-bd"); // convate into bangla 
+if (GSTendDate > todays) {
+  gstappdateLine = ` আবেদন চলমাান এবং ${GSTDaysEngbd} দিন বাকি আছে।  `;
+  gstdateendstyle.style.color = "green";
+} else if (GSTendDate === todays) {
+  gstappdateLine = ` আজকেই শেষ দিন।`;
+  gstdateendstyle.style.color = "red"}
+   else if (GSTendDate < todays) {
+  gstappdateLine  = ` সময় অতিক্রম হয়েছে।`;
+  gstdateendstyle.style.color = "black";
+  gstdateendstyle.style.textDecoration = "line-through red";
+  };
+  document.getElementById("timegst").innerHTML =gstappdateLine;
+

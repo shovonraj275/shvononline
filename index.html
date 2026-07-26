@@ -419,6 +419,10 @@
               <td style="width: 50%;text-align: justify;" id="JNUunitDresult"></td>
             </tr>
             <tr>
+              <td class="JNUunitE"></td>
+              <td style="width: 50%;text-align: justify;" id="JNUunitEresult"></td>
+            </tr>
+            <tr>
               <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
             </tr>
             <tr>
@@ -457,6 +461,10 @@
               <td id="JNUunitDFee"></td>
             </tr>
             <tr>
+              <td class="JNUunitE"></td>
+              <td id="JNUunitEFee"></td>
+            </tr>
+            <tr>
               <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
                 প্রয়েজ্য</td>
             </tr>
@@ -485,6 +493,10 @@
               <td class="JNUunitD"></td>
               <td id="JNUunitDadmitdn"></td>
             </tr>
+            <tr class="jnuadmitdnsection">
+              <td class="JNUunitE"></td>
+              <td id="JNUunitEadmitdn"></td>
+            </tr>
 
             <tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
@@ -510,6 +522,10 @@
               <td id="JNUunitDExam"></td>
             </tr>
             <tr>
+              <td class="JNUunitE"></td>
+              <td id="JNUunitEExam"></td>
+            </tr>
+            <tr>
             <tr>
               <td>পরীক্ষার কেন্দ্র</td>
               <td id="jnuexamcenter"></td>
@@ -518,7 +534,373 @@
           <div class="button_section" id="JNUNotice"></div>
 
         </div>
-        <div  style="display: none;" class="output">
+      </div>
+      <div class="NotiecList">
+        <div class="nameofevent" onclick="cu()"> চট্টগ্রাম বিশ্ববিদ্যালয় </div>
+        <div id="cu_output" class="output">
+          <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয়</h1>
+          <div class="logoofunvi"><img src="./src/img/ru.png" class="logoofunvio" alt="du"></div>
+
+          <table>
+            <tr>
+              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
+            </tr>
+            <tr>
+              <td>ইউনিট</td>
+              <td> ফলাফল</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
+                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ বিজ্ঞান বিভাগ হতে ন্যূনতম ৩.৫০ এবং্রাপ্ত জিপিএ-দ্বয়ের যোগফল
+                ন্যূনতম ৮.০ হতে হবে। </td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td style="width: 50%; text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
+                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ মানবিক বিভাগ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল
+                ন্যূনতম ৮.০ হতে হবে। </td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
+                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ব্যবসায় শিক্ষা শাখা হতে এবং প্রপ্ত জিপিএ-দ্বয়ের
+                যোগফল ন্যূনতম ৮.০ হতে হবে। </td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
+                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল ন্যূনতম ৮.০ হতে
+                হবে। উলেখ্য সকল বিভাগে শিক্ষার্থী আবেদন করতে পাবে </td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>
+            <tr>
+              <td>আবেদন শুরু</td>
+              <td>২৯ অক্টোবর ২০২৫ দুপুর ১২:০০ টা</td>
+            </tr>
+            <tr>
+              <td> আবেদন শেষ</td>
+              <td>১৬ নভেম্বর ২০২৫ তারিখ রাত ১১:৫৯ মিনিট</td>
+            </tr>
+            <tr>
+              <td> আবেদন আর বাকি আছে</td>
+              <td> js diya kaj korbo</td>
+            </tr>
+            <!-- application fee -->
+            <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr>
+              <td>ইউনিট</td>
+              <td> তারিখ</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td> বাংলায় তারিখ আসবে</td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td>বাংলায় তারিখ আসবে</td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td>বাংলায় তারিখ আসবে</td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td>বাংলায় তারিখ আসবে</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"> আবেদন ফি </td>
+            </tr>
+            <tr>
+              <td>ইউনিট</td>
+              <td> টাকা</td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</td>
+            </tr>
+            <tr>
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr>
+              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>খ - ইউনিট (মানবিক শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
+              <td></td>
+            </tr>
+          </table>
+          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
+          <div class="button_section">
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank">সাধারষ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
+            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a>
+            <a href="">আবেদনের ওয়েবসাইটে</a>
+            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="NotiecList">
+        <div class="nameofevent"  onclick="gst()"> 
+          <div class="nameofevent_content icons"><i id="gst_icon" class="fa-solid fa-plus"> </i></div> 
+          <div class="nameofevent_content" id="GSTNmaeEng"> </div>   
+        </div>
+        <div id="gst_output" style="display: none;" class="output">
+          <h1 class="nameofuniv" id="GSTNmaeBng"></h1>
+          <!-- <div class="logoofunvi"><img src="./src/img/gst.png" class="logoofunvio" alt="Jagannath University"></div> -->
+
+           <table>
+            <tr>
+              <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> ফলাফল</td>
+            </tr>
+            <tr>
+              <td class="GSTunitA"></td>
+              <td style="width: 50%;text-align: justify;" id="GSTunitAresult"
+              > </td>
+            </tr>
+            <tr>
+              <td class="GSTunitB"></td>
+              <!-- <td>খ - ইউনিট (মানবিক শাখা)</td> -->
+              <td style="width: 50%; text-align: justify;" id="GSTunitBresult"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitC"></td>
+              <td style="width: 50%;text-align: justify;" id="GSTunitCresult"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitD"></td>
+              <td style="width: 50%;text-align: justify;" id="GSTunitDresult"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>
+            <tr>
+              <td>আবেদন শুরু</td>
+              <td><span id="gstdatestart"></span></td>
+            </tr>
+            <tr>
+              <td> আবেদন শেষ</td>
+              <td><span id="GSTstyle"> <span id="gstdateend"></span></span></span></td>
+            </tr>
+            <tr>
+              <td>আবেদন আর বাকি আছে</td>
+              <td id="timegst"></td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>
+            <tr>
+              <td class="GSTunitA"></td>
+              <td id="GSTunitAFee"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitB"></td>
+              <td id="GSTunitBFee"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitC"></td>
+              <td id="GSTunitCFee"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitD"></td>
+              <td id="GSTunitDFee"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
+                প্রয়েজ্য</td>
+            </tr>
+            <!-- application fee -->
+
+            <tr class="gstadmitdnsection">
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr class="gstadmitdnsection" style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ </td>
+            </tr>
+            <tr class="gstadmitdnsection">
+              <td class="GSTunitA"></td>
+              <td id="GSTunitAadmitdn"></td>
+            </tr>
+            <tr class="gstadmitdnsection"> 
+              <td class="GSTunitB"></td>
+              <td id="GSTunitBadmitdn"></td>
+            </tr>
+            <tr class="gstadmitdnsection">
+              <td class="GSTunitC"></td>
+              <td id="GSTunitCadmitdn"></td>
+            </tr>
+            <tr class="gstadmitdnsection">
+              <td class="GSTunitD"></td>
+              <td id="GSTunitDadmitdn"></td>
+            </tr>
+
+            <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিট</td>
+              <td> তারিখ</td>
+            </tr>
+            <tr>
+              <td class="GSTunitA"></td>
+              <td id="GSTunitAExam"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitB"></td>
+              <td id="GSTunitBExam"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitC"></td>
+              <td id="GSTunitCExam"></td>
+            </tr>
+            <tr>
+              <td class="GSTunitD"></td>
+              <td id="GSTunitDExam"></td>
+            </tr>
+            <tr>
+            <tr>
+              <td>পরীক্ষার কেন্দ্র</td>
+              <td id="gstexamcenter"></td>
+            </tr>
+          </table>
+
+          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
+          <div class="button_section" id="GSTNotice"></div>
+        </div>
+
+      </div>
+      <div class="NotiecList">
+        <div class="nameofevent" onclick="gstd()"> গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় </div>
+        <div id="gst_output" class="output">গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Illo blanditiis, et dignissimos culpa ullam exercitationem voluptatem quidem dolorem libero
+          necessitatibus eaque quisquam illum doloribus inventore ipsam quia iusto eligendi facilis?</div>
+      </div>
+    </div>
+    <div id="job" class="Organtion">
+      <h1>All Job Notice</h1>
+    </div>
+  </section>
+  <button id="toggleBtn">Toggle Content</button>
+  <!-- Element starts out displayed by default -->
+  <div id="content">This text will show and hide.HOVON</div>
+  <button id="toggleBtn2">Toggle Content</button>
+  <!-- Element starts out displayed by default -->
+  <div id="content2">This text will show and hide shovononline275.</div>
+
+  <div id="qr">
+    <div class="grid">
+      <div class="grid_content">
+        <img src="./src/img/bk.jpg" alt="" />
+        <h2>bkash</h2>
+      </div>
+      <div class="grid_content">
+        <img src="./src/img/ng.jpg" alt="" />
+        <h2>Nogad</h2>
+      </div>
+      <div class="grid_content">
+        <img src="./src/img/ro.jpg" alt="" />
+        <h2>Rocket</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="grid_content">
+        <img src="./src/img/up.jpg" alt="" />
+        <h2>Upay</h2>
+      </div>
+      <div class="grid_content">
+        <img src="./src/img/whatup.jpg" alt="" />
+        <h2>whatup</h2>
+      </div>
+      <div class="grid_content">
+        <img src="./src/img/wifi.jpg" alt="" />
+        <h2>wifi</h2>
+      </div>
+    </div>
+  </div>
+
+  <section id="input">
+    <div class="grid">
+      <div class="grid_content">
+        Enter Your Account Balance: <br />
+        <input type="number" id="amount" />
+      </div>
+      <div class="grid_content">
+        <label for="">Select Mobile Banking</label><br />
+        <select id="Shop001" onchange="hem()"></select>
+      </div>
+      <div class="grid_content">
+        <label for="">Mobile Banking Facilitys</label><br />
+        <select id="Shop003">
+          <option value="" selected disabled hidden>select</option>
+        </select>
+      </div>
+      <div class="grid_content">
+        <button class="Grid_content_Btn" onclick="bkasss()">
+          Calculation
+        </button>
+      </div>
+    </div>
+  </section>
+  <div id="hemout"></div>
+  <section id="footer">
+    <div class="grid">
+      <div class="grid_content">
+        desigin & develop by Ezaz Ahamed <br />
+        owner of Shovon Online
+      </div>
+      <div class="grid_content">
+        Copyright by &copy; <span id="Year"></span> Shovon Online
+      </div>
+    </div>
+  </section>
+   <div>
           <h1 class="nameofuniv"> জগন্নাথ বিশ্ববিদ্যালয়, ঢাকা</h1>
           <div class="logoofunvi"><img src="./src/img/jnu.png" class="logoofunvio" alt="Jagannath University"></div>
 
@@ -675,369 +1057,6 @@
 
 
         </div>
-      </div>
-      <div class="NotiecList">
-        <div class="nameofevent" onclick="cu()"> চট্টগ্রাম বিশ্ববিদ্যালয় </div>
-        <div id="cu_output" class="output">
-          <h1 class="nameofuniv"> ঢাকা বিশ্ববিদ্যালয়</h1>
-          <div class="logoofunvi"><img src="./src/img/ru.png" class="logoofunvio" alt="du"></div>
-
-          <table>
-            <tr>
-              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
-            </tr>
-            <tr>
-              <td>ইউনিট</td>
-              <td> ফলাফল</td>
-            </tr>
-            <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ বিজ্ঞান বিভাগ হতে ন্যূনতম ৩.৫০ এবং্রাপ্ত জিপিএ-দ্বয়ের যোগফল
-                ন্যূনতম ৮.০ হতে হবে। </td>
-            </tr>
-            <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td style="width: 50%; text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ মানবিক বিভাগ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল
-                ন্যূনতম ৮.০ হতে হবে। </td>
-            </tr>
-            <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ব্যবসায় শিক্ষা শাখা হতে এবং প্রপ্ত জিপিএ-দ্বয়ের
-                যোগফল ন্যূনতম ৮.০ হতে হবে। </td>
-            </tr>
-            <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td style="width: 50%;text-align: justify;">মাধ্যমিক (এস.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ ও উচ্চ
-                মাধ্যমিক (এইচ.এস.সি.) তে চতুর্থ বিষয় সহ ন্যূনতম ৩.৫০ হতে এবং প্রপ্ত জিপিএ-দ্বয়ের যোগফল ন্যূনতম ৮.০ হতে
-                হবে। উলেখ্য সকল বিভাগে শিক্ষার্থী আবেদন করতে পাবে </td>
-            </tr>
-            <tr>
-              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
-            </tr>
-            <tr>
-              <td>আবেদন শুরু</td>
-              <td>২৯ অক্টোবর ২০২৫ দুপুর ১২:০০ টা</td>
-            </tr>
-            <tr>
-              <td> আবেদন শেষ</td>
-              <td>১৬ নভেম্বর ২০২৫ তারিখ রাত ১১:৫৯ মিনিট</td>
-            </tr>
-            <tr>
-              <td> আবেদন আর বাকি আছে</td>
-              <td> js diya kaj korbo</td>
-            </tr>
-            <!-- application fee -->
-            <tr>
-              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
-            </tr>
-            <tr>
-              <td>ইউনিট</td>
-              <td> তারিখ</td>
-            </tr>
-            <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td> বাংলায় তারিখ আসবে</td>
-            </tr>
-            <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td>বাংলায় তারিখ আসবে</td>
-            </tr>
-            <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td>বাংলায় তারিখ আসবে</td>
-            </tr>
-            <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td>বাংলায় তারিখ আসবে</td>
-            </tr>
-            <tr>
-              <td colspan="2" style="text-align: center;"> আবেদন ফি </td>
-            </tr>
-            <tr>
-              <td>ইউনিট</td>
-              <td> টাকা</td>
-            </tr>
-            <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
-                প্রয়েজ্য</td>
-            </tr>
-            <tr>
-              <td colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</td>
-            </tr>
-            <tr>
-              <td>ইউনিট</td>
-              <td> তারিখ </td>
-            </tr>
-            <tr>
-              <td>ক - ইউনিট (বিজ্ঞান শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>খ - ইউনিট (মানবিক শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>ঘ - ইউনিট (বিভাগ পরিবর্তন)</td>
-              <td></td>
-            </tr>
-          </table>
-          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
-          <div class="button_section">
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank">সাধারষ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a>
-            <a href="">আবেদনের ওয়েবসাইটে</a>
-            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
-          </div>
-
-
-
-        </div>
-      </div>
-      <div class="NotiecList">
-        <div class="nameofevent"  onclick="gst()"> 
-          <div class="nameofevent_content icons"><i id="gst_icon" class="fa-solid fa-plus"> </i></div> 
-          <div class="nameofevent_content">গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় </div>   
-        </div>
-        <div id="gst_output" style="display: none;" class="output">
-          <h1 class="nameofuniv">গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয়</h1>
-          <!-- <div class="logoofunvi"><img src="./src/img/gst.png" class="logoofunvio" alt="Jagannath University"></div> -->
-
-          <table>
-            <tr>
-              <th colspan="2" style="text-align: center;" id="cllll">শিক্ষাগত যোগ্যতা</th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> যোগ্যতা</td>
-            </tr>
-            <tr>
-              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান ও ভোকেশনাল (উপযুক্ত বিষয়সহ) এসএসসি/সমমান ও
-                এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় প্রাপ্ত জিপিএ ৩.২৫ এর কম নয়।
-              </td>
-            </tr>
-            <tr>
-              <td>ইউনিট—B (মানবিক শাখা)</td>
-              <td style="width: 50%; text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
-                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
-                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
-            </tr>
-            <tr>
-              <td> ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td style="width: 50%;text-align: justify;">বিজ্ঞান , মানবিক ও ব্যবসায় শিক্ষা শাখার সকল শিক্ষার্থী আবেদন
-                করতে পারবে। শিক্ষার্থীদের এসএসসি/সমমান ও এইচএসসি/সমমান উভয় পরীক্ষায় মোট জিপিএ ৬.৫০ থাকতে হবে। তবে কোনো
-                পরীক্ষায় প্রাপ্ত জিপিএ ৩.০০ এর কম নয়।</td>
-            </tr>
-          
-            <tr>
-              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
-            </tr>
-            <tr>
-              <td>আবেদন শুরু</td>
-              <td><span id="gstdatestart"></span></td>
-            </tr>
-            <tr>
-              <td> আবেদন শেষ</td>
-              <td><span id="gstdateend"></span></td>
-            </tr>
-            <tr>
-              <td> আবেদন আর বাকি আছে</td>
-              <td id="gstappdateLineId"><span></span></td>
-            </tr>
-            <tr>
-              <th colspan="2" style="text-align: center;"> আবেদন ফি </th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> টাকার পরিমাণ</td>
-            </tr>
-            <tr>
-              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
-              <td id="gstauintfee"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট—B (মানবিক শাখা)</td>
-              <td id="gstbuintfee"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="gstcuintfee"></td>
-            </tr>
-            <tr>
-              <td colspan="2" style="color: red;text-decoration: underline; text-align: center;">কম্পিউটার আবেদনের চার্জ
-                প্রয়েজ্য</td>
-            </tr>
-            <!-- application fee -->
-
-            <tr class="gstadmitdnsection">
-              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
-            </tr>
-            <tr class="gstadmitdnsection" style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> তারিখ </td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
-              <td id="gstaunitadmitdnop"></td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট—B (মানবিক শাখা)</td>
-              <td id="gstbunitadmitdnop"></td>
-            </tr>
-            <tr class="gstadmitdnsection">
-              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="gstcunitadmitdnop"></td>
-            </tr>
-            <tr>
-              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিট</td>
-              <td> তারিখ</td>
-            </tr>
-            <tr>
-              <td>ইউনিট—A (বিজ্ঞান শাখা)</td>
-              <td id="gstaexemop"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট—B (মানবিক শাখা)</td>
-              <td id="gstbexemop"></td>
-            </tr>
-            <tr>
-              <td>ইউনিট - C (ব্যবসায় শিক্ষা শাখা)</td>
-              <td id="gstcexemop"></td>
-            </tr>
-            <tr>
-              <td>পরীক্ষার কেন্দ্র</td>
-              <td> গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় গুলোত অনুষ্ঠিত হবে </td>
-            </tr>
-          </table>
-          <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
-          <div class="button_section">
-            <a href="./src/noticfile/gst.pdf" target="_blank">সাধারণ নেটিশ</a>
-            <!-- <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ক - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> খ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> গ - বিভাগ নেটিশ</a>
-            <a href="./src/noticefile/KA-Unit.pdf" target="_blank"> ঘ - বিভাগ নেটিশ</a> -->
-            <a href="">আবেদনের ওয়েবসাইটে</a>
-            <a href="">অফিসিয়াল ওয়েবসাইটে</a>
-          </div>
-
-
-
-        </div>
-
-      </div>
-      <div class="NotiecList">
-        <div class="nameofevent" onclick="gstd()"> গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় </div>
-        <div id="gst_output" class="output">গুচ্ছভুক্ত প্রযুক্তি বিশ্ববিদ্যালয় Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Illo blanditiis, et dignissimos culpa ullam exercitationem voluptatem quidem dolorem libero
-          necessitatibus eaque quisquam illum doloribus inventore ipsam quia iusto eligendi facilis?</div>
-      </div>
-    </div>
-    <div id="job" class="Organtion">
-      <h1>All Job Notice</h1>
-    </div>
-  </section>
-  <button id="toggleBtn">Toggle Content</button>
-  <!-- Element starts out displayed by default -->
-  <div id="content">This text will show and hide.HOVON</div>
-  <button id="toggleBtn2">Toggle Content</button>
-  <!-- Element starts out displayed by default -->
-  <div id="content2">This text will show and hide shovononline275.</div>
-
-  <div id="qr">
-    <div class="grid">
-      <div class="grid_content">
-        <img src="./src/img/bk.jpg" alt="" />
-        <h2>bkash</h2>
-      </div>
-      <div class="grid_content">
-        <img src="./src/img/ng.jpg" alt="" />
-        <h2>Nogad</h2>
-      </div>
-      <div class="grid_content">
-        <img src="./src/img/ro.jpg" alt="" />
-        <h2>Rocket</h2>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="grid_content">
-        <img src="./src/img/up.jpg" alt="" />
-        <h2>Upay</h2>
-      </div>
-      <div class="grid_content">
-        <img src="./src/img/whatup.jpg" alt="" />
-        <h2>whatup</h2>
-      </div>
-      <div class="grid_content">
-        <img src="./src/img/wifi.jpg" alt="" />
-        <h2>wifi</h2>
-      </div>
-    </div>
-  </div>
-
-  <section id="input">
-    <div class="grid">
-      <div class="grid_content">
-        Enter Your Account Balance: <br />
-        <input type="number" id="amount" />
-      </div>
-      <div class="grid_content">
-        <label for="">Select Mobile Banking</label><br />
-        <select id="Shop001" onchange="hem()"></select>
-      </div>
-      <div class="grid_content">
-        <label for="">Mobile Banking Facilitys</label><br />
-        <select id="Shop003">
-          <option value="" selected disabled hidden>select</option>
-        </select>
-      </div>
-      <div class="grid_content">
-        <button class="Grid_content_Btn" onclick="bkasss()">
-          Calculation
-        </button>
-      </div>
-    </div>
-  </section>
-  <div id="hemout"></div>
-  <section id="footer">
-    <div class="grid">
-      <div class="grid_content">
-        desigin & develop by Ezaz Ahamed <br />
-        owner of Shovon Online
-      </div>
-      <div class="grid_content">
-        Copyright by &copy; <span id="Year"></span> Shovon Online
-      </div>
-    </div>
-  </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="./src/js/main.js"></script>
 </body>
