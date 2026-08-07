@@ -6,9 +6,13 @@
 }
 #head,
 #banner,
-#MyInfo{
+#MyInfo,
+#qr,
+#input,
+#footer{
  display: none !important;
 }
+ 
 .duadmitdnsection{
   /* display: none; */
 }.ruadmitdnsection{
@@ -301,7 +305,8 @@ nav#nav {
   cursor: pointer;
 }
 #info {
-  background: #e7eaea;
+    background: #e7eaea;
+    padding: 20px 0;
 }
 #info h1 {
   text-align: center;
@@ -333,6 +338,9 @@ nav#nav {
   display: block;
 }
 #info #job {
+  display: none;
+}
+#info #medical {
   display: none;
 }
 
@@ -383,6 +391,7 @@ nav#nav {
   color: red;
   font-weight: bolder;
   font-size: 25px;
+  text-align: center;
 }
 .button_section {
   display: flex;
