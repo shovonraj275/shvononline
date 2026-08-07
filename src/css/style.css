@@ -10,7 +10,7 @@
 #qr,
 #input,
 #footer{
- display: none !important;
+ display: block !important;
 }
  
 .duadmitdnsection{
