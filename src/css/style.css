@@ -12,7 +12,23 @@
 #footer{
  display: block !important;
 }
- 
+
+#info #school {
+  display: none;
+}
+#info #college {
+  display: none;
+}
+#info #university {
+  display: block;
+}
+#info #job {
+  display: none;
+}
+#info #medical {
+  display: none;
+}
+
 .duadmitdnsection{
   /* display: none; */
 }.ruadmitdnsection{
