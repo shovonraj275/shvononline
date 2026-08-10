@@ -5,6 +5,7 @@ function convertToBanglaNumber(number) {
 
   return number.toString().replace(/\d/g, (digit) => banglaDigits[digit]);
 }
+
 const am10 = convertToBanglaNumber(10);
 const am10bd = ` সকাল ${am10} টা`;
 const am11 = convertToBanglaNumber(11);
@@ -34,7 +35,7 @@ export const MADICALADDATA = [
     tabeloutputId: "mbbs_table_output", //table id
     outmain: "mbbs_output_main", //main out put
     notice: "MBBS.pdf", // notce
-    noticepub : false,
+    noticepub : true,
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
@@ -88,6 +89,42 @@ export const MADICALADDATA = [
     examresulttme : `${pm04bd}`,
   },
 ]
+let madicalOPTmian = "";
+MADICALADDATA.forEach(function (madicaldata) {
+  madicalOPTmian += `<div class="NotiecList">
+        <div class="nameofevent" onclick="${madicaldata.onclick}"> <!-- on click-->
+          <div class="nameofevent_content icons"><i id="${madicaldata.IconID}" class="fa-solid fa-plus"> </i></div> <!-- icon-->
+          <div class="nameofevent_content">${madicaldata.NameEng}</div> <!-- Name -->
+          
+        </div><!-- output div-->
+        
+        <div id="${madicaldata.OutptuID}" style="display: none;"> <!-- onclick output-->
+        <h1>${madicaldata.NameBng}</h1><!-- name bangla-->
+          <div class="logoofunvi">
+            <img class="logoofunvio"  src="./src/img/${madicaldata.Images}" alt="">
+          </div>
+          <div id="${madicaldata.outmain}">
+            <div id="${madicaldata.tabeloutputId}"></div><!-- table section -->
+            <div id="tex"></div>
+            <div id="notice_section">
+              <div class="button_section">
+              <a href="./src/noticfile/${madicaldata.notice}" target="_blank">সাধারণ নেটিশ</a>
+              <a href="${madicaldata.appweb}" target="_blank">আবেদনের ওয়েবসাইটে</a>
+              <a href="${madicaldata.mainweb}" target="_blank">অফিসিয়াল ওয়েবসাইটে</a>
+            </div><!-- notice section -->
+          </div>
+        </div>
+        </div> <!-- output div-->
+        
+        `;
+        // mdddd = `<h1>${madicaldata.NameBng}</h1>
+        // <p>${madicaldata.NameEng}</p>
+        // `
+      //   const madicaldatanotice = madicaldata.noticepub;
+     
+});
+document.getElementById("madicalOPTmian").innerHTML = madicalOPTmian; //medical main output 
+
 export const UNIVERSITYDTA = [
   {
     id:0,

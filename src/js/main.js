@@ -431,7 +431,7 @@ const tableHTMLHeadall = `<table>
     </tr>
     `;
 //university tableHead
-const universitytableHTMLHead = `<table>
+const untableHTMLHead = `<table>
     <tr>
       <th colspan="2" style="text-align: center;">আবেদনের যোগ্যতা</th>
     </tr>
@@ -441,29 +441,24 @@ const universitytableHTMLHead = `<table>
             </tr>`;
 const tableFooter = `</table>`;
 //all apply fee
-const applyfeeheaderall = `
+const applyfeeheader = `
             <tr>
               <th colspan="2" style="text-align: center;">অনলাইনে আবেদনের টাকার পরিমান</th>
             </tr>`;
-//apply time
-const applytimetableheaderall = `
-            <tr>
-              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনের টাকার পরিমান</th>
+// unit apply fee
+const unapplyfeeunit = `
+            <tr style="text-align: center;">
+              <td>ইউনিটের নাম</td>
+              <td> টাকার পরিমাণ</td>
             </tr>`;
-// univarsity unit apply fee
-const univarsityapplyfeeunit = `
+const unadmitcardheader = `
             <tr>
-              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনের টাকার পরিমান</th>
+              <th colspan="2" style="text-align: center;">প্রবেশপত্র সংগ্রহের সময়সৃচী</th>
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিটের নাম</td>
               <td> টাকার পরিমাণ</td>
             </tr>`;
-// const unadmitcardheader = `
-//             <tr>
-//               <th colspan="2" style="text-align: center;">প্রবেশপত্র সংগ্রহের সময়সৃচী</th>
-//             </tr>
-//             `;
 // all admit head
 const admitcardheaderall = `
             <tr>
@@ -599,21 +594,6 @@ MADICALADDATA.forEach(function (madicaldata) {
 });
 document.getElementById("madicalOPTmian").innerHTML = madicalOPTmian; //medical main output 
 
-const mbbsid = MADICALADDATA[0];
-const mbbsnoticepub = mbbsid.noticepub;
- if (mbbsnoticepub === true){
-        mbbsoutput = `
-        <table>
-          
-          <th>
-            <td></td>
-          </th>
-        </table>
-        `
-      }else if(mbbsnoticepub === false){
-        mbbsoutput = notnoticePUb;
-      }
-document.getElementById("mbbs_table_output").innerHTML +=mbbsoutput;
 function mbbs() {
   const mbbsoutput = document.getElementById("mbbs_output");
   const mbbsIcon = document.getElementById("mbbs_icon");
@@ -1250,7 +1230,8 @@ function ju() {
   }
 }
 
-
+const doo = UNIVERSITYDTA[duid].appDateend
+console.log(doo)
 const duapplicationenddate = UNIVERSITYDTA[duid].appDateend
   .toISOString()
   .split("T")[0]; // object outupt to string
@@ -1266,6 +1247,7 @@ const dutimetable = ` <tr>
       <td> আবেদন শেষ</td>
       <td>${UNIVERSITYDTA[duid].appDateend.toLocaleDateString("bn-BD", dateBangla)}</td>
     </tr>`;
+console.log(duDaysEngbd)    
 if (duapplicationenddate > todays) {
   duappdateLine = `
     <tr>
@@ -1287,6 +1269,7 @@ if (duapplicationenddate > todays) {
     </tr>`;
 }
 
+console.log(duappdateLine)
 const ruapplicationenddate = UNIVERSITYDTA[ruid].appDateend.toISOString().split("T")[0]; // object outupt to string
 const rustingtodate = new Date(ruapplicationenddate); // into a date
 const ruDaysEng = Math.abs(rustingtodate - today); // find out days
@@ -1422,8 +1405,8 @@ if (gstapplicationenddate > todays) {
 
 // !
 // * coad for all
-let duapplyResultHTML = "";
-let dutableapplyfee = "";
+let dutableResultHTML = "";
+let dutaelfee = "";
 let admitDNHeadhtml = "";
 let duadmitHTML = "";
 let examheadhtml = "";
@@ -1434,11 +1417,11 @@ let duexamresultHtmlheaad = "";
 
 DUInfo.forEach(function (dudata) {
  
-  duapplyResultHTML += `<tr>
+  dutableResultHTML += `<tr>
       <td>${dudata.NameofUnit}</td>
       <td style="width: 50%"> ${dudata.result}</td>
     </tr>  <!-- Result-->`;
-  dutableapplyfee += `<tr>
+  dutaelfee += `<tr>
       <td>${dudata.NameofUnit}</td>
       <td style="width: 50%"> ${dudata.applyfee.toLocaleString("bn-BD")} (${dudata.applyfeebd}) </td>
     </tr>`;
@@ -1517,15 +1500,22 @@ if (duexamresult === true && duexamresultunit === false) {
 // const
 // ? table output section
 //du
-const /* */ duNoticePUB= UNIVERSITYDTA[duid].noticepub;
+const duNoticePUB= UNIVERSITYDTA[duid].noticepub;
 if (duNoticePUB === true) {
-  dufinalopt=
-  universitytableHTMLHead+
-  duapplyResultHTML+
-  dutableapplyfee+ // apply free
-  dutimetable+ //app start and end
-  duappdateLine+ //duddate
-  applyfeeheaderall+
+  dufinalopt= untableHTMLHead +
+  dutableResultHTML + //du reuslt
+  unonlineTimeHead +
+  dutimetable + // time table
+  duappdateLine + //time table
+  unapplyfeeheader +
+  dutaelfee + // fee
+  admitDNHeadhtml +
+  duadmitHTML + // admit downlaod
+  examheadhtml +
+  duexmaHTML + // exam date
+  duexmacenterHTML+
+  duexamresultHtmlheaad+
+  duexamresultHtml+
   tableFooter+
   note;
 } else {
@@ -1642,7 +1632,7 @@ if (ruexamresult === true && ruexamresultunit === false) {
 const ruNoticePUB= UNIVERSITYDTA[ruid].noticepub;
 if (ruNoticePUB === true) {
     RUfinalopt = untableHTMLHead +
-  rutableResultHTML + /* */
+  rutableResultHTML + //du reuslt
   unonlineTimeHead +
   rutimetable + // time table
   ruappdateLine + //time table
