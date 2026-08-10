@@ -1,69 +1,83 @@
-const gstapplicationenddate = UNIVERSITYDTA[gstid].appDateend
+const juapplicationenddate = UNIVERSITYDTA[juid].appDateend
   .toISOString()
   .split("T")[0]; // object outupt to string
-const gststingtodate = new Date(gstapplicationenddate); // into a date
-const gstDaysEng = Math.abs(gststingtodate - today); // find out days
-const gstDaysEngs = Math.floor(gstDaysEng / (1000 * 60 * 60 * 24) + 1); // convate to date
-const gstDaysEngbd = gstDaysEngs.toLocaleString("bn-bd"); // convate into bangla
-const gsttimetable = ` <tr>
+const justingtodate = new Date(juapplicationenddate); // into a date
+const juDaysEng = Math.abs(justingtodate - today); // find out days
+const juDaysEngs = Math.floor(juDaysEng / (1000 * 60 * 60 * 24) + 1); // convate to date
+const juDaysEngbd = juDaysEngs.toLocaleString("bn-bd"); // convate into bangla
+const jutimetable = ` <tr>
       <td>আবেদন শুরু</td>
-      <td>${UNIVERSITYDTA[gstid].appDateStart.toLocaleDateString("bn-BD", dateBangla)}</td>
+      <td>${UNIVERSITYDTA[juid].appDateStart.toLocaleDateString("bn-BD", dateBangla)}</td>
     </tr>
     <tr>
       <td> আবেদন শেষ</td>
-      <td>${UNIVERSITYDTA[gstid].appDateend.toLocaleDateString("bn-BD", dateBangla)}</td>
+      <td>${UNIVERSITYDTA[juid].appDateend.toLocaleDateString("bn-BD", dateBangla)}</td>
     </tr>`;
-if (gstapplicationenddate > todays) {
-  gstappdateLine = `
+if (juapplicationenddate > todays) {
+  juappdateLine = `
     <tr>
       <td>আবেদন আর বাকি আছে</td>
-      <td style="color:green">আবেদন চলমাান ${gstDaysEngbd} দিন বাকি আছে </td>
+      <td style="color:green">আবেদন চলমাান ${juDaysEngbd} দিন বাকি আছে </td>
     </tr>
   `;
-} else if (gstapplicationenddate === todays) {
-  gstappdateLine = `<tr>
+} else if (juapplicationenddate === todays) {
+  juappdateLine = `<tr>
       <td>আবেদন আর বাকি আছে</td>
       <td style="color:green"আজকেই শেষ দিন </td>
     </tr>`;
-} else if (gstapplicationenddate < todays) {
-  gstappdateLine = ` <tr>
+} else if (juapplicationenddate < todays) {
+  juappdateLine = ` <tr>
       <td>আবেদন সময়সীমা </td>
       <td style="color:red">আবেদনের সময় শেষ </td>
     </tr>`;
 }
+function ju() {
+  const juoutput = document.getElementById("ju_output");
+  const juIcon = document.getElementById("ju_icon");
+  if (juoutput.style.display === "none") {
+    juoutput.style.display = "block";
+    juIcon.classList.remove("fa-plus");
+    juIcon.classList.add("fa-minus");
+  } else {
+    juoutput.style.display = "none";
+    juIcon.classList.remove("fa-minus");
+    juIcon.classList.add("fa-plus");
+  }
+}
 
-let gsttableResultHTML = "";
-let gsttaelfee = "";
-let gstadmitDNHeadhtml = "";
-let gstadmitHTML = "";
-let gstexamheadhtml = "";
-let gstexmaHTML = "";
-let gstexmacenterHTML = "";
-let gstexamreusultHtml = "";
-let gstexamreusultHtmlheaad = "";
 
-GSTInfo.forEach(function (gstdata) {
+let jutableResultHTML = "";
+let jutaelfee = "";
+let juadmitDNHeadhtml = "";
+let juadmitHTML = "";
+let juexamheadhtml = "";
+let juexmaHTML = "";
+let juexmacenterHTML = "";
+let juexamreusultHtml = "";
+let juexamreusultHtmlheaad = "";
+
+JUInfo.forEach(function (judata) {
   // du = 0
-  gsttableResultHTML += `<tr>
-      <td>${gstdata.NameofUnit}</td>
-      <td style="width: 50%"> ${gstdata.result}</td>
+  jutableResultHTML += `<tr>
+      <td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.result}</td>
     </tr>  <!-- Result-->`;
-  gsttaelfee += `<tr>
-      <td>${gstdata.NameofUnit}</td>
-      <td style="width: 50%"> ${gstdata.applyfee.toLocaleString("bn-BD")} (${gstdata.applyfeebd}) </td>
+  jutaelfee += `<tr>
+      <td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.applyfee.toLocaleString("bn-BD")} (${judata.applyfeebd}) </td>
     </tr>`;
   // ?fee section
   // admitDNUnitwise:true,
-  let uintwiseADGST = UNIVERSITYDTA[gstid].admitDNUnitwise; //admit true flase
-  if (uintwiseADGST === false) {
-    gstadmitHTML = `<tr>
+  let uintwiseADJU = UNIVERSITYDTA[juid].admitDNUnitwise; //admit true flase
+  if (uintwiseADJU === false) {
+    juadmitHTML = `<tr>
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
             <tr>
-      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[gstid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[gstid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[gstid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[gstid].admitDNUnitwistimeend} পর্যন্ত করা যাবে।</td>
+      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[juid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[juid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[juid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[juid].admitDNUnitwistimeend} পর্যন্ত করা যাবে।</td>
     </tr>`;
-  } else if (uintwiseADGST === true) {
-    gstadmitDNHeadhtml = `
+  } else if (uintwiseADJU === true) {
+    juadmitDNHeadhtml = `
             <tr>
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
@@ -71,24 +85,24 @@ GSTInfo.forEach(function (gstdata) {
               <td>ইউনিটের নাম</td>
               <td> তারিখ  </td>
             </tr>`;
-    gstadmitHTML += `<tr>
-<td>${gstdata.NameofUnit}</td>
-      <td style="width: 50%"> ${gstdata.admitdnstart.toLocaleDateString("bn-BD", dateBangla)} </td>
+    juadmitHTML += `<tr>
+<td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.admitdnstart.toLocaleDateString("bn-BD", dateBangla)} </td>
       
     </tr>`;
   }
-  let GSTuintwiseExam = UNIVERSITYDTA[gstid].examUnitwise; //admit true flase
+  let JUuintwiseExam = UNIVERSITYDTA[juid].examUnitwise; //admit true flase
   // * False for Unit-wise NO , true for Unit-wise yes
-  if (GSTuintwiseExam === false) {
-    gstexmaHTML = `
+  if (JUuintwiseExam === false) {
+    juexmaHTML = `
             <tr>
               <th colspan="2" style="text-align: center;">  পরীক্ষার  তারিখ</th>
             </tr>
             <tr>
-<td colspan="2">সাকল ইউনিটের পরীক্ষা আগামী ${UNIVERSITYDTA[gstid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${UNIVERSITYDTA[gstid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের পরীক্ষা আগামী ${UNIVERSITYDTA[juid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${UNIVERSITYDTA[juid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে অনুষ্টিত হবে।  </td>      
     </tr>`;
-  } else if (GSTuintwiseExam === true) {
-    gstexamheadhtml = ` <tr>
+  } else if (JUuintwiseExam === true) {
+    juexamheadhtml = ` <tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
             </tr>
             <tr style="text-align: center;">
@@ -96,57 +110,79 @@ GSTInfo.forEach(function (gstdata) {
               <td> তারিখ</td>
             </tr>`;
 
-    gstexmaHTML += `<tr>
-<td>${gstdata.NameofUnit}</td>
-      <td style="width: 50%"> ${gstdata.examdate.toLocaleDateString("bn-BD", dateBangla)} ${gstdata.examtime}  অনুষ্টিত হবে।  </td>
+    juexmaHTML += `<tr>
+<td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.examdate.toLocaleDateString("bn-BD", dateBangla)} ${judata.examtime}  অনুষ্টিত হবে।  </td>
       
     </tr>`;
-    gstexmacenterHTML = `<tr>
+    juexmacenterHTML = `<tr>
               <td>পরীক্ষার কেন্দ্র</td>
-              <td>${UNIVERSITYDTA[gstid].examCenter}।</td>
+              <td>${UNIVERSITYDTA[juid].examCenter}।</td>
             </tr>`;
   }
-  const gstexamreusult = UNIVERSITYDTA[gstid].examreusult;
-  const gstexamreusultunit = UNIVERSITYDTA[gstid].examreusultUnitwis;
-  if (gstexamreusult === true && gstexamreusultunit === false) {
-    gstexamreusultHtml = `<tr>
+  const juexamreusult = UNIVERSITYDTA[juid].examreusult;
+  const juexamreusultunit = UNIVERSITYDTA[juid].examreusultUnitwis;
+  if (juexamreusult === true && juexamreusultunit === false) {
+    juexamreusultHtml = `<tr>
               <td>পরীক্ষার ফলাফল</td>
-              <td>${UNIVERSITYDTA[gstid].examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[gstid].examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${UNIVERSITYDTA[juid].examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[juid].examreusulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
-  } else if (gstexamreusult === true && gstexamreusultunit === true) {
-    gstexamreusultHtmlheaad = `<tr>
+  } else if (juexamreusult === true && juexamreusultunit === true) {
+    juexamreusultHtmlheaad = `<tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার ফলাফল</th>
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিটের নাম</td>
               <td> তারিখ</td>
             </tr>`;
-    gstexamreusultHtml += `
+    juexamreusultHtml += `
             
             <tr>
-              <td>${gstdata.NameofUnit} </td>
-              <td>${gstdata.examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${gstdata.examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${judata.NameofUnit} </td>
+              <td>${judata.examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${judata.examreusulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
   }
   // exam center
 });
-// const
-// ? table output section
-//du
-document.getElementById("gst_table_output").innerHTML =
+const juNoticePUB= UNIVERSITYDTA[juid].noticepub;
+if (juNoticePUB === true) {
+  jufinalopt=
   tableHTMLHead +
-  gsttableResultHTML + //du reuslt
+  jutableResultHTML + //du reuslt
   onlineTimeHead +
-  gsttimetable + // time table
-  gstappdateLine + //time table
+  jutimetable + // time table
+  juappdateLine + //time table
   applyfeeheader +
-  gsttaelfee + // fee
+  jutaelfee + // fee
   admitDNHeadhtml +
-  gstadmitHTML + // admit downlaod
-  gstexamheadhtml +
-  gstexmaHTML + // exam date
-  gstexmacenterHTML +
-  gstexamreusultHtmlheaad +
-  gstexamreusultHtml +
-  tableFooter;
-//gst
+  juadmitHTML + // admit downlaod
+  juexamheadhtml +
+  juexmaHTML + // exam date
+  juexmacenterHTML +
+  juexamreusultHtmlheaad +
+  juexamreusultHtml +
+  tableFooter+
+  note;
+} else {
+  jufinalopt = `${notnoticePUb}`
+}
+document.getElementById("ju_table_output").innerHTML =jufinalopt;
+//ju
+
+
+ব.
+ফিার ৪থ বিষয়সহ নোট ভি গণণা করা হবে।
+গ.
+ইউনিটের নাম
+মাধ্যমিক/সমমান ও উচ্চমাধ্যমিক/সমমান পরীক্ষায় ন্যূনতম শিক্ষাগত যোগ্যতা
+A ইউনিট (গাণিতিক ও পদার্থ বিষয়ক অনুষদ এবং ইনস্টিটিউট অব ইনফরমেশন টেকনোলজি, আইআইটি)
+
+B ইউনিট (সমাজবিজ্ঞান অনুষদ), C ইউনিট (কলা ও মানবিকী অনুষদ, আইন অনুষদ এবং তুলনামূলক সাহিত্য ও সংস্কৃতি ইনস্টিটিউট)
+উভয় পরীক্ষায় বিজ্ঞান শাখার জন্য মোট জিপিএ ৮.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে); মানবিক/ব্যবসায় শিক্ষা/অন্যান্য শাখার জন্য মোট জিপিএ ৭.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে)।
+C1 ইউনিট (কলা ও মানবিক অনুষদ: নাটক ও নাট্যতত্ত্ব বিভাগ এবং চারুকলা বিভাগ)
+
+
+
+
+
+

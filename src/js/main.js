@@ -424,19 +424,143 @@ const dateBangla = {
 const calendarDate = { year: "numeric", month: "2-digit", day: "2-digit" };
 const today = new Date();
 const todays = today.toISOString().split("T")[0];
+//all tableHead
+const tableHTMLHeadall = `<table>
+    <tr>
+      <th colspan="2" style="text-align: center;">আবেদনের যোগ্যতা</th>
+    </tr>
+    `;
+//university tableHead
+const universitytableHTMLHead = `<table>
+    <tr>
+      <th colspan="2" style="text-align: center;">আবেদনের যোগ্যতা</th>
+    </tr>
+     <tr style="text-align: center;">
+              <td>ইউনিটের নাম</td>
+              <td> ফলাফল</td>
+            </tr>`;
+const tableFooter = `</table>`;
+//all apply fee
+const applyfeeheaderall = `
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনের টাকার পরিমান</th>
+            </tr>`;
+//apply time
+const applytimetableheaderall = `
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনের টাকার পরিমান</th>
+            </tr>`;
+// univarsity unit apply fee
+const univarsityapplyfeeunit = `
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনের টাকার পরিমান</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিটের নাম</td>
+              <td> টাকার পরিমাণ</td>
+            </tr>`;
+// const unadmitcardheader = `
+//             <tr>
+//               <th colspan="2" style="text-align: center;">প্রবেশপত্র সংগ্রহের সময়সৃচী</th>
+//             </tr>
+//             `;
+// all admit head
+const admitcardheaderall = `
+            <tr>
+              <th colspan="2" style="text-align: center;">প্রবেশপত্র সংগ্রহের সময়সৃচী</th>
+            </tr>`;
+// all exam head
+const examheaderall = `
+            <tr>
+              <th colspan="2" style="text-align: center;">ভর্তি পরীক্ষার সময়সৃচী</th>
+            </tr>`;
+// all result hed
+const reusltheaderall = `
+            <tr>
+              <th colspan="2" style="text-align: center;">ভর্তি পরীক্ষার ফলাফল</th>
+            </tr>`;
+// univarsity name of unit
+const universityunitdatetime = `
+            <tr style="text-align: center;">
+              <td>ইউনিটের নাম</td>
+              <td>তারিখ ও সময়</td>
+            </tr>`;
+
+// const onlinechagr =
+const onlineTimeHead = ` 
+            <tr>
+              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
+            </tr>`;
+const note = `<div class="note">বিশেষ দ্রষ্টব্যঃ বিস্তারিত তথ্যের জন্য  অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন।</div>`;
+const notnoticePUb = `<h1 ‍style="font-size: 40px;font-weight: lighter;text-align: justify;"> অফিসিয়াল ভাবে কোন নোটিশ প্রকাশিত হয়নি।প্রকাশিত হলে ওযেবসােইটের মাধ্যমে জানিয়ে দেওয়া হবে।বিস্তারিত তথ্যের জন্য  অফিসিয়াল ওয়েবসাইটে দেখুন।</h1>`
+
+// * For alll
+
 
 const MADICALADDATA = [
   {
     id:0,
     NameEng: "bangladesh medical admission", // name of english
     NameBng: "মেডিকেল কলেজ ভর্তি পরীক্ষা", // name of bangla
-    Images: "du.png", //logo
+    Images: "mbbsbds.png", //logo
     onclick: "mbbs()", // onclick
     OutptuID: "mbbs_output", // output div
     IconID: "mbbs_icon", //icon
     tabeloutputId: "mbbs_table_output", //table id
+    outmain: "mbbs_output_main", //main out put
+    notice: "MBBS.pdf", // notce
+    noticepub : true,
+    appweb:
+      "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
+    mainweb: "https://www.du.ac.bd/", //main web
+    appDateStart: new Date("2026-08-01"), // date start
+    appDateend: new Date("2026-08-10"), // date end
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
+    admitDNUnitwistimestart: ``, // start time
+    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
+    admitDNUnitwistimeend: `${lastLine}`, // start date
+    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examteststart: new Date("2026-08-20"), // examdate start
+    examtestend: new Date("2026-08-22"), // examdate end
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme : `${pm04bd}`,
+  },
+  {
+    id:1,
+    NameEng: "Armed Forces Medical College", // name of english
+    NameBng: "আর্মড ফোর্সেস মেডিকেল কলেজ", // name of bangla
+    Images: "bnmc.png", //logo
+    onclick: "afmc()", // onclick
+    OutptuID: "afmc_output", // output div
+    IconID: "afmc_icon", //icon
+    tabeloutputId: "afmc_table_output", //table id
      outmain: "mbbs_output_main", //main out put
-    notice: "DU.jpg.jpeg", // notce
+    notice: "AFMC.pdf", // notce
+    noticepub : false,
+    appweb:
+      "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
+    mainweb: "https://www.du.ac.bd/", //main web
+    appDateStart: new Date("2026-08-01"), // date start
+    appDateend: new Date("2026-08-10"), // date end
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
+    admitDNUnitwistimestart: ``, // start time
+    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
+    admitDNUnitwistimeend: `${lastLine}`, // start date
+    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examteststart: new Date("2026-08-20"), // examdate start
+    examtestend: new Date("2026-08-22"), // examdate end
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme : `${pm04bd}`,
   },
 ]
 let madicalOPTmian = "";
@@ -455,8 +579,8 @@ MADICALADDATA.forEach(function (madicaldata) {
           </div>
           <div id="${madicaldata.outmain}">
             <div id="${madicaldata.tabeloutputId}"></div><!-- table section -->
+            <div id="tex"></div>
             <div id="notice_section">
-              <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
               <div class="button_section">
               <a href="./src/noticfile/${madicaldata.notice}" target="_blank">সাধারণ নেটিশ</a>
               <a href="${madicaldata.appweb}" target="_blank">আবেদনের ওয়েবসাইটে</a>
@@ -467,9 +591,29 @@ MADICALADDATA.forEach(function (madicaldata) {
         </div> <!-- output div-->
         
         `;
+        // mdddd = `<h1>${madicaldata.NameBng}</h1>
+        // <p>${madicaldata.NameEng}</p>
+        // `
+      //   const madicaldatanotice = madicaldata.noticepub;
+     
 });
-document.getElementById("madicalOPTmian").innerHTML = madicalOPTmian;
+document.getElementById("madicalOPTmian").innerHTML = madicalOPTmian; //medical main output 
 
+const mbbsid = MADICALADDATA[0];
+const mbbsnoticepub = mbbsid.noticepub;
+ if (mbbsnoticepub === true){
+        mbbsoutput = `
+        <table>
+          
+          <th>
+            <td></td>
+          </th>
+        </table>
+        `
+      }else if(mbbsnoticepub === false){
+        mbbsoutput = notnoticePUb;
+      }
+document.getElementById("mbbs_table_output").innerHTML +=mbbsoutput;
 function mbbs() {
   const mbbsoutput = document.getElementById("mbbs_output");
   const mbbsIcon = document.getElementById("mbbs_icon");
@@ -481,6 +625,19 @@ function mbbs() {
     mbbsoutput.style.display = "none";
     mbbsIcon.classList.remove("fa-minus");
     mbbsIcon.classList.add("fa-plus");
+  }
+}
+function afmc() {
+  const afmcoutput = document.getElementById("afmc_output");
+  const afmcIcon = document.getElementById("afmc_icon");
+  if (afmcoutput.style.display === "none") {
+    afmcoutput.style.display = "block";
+    afmcIcon.classList.remove("fa-plus");
+    afmcIcon.classList.add("fa-minus");
+  } else {
+    afmcoutput.style.display = "none";
+    afmcIcon.classList.remove("fa-minus");
+    afmcIcon.classList.add("fa-plus");
   }
 }
 
@@ -496,13 +653,15 @@ const UNIVERSITYDTA = [
     IconID: "du_icon", //icon
     tabeloutputId: "du_table_output", //table id
     outmain: "du_output_main", //main out put
+    noticepub : true,
     notice: "DU.jpg.jpeg", // notce
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
     appDateend: new Date("2026-08-10"), // date end
-    admitDNUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
     admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
     admitDNUnitwistimestart: ``, // start time
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
@@ -511,10 +670,10 @@ const UNIVERSITYDTA = [
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
-    examreusult :true,
-    examreusultUnitwis :true,
-    examreusultdate : new Date("2026-09-20"),
-    examreusulttme : `${pm04bd}`,
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme : `${pm04bd}`,
   },
   {
     id:1,
@@ -525,13 +684,15 @@ const UNIVERSITYDTA = [
     OutptuID: "ru_output", // output div
     IconID: "ru_icon",
     outmain: "ru_output_main", //main out put
+    noticepub : true,
     tabeloutputId: "ru_table_output", //table id
     notice: "ru.pdf", // notce
     appweb: "https://application.ru.ac.bd/", //main web
     mainweb: "https://www.ru.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
     appDateend: new Date("2026-08-14"), // date end
-    admitDNUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitdn: true,
+    admitdnunitwise: true, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
     admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
     admitDNUnitwistimestart: ``, // start time
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
@@ -540,10 +701,10 @@ const UNIVERSITYDTA = [
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
-    examreusult :false,
-    examreusultUnitwis :false,
-    examreusultdate : new Date("2026-09-26"),
-    examreusulttme : `${pm05bd}`,
+    examresult : true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-19"),
+    examresulttme : `${pm05bd}`,
   },
   {
     id:2,
@@ -555,12 +716,14 @@ const UNIVERSITYDTA = [
     tabeloutputId: "jnu_table_output", //table id
     IconID: "jnu_icon",
     outmain: "jnu_output_main", //main out put
-    notice: "ru.pdf", // notce
-    appweb: "https://application.ru.ac.bd/", //main web
-    mainweb: "https://www.ru.ac.bd/", //main web
+    noticepub : true,
+    notice: "JNU.pdf", // notce
+    appweb: "https://jnu.ac.bd/newsite/getdata/6001", //main web
+    mainweb: "https://www.jnu.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
     appDateend: new Date("2026-08-25"), // date end
-    admitDNUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitdn: true,
+    admitdnunitwise: true, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
     admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
     admitDNUnitwistimestart: ``, // start time
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
@@ -569,39 +732,78 @@ const UNIVERSITYDTA = [
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
-    examreusult :true,
-    examreusultUnitwis :true,
-    examreusultdate : new Date("2026-09-26"),
-    examreusulttme : `${pm05bd}`,
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-26"),
+    examresulttme : `${pm05bd}`,
   },
   {
     id:3,
-    NameEng: "General, Science and Technology,",
+    NameEng: "General, Science and Technology",
     NameBng: "গুচ্ছভুক্ত  বিশ্ববিদ্যালয়",
-    Images: "",
+    Images: "gst.png",
     onclick: "gst()",
     OutptuID: "gst_output",
     tabeloutputId: "gst_table_output", //table id
     IconID: "gst_icon",
     outmain: "gst_output_main", //main out put
+    // *  notice
+    noticepub : true,
     notice: "GST.pdf", // notce
     appweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
     mainweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
+    // * time 
     appDateStart: new Date("2026-08-01"), // date start
     appDateend: new Date("2026-08-25"), // date end
-    admitDNUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    // *Admitcard
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
     admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
     admitDNUnitwistimestart: ``, // start time
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
     admitDNUnitwistimeend: `${lastLine}`, // start date
+    // *center
     examCenter: "গুচ্ছভুক্ত  বিশ্ববিদ্যালয় গুলোতে অনুষ্ঠিত হবে", //exam center.
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
-    examreusult :true,
-    examreusultUnitwis :true,
-    examreusultdate : new Date("2026-09-26"),
-    examreusulttme : `${pm05bd}`,
+    // *result
+    examresult :true,
+    examresultUnitwis :false,
+    examresultdate : new Date("2026-09-26"),
+    examresulttme : `${pm05bd}`,
+  },
+  {
+    id:4,
+    NameEng: "jahangirnagar university",
+    NameBng: "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়",
+    Images: "ju.png",
+    onclick: "ju()",
+    OutptuID: "ju_output",
+    tabeloutputId: "ju_table_output", //table id
+    IconID: "ju_icon",
+    outmain: "ju_output_main", //main out put
+    noticepub : true,
+    notice: "JU.pdf", // notce
+    notice: "JU.pdf", // notce
+    appweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
+    mainweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
+    appDateStart: new Date("2026-07-01"), // date start
+    appDateend: new Date("2026-08-18"), // date end
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
+    admitDNUnitwistimestart: ``, // start time
+    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
+    admitDNUnitwistimeend: `${lastLine}`, // start date
+    examCenter: "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়", //exam center.
+    examUnitwise: false, // False for Unit-wise NO , true for Unit-wise yes
+    examteststart: new Date("2026-08-20"), // examdate start
+    examtestend: new Date("2026-08-29"), // examdate end
+    examresult :false,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-26"),
+    examresulttme : `${pm05bd}`,
   },
 ];
 //! universtiuy data
@@ -609,6 +811,7 @@ const UNIVERSITYDTA = [
  const ruid = UNIVERSITYDTA[1].id;
  const jnuid = UNIVERSITYDTA[2].id;
  const gstid = UNIVERSITYDTA[3].id;
+ const juid = UNIVERSITYDTA[4].id;
 const DUInfo = [
   {
     NameofUnit: "ক - ইউনিট (বিজ্ঞান শাখা)", // name of unit
@@ -622,8 +825,8 @@ const DUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download
     examdate: new Date("2026-08-15"), // admitcard download
     examtime: `${am10bd}${halfbd}`, // admitcard download
-    examreusultdate : new Date("2026-09-18"),
-    examreusulttme : `${pm05bd} ${halfbd}`,
+    examresultdate : new Date("2026-09-18"),
+    examresulttme : `${pm05bd} ${halfbd}`,
   },
   {
     NameofUnit: "খ - ইউনিট (মানবিক শাখা)",
@@ -637,8 +840,8 @@ const DUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-09-19"),
-    examreusulttme : `${pm05bd}`,
+    examresultdate : new Date("2026-09-19"),
+    examresulttme : `${pm05bd}`,
   },
   {
     NameofUnit: "গ - ইউনিট (ব্যবসায় শিক্ষা শাখা)",
@@ -652,8 +855,8 @@ const DUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-09-20"),
-    examreusulttme : `${pm05bd}`,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme : `${pm05bd}`,
   },
   {
     NameofUnit: "ঘ - ইউনিট (বিভাগ পরিবর্তন) ",
@@ -667,8 +870,8 @@ const DUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-09-28"),
-    examreusulttme : `${pm05bd}`,
+    examresultdate : new Date("2026-09-28"),
+    examresulttme : `${pm05bd}`,
   },
 ];
 const RUInfo = [
@@ -684,8 +887,8 @@ const RUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-09-14"), // exam date
     examtime: `${am11bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-09-29"),
-    examreusulttme : `${pm05bd} ${halfbd}`,
+    examresultdate : new Date("2026-09-29"),
+    examresulttme : `${pm05bd} ${halfbd}`,
   },
   {
     NameofUnit: "খ - ইউনিট (ব্যবসায় শিক্ষা শাখা)",
@@ -699,8 +902,8 @@ const RUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-09-19"), // exam date
     examtime: `${am10bd}`, // exam time
-    examreusultdate : new Date("2026-09-29"),
-    examreusulttme : `${pm05bd}`,
+    examresultdate : new Date("2026-09-29"),
+    examresulttme : `${pm05bd}`,
   },
   {
     NameofUnit: "গ - ইউনিট (বিজ্ঞান শাখা)",
@@ -714,12 +917,10 @@ const RUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-09-26"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-09-30"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-09-30"),
+    examresulttme : `${pm04bd}`,
   },
 ];
-
-// ?? ======================================
 const JNUInfo = [
   {
     NameofUnit:
@@ -734,8 +935,8 @@ const JNUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-10-01"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-01"),
+    examresulttme : `${pm04bd}`,
   },
   {
     NameofUnit: "ইউনিট—B (কলা ও আইন অনুষদ)",
@@ -749,8 +950,8 @@ const JNUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-10-02"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-02"),
+    examresulttme : `${pm04bd}`,
   },
   {
     NameofUnit: "ইউনিট - C (ব্যবসায় শিক্ষা শাখা)",
@@ -764,8 +965,8 @@ const JNUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-10-03"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-03"),
+    examresulttme : `${pm04bd}`,
   },
   {
     NameofUnit: "ইউনিট — D (সামাজিক বিজ্ঞান অনুষদ) ",
@@ -779,8 +980,8 @@ const JNUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-10-04"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-04"),
+    examresulttme : `${pm04bd}`,
   },
   {
     NameofUnit: "ইউনিট —E (চারুকলা অনুষদ) ",
@@ -794,13 +995,10 @@ const JNUInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-10-05"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-05"),
+    examresulttme : `${pm04bd}`,
   },
 ];
-
-// ?? ======================================ইউনিট A:
-
 const GSTInfo = [
   {
     NameofUnit: "ইউনিট—A (বিজ্ঞান অনুষদ)",
@@ -814,8 +1012,8 @@ const GSTInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-10-02"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-02"),
+    examresulttme : `${pm04bd} ${halfbd}`,
   },
   {
     NameofUnit: "ইউনিট—B (কলা ও আইন অনুষদ)",
@@ -829,8 +1027,8 @@ const GSTInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time\
-    examreusultdate : new Date("2026-10-02"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-02"),
+    examresulttme : `${pm04bd}`,
   },
   {
     NameofUnit: "ইউনিট - C (ব্যবসায় শিক্ষা শাখা)",
@@ -844,8 +1042,113 @@ const GSTInfo = [
     admitdnendTime: `${lastLine}`, // admitcard download time end
     examdate: new Date("2026-08-15"), // exam date
     examtime: `${am10bd}${halfbd}`, // exam time
-    examreusultdate : new Date("2026-10-02"),
-    examreusulttme : `${pm04bd}`,
+    examresultdate : new Date("2026-10-02"),
+    examresulttme : `${pm04bd}`,
+  },
+];
+const JUInfo = [
+  {
+    NameofUnit: "A ইউনিট (গাণিতিক ও পদার্থ বিষয়ক অনুষদ এবং ইনস্টিটিউট অব ইনফরমেশন টেকনোলজি, আইআইটি)",
+    result:
+      "উভয় পরীক্ষায় মোট জিপিএ ৮.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৪.০০ থাকতে হবে)।", //result
+    applyfee: 800, // fee
+    applyfeebd: numberToBanglaWords(800), // word bd
+    admitdnstart: new Date("2026-08-03"), // admitcard download date  start
+    admitdnstartTtime: "", // admitcard download time start
+    admitdnend: new Date("2026-08-05"), // admitcard download date  end
+    admitdnendTime: `${lastLine}`, // admitcard download time end
+    examdate: new Date("2026-08-06"), // exam date
+    examtime: `${am10bd}${halfbd}`, // exam time
+    examresultdate : new Date("2026-10-07"),
+    examresulttme : `${pm04bd}`,
+  },
+  {
+    NameofUnit: "B ইউনিট (সমাজবিজ্ঞান অনুষদ),  ",
+    result:
+      "উভয় পরীক্ষায় বিজ্ঞান শাখার জন্য মোট জিপিএ ৮.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে); মানবিক/ব্যবসায় শিক্ষা/অন্যান্য শাখার জন্য মোট জিপিএ ৭.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে)।", //result
+    applyfee: 800, // fee
+    applyfeebd: numberToBanglaWords(800), // word bd
+    admitdnstart: new Date("2026-08-8"), // admitcard download date  start
+    admitdnstartTtime: "", // admitcard download time start
+    admitdnend: new Date("2026-08-09"), // admitcard download date  end
+    admitdnendTime: `${lastLine}`, // admitcard download time end
+    examdate: new Date("2026-08-10"), // exam date
+    examtime: `${am10bd}${halfbd}`, // exam time\
+    examresultdate : new Date("2026-10-11"),
+    examresulttme : `${pm04bd}`,
+  },
+  {
+    NameofUnit: "C ইউনিট (কলা ও মানবিক অনুষদ, আইন অনুষদ এবং তুলনামূলক সাহিত্য ও সংস্কৃতি ইনস্টিটিউট)",
+    result:
+      "উভয় পরীক্ষায় বিজ্ঞান শাখার জন্য মোট জিপিএ ৮.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে); মানবিক/ব্যবসায় শিক্ষা/অন্যান্য শাখার জন্য মোট জিপিএ ৭.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে)।", //result
+    applyfee: 800, // fee
+    applyfeebd: numberToBanglaWords(800), // word bd
+    admitdnstart: new Date("2026-08-12"), // admitcard download date  start
+    admitdnstartTtime: "", // admitcard download time start
+    admitdnend: new Date("2026-08-13"), // admitcard download date  end
+    admitdnendTime: `${lastLine}`, // admitcard download time end
+    examdate: new Date("2026-08-14"), // exam date
+    examtime: `${am10bd}${halfbd}`, // exam time
+    examresultdate : new Date("2026-10-15"),
+    examresulttme : `${pm04bd}`,
+  },
+  {
+    NameofUnit: "C1 ইউনিট (কলা ও মানবিক অনুষদ: নাটক ও নাট্যতত্ত্ব বিভাগ এবং চারুকলা বিভাগ)",
+    result:
+      "উভয় পরীক্ষায় মোট জিপিএ ৭.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে)।", //result
+    applyfee: 700, // fee
+    applyfeebd: numberToBanglaWords(700), // word bd
+    admitdnstart: new Date("2026-08-16"), // admitcard download date  start
+    admitdnstartTtime: "", // admitcard download time start
+    admitdnend: new Date("2026-08-17"), // admitcard download date  end
+    admitdnendTime: `${lastLine}`, // admitcard download time end
+    examdate: new Date("2026-08-18"), // exam date
+    examtime: `${am10bd}${halfbd}`, // exam time
+    examresultdate : new Date("2026-08-19"),
+    examresulttme : `${pm04bd}`,
+  },
+  {
+    NameofUnit: "D ইউনিট (জীববিজ্ঞান অনুষদ)",
+    result:
+      "উভয় পরীক্ষায় মোট জিপিএ ৯.০০ (পৃথকভাবে ন্যূনতম জিপিএ ৪.০০ থাকতে হবে)।", //result
+    applyfee: 800, // fee
+    applyfeebd: numberToBanglaWords(800), // word bd
+    admitdnstart: new Date("2026-08-20"), // admitcard download date  start
+    admitdnstartTtime: "", // admitcard download time start
+    admitdnend: new Date("2026-08-21"), // admitcard download date  end
+    admitdnendTime: `${lastLine}`, // admitcard download time end
+    examdate: new Date("2026-08-22"), // exam date
+    examtime: `${am10bd}${halfbd}`, // exam time
+    examresultdate : new Date("2026-08-23"),
+    examresulttme : `${pm04bd}`,
+  },
+  {
+    NameofUnit: "E ইউনিট (বিজনেস স্টাডিজ অনুষদ)",
+    result:"উভয় পরীক্ষায় মোট জিপিএ ৮.০০ তন্মধ্যে মাধ্যমিক/সমমান পরীক্ষায় ন্যূনতম জিপিএ ৪.০০ ও উচ্চমাধ্যমিক/সমমান পরীক্ষায় ন্যূনতম জিপিএ ৩.৫০ থাকতে হবে।উভয় পরীক্ষায় মোট জিপিএ ৯.০০ (পৃথকভাবে ন্যূনতম জিপিএ ৪.০০ থাকতে হবে)।", //result
+    applyfee: 700, // fee
+    applyfeebd: numberToBanglaWords(700), // word bd
+    admitdnstart: new Date("2026-09-01"), // admitcard download date  start
+    admitdnstartTtime: "", // admitcard download time start
+    admitdnend: new Date("2026-09-02"), // admitcard download date  end
+    admitdnendTime: `${lastLine}`, // admitcard download time end
+    examdate: new Date("2026-09-03"), // exam date
+    examtime: `${am10bd}${halfbd}`, // exam time
+    examresultdate : new Date("2026-09-05"),
+    examresulttme : `${pm04bd}`,
+  },
+  {
+    NameofUnit: "ইনস্টিটিউট অব বিজনেস এ্যাডমিনিস্ট্রেশন, আইবিএ-জেইউ",
+    result:"উভয় পরীক্ষায় বিজ্ঞান শাখার জন্য মোট জিপিএ ৮.০০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৭৫); মানবিক/ব্যবসায় শিক্ষা/অন্যান্য শাখার জন্য মোট জিপিএ ৭.৫০ (পৃথকভাবে ন্যূনতম জিপিএ ৩.৫০) থাকতে হবে।", //result
+    applyfee: 700, // fee
+    applyfeebd: numberToBanglaWords(700), // word bd
+    admitdnstart: new Date("2026-09-01"), // admitcard download date  start
+    admitdnstartTtime: "", // admitcard download time start
+    admitdnend: new Date("2026-09-02"), // admitcard download date  end
+    admitdnendTime: `${lastLine}`, // admitcard download time end
+    examdate: new Date("2026-09-03"), // exam date
+    examtime: `${am10bd}${halfbd}`, // exam time
+    examresultdate : new Date("2026-09-05"),
+    examresulttme : `${pm04bd}`,
   },
 ];
 
@@ -864,24 +1167,26 @@ UNIVERSITYDTA.forEach(function (universitydata) {
             <img class="logoofunvio"  src="./src/img/${universitydata.Images}" alt="">
           </div>
           <div id="${universitydata.outmain}">
-            <div id="${universitydata.tabeloutputId}"></div><!-- table section -->
-            <div id="notice_section">
-              <div class="note">বিশেষ দ্রষ্টব্য যদি আর কোন এর প্রয়োজন হয় তবে অফিসিয়াল ওয়েবসাইটে অথবা নেটিশে দেখুন</div>
+            <div id="${universitydata.tabeloutputId}" clsss="noticepubliceture"></div><!-- table section -->
+            
+              
               <div class="button_section">
               <a href="./src/noticfile/${universitydata.notice}" target="_blank">সাধারণ নেটিশ</a>
               <a href="${universitydata.appweb}" target="_blank">আবেদনের ওয়েবসাইটে</a>
               <a href="${universitydata.mainweb}" target="_blank">অফিসিয়াল ওয়েবসাইটে</a>
             </div><!-- notice section -->
           </div>
-        </div>
+        
         </div> <!-- output div-->
         
-        `;
+        `
+        ;
 });
 document.getElementById("university_opt").innerHTML = universityOPTmian;
 function du() {
   const duoutput = document.getElementById("du_output");
   const duIcon = document.getElementById("du_icon");
+
   if (duoutput.style.display === "none") {
     duoutput.style.display = "block";
     duIcon.classList.remove("fa-plus");
@@ -931,6 +1236,20 @@ function gst() {
     gstIcon.classList.add("fa-plus");
   }
 }
+function ju() {
+  const juoutput = document.getElementById("ju_output");
+  const juIcon = document.getElementById("ju_icon");
+  if (juoutput.style.display === "none") {
+    juoutput.style.display = "block";
+    juIcon.classList.remove("fa-plus");
+    juIcon.classList.add("fa-minus");
+  } else {
+    juoutput.style.display = "none";
+    juIcon.classList.remove("fa-minus");
+    juIcon.classList.add("fa-plus");
+  }
+}
+
 
 const duapplicationenddate = UNIVERSITYDTA[duid].appDateend
   .toISOString()
@@ -958,7 +1277,7 @@ if (duapplicationenddate > todays) {
 } else if (duapplicationenddate === todays) {
   duappdateLine = `<tr>
       <td>আবেদন আর বাকি আছে</td>
-      <td style="color:green"আজকেই শেষ দিন </td>
+      <td style="color:green">আজকেই শেষ দিন </td>
     </tr>`;
   // dudateendstyle.style.color = "red"
 } else if (duapplicationenddate < todays) {
@@ -991,7 +1310,7 @@ if (ruapplicationenddate > todays) {
 } else if (ruapplicationenddate === todays) {
   ruappdateLine = `<tr>
       <td>আবেদন আর বাকি আছে</td>
-      <td style="color:green"আজকেই শেষ দিন </td>
+      <td style="color:green">আজকেই শেষ দিন </td>
     </tr>`;
 } else if (ruapplicationenddate < todays) {
   ruappdateLine = ` <tr>
@@ -1024,7 +1343,7 @@ if (jnuapplicationenddate > todays) {
 } else if (jnuapplicationenddate === todays) {
   jnuappdateLine = `<tr>
       <td>আবেদন আর বাকি আছে</td>
-      <td style="color:green"আজকেই শেষ দিন </td>
+      <td style="color:green">আজকেই শেষ দিন </td>
     </tr>`;
 } else if (jnuapplicationenddate < todays) {
   jnuappdateLine = ` <tr>
@@ -1032,6 +1351,41 @@ if (jnuapplicationenddate > todays) {
       <td style="color:red">আবেদনের সময় শেষ </td>
     </tr>`;
 }
+
+const juapplicationenddate = UNIVERSITYDTA[juid].appDateend
+  .toISOString()
+  .split("T")[0]; // object outupt to string
+const justingtodate = new Date(juapplicationenddate); // into a date
+const juDaysEng = Math.abs(justingtodate - today); // find out days
+const juDaysEngs = Math.floor(juDaysEng / (1000 * 60 * 60 * 24) + 1); // convate to date
+const juDaysEngbd = juDaysEngs.toLocaleString("bn-bd"); // convate into bangla
+const jutimetable = ` <tr>
+      <td>আবেদন শুরু</td>
+      <td>${UNIVERSITYDTA[juid].appDateStart.toLocaleDateString("bn-BD", dateBangla)}</td>
+    </tr>
+    <tr>
+      <td> আবেদন শেষ</td>
+      <td>${UNIVERSITYDTA[juid].appDateend.toLocaleDateString("bn-BD", dateBangla)}</td>
+    </tr>`;
+if (juapplicationenddate > todays) {
+  juappdateLine = `
+    <tr>
+      <td>আবেদন আর বাকি আছে</td>
+      <td style="color:green">আবেদন চলমাান ${juDaysEngbd} দিন বাকি আছে </td>
+    </tr>
+  `;
+} else if (juapplicationenddate === todays) {
+  juappdateLine = `<tr>
+      <td>আবেদন আর বাকি আছে</td>
+      <td style="color:green">আজকেই শেষ দিন </td>
+    </tr>`;
+} else if (juapplicationenddate < todays) {
+  juappdateLine = ` <tr>
+      <td>আবেদন সময়সীমা </td>
+      <td style="color:red">আবেদনের সময় শেষ </td>
+    </tr>`;
+}
+
 const gstapplicationenddate = UNIVERSITYDTA[gstid].appDateend
   .toISOString()
   .split("T")[0]; // object outupt to string
@@ -1057,7 +1411,7 @@ if (gstapplicationenddate > todays) {
 } else if (gstapplicationenddate === todays) {
   gstappdateLine = `<tr>
       <td>আবেদন আর বাকি আছে</td>
-      <td style="color:green"আজকেই শেষ দিন </td>
+      <td style="color:green">আজকেই শেষ দিন </td>
     </tr>`;
 } else if (gstapplicationenddate < todays) {
   gstappdateLine = ` <tr>
@@ -1068,72 +1422,36 @@ if (gstapplicationenddate > todays) {
 
 // !
 // * coad for all
-const tableHTMLHead = `<table>
-    <tr>
-      <th colspan="2" style="text-align: center;">শিক্ষাগত যোগ্যতা</th>
-    </tr>
-     <tr style="text-align: center;">
-              <td>ইউনিটের নাম</td>
-              <td> ফলাফল</td>
-            </tr>`;
-const tableFooter = `</table>`;
-
-const applyfeeheader = `
-            <tr>
-              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনের টাকার পরিমান</th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিটের নাম</td>
-              <td> টাকার পরিমাণ</td>
-            </tr>`;
-
-// const onlinechagr =
-const onlineTimeHead = ` 
-            <tr>
-              <th colspan="2" style="text-align: center;">অনলাইনে আবেদনে সময়সীমা</th>
-            </tr>`;
-
-
-// * For alll
-let dutableResultHTML = "";
-let dutaelfee = "";
+let duapplyResultHTML = "";
+let dutableapplyfee = "";
 let admitDNHeadhtml = "";
 let duadmitHTML = "";
 let examheadhtml = "";
 let duexmaHTML = "";
 let duexmacenterHTML = "";
-let duexamreusultHtml = "";
-let duexamreusultHtmlheaad = "";
+let duexamresultHtml = "";
+let duexamresultHtmlheaad = "";
 
 DUInfo.forEach(function (dudata) {
  
-  dutableResultHTML += `<tr>
+  duapplyResultHTML += `<tr>
       <td>${dudata.NameofUnit}</td>
       <td style="width: 50%"> ${dudata.result}</td>
     </tr>  <!-- Result-->`;
-  dutaelfee += `<tr>
+  dutableapplyfee += `<tr>
       <td>${dudata.NameofUnit}</td>
       <td style="width: 50%"> ${dudata.applyfee.toLocaleString("bn-BD")} (${dudata.applyfeebd}) </td>
     </tr>`;
   // ?fee section
-  // admitDNUnitwise:true,
-  let uintwiseADDU = UNIVERSITYDTA[duid].admitDNUnitwise; //admit true flase
-  if (uintwiseADDU === false) {
-    duadmitHTML = `<tr>
-              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
-            </tr>
-            <tr>
-      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[duid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[duid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[duid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[duid].admitDNUnitwistimeend} পর্যন্ত করা যাবে।</td>
+  // admitdnunitwise:true,
+  let uintwiseADDU = UNIVERSITYDTA[duid].admitdnunitwise; //admit true flase
+  let admitDNDU = UNIVERSITYDTA[duid].admitdn;
+  if (admitDNDU===true && uintwiseADDU === false) {
+    duadmitHTML = `
+      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[duid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[duid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[duid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[duid].admitDNUnitwistimeend} পর্যন্ত প্রবেশপত্র সংগ্রহ করা যাবে।</td>
     </tr>`;
-  } else if (uintwiseADDU === true) {
-    admitDNHeadhtml = `
-            <tr>
-              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
-            </tr>
-            <tr style="text-align: center;">
-              <td>ইউনিটের নাম</td>
-              <td> তারিখ  </td>
-            </tr>`;
+  } else if (admitDNDU===true && uintwiseADDU === true) {
+    admitDNHeadhtml = ``;
     duadmitHTML += `<tr>
 <td>${dudata.NameofUnit}</td>
       <td style="width: 50%"> ${dudata.admitdnstart.toLocaleDateString("bn-BD", dateBangla)} ${dudata.admitdnstartTtime} হতে ${dudata.admitdnend.toLocaleDateString("bn-BD", dateBangla)} ${dudata.admitdnendTime} </td>
@@ -1148,7 +1466,7 @@ DUInfo.forEach(function (dudata) {
               <th colspan="2" style="text-align: center;">  পরীক্ষার  তারিখ</th>
             </tr>
             <tr>
-<td colspan="2">সাকল ইউনিটের পরীক্ষা আগামী ${UNIVERSITYDTA[0].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${UNIVERSITYDTA[0].examtestend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[duid].examCenter} মধ্যে অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের পরীক্ষা আগামী ${UNIVERSITYDTA[0].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${UNIVERSITYDTA[0].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${UNIVERSITYDTA[duid].examCenter}  অনুষ্টিত হবে।  </td>      
     </tr>`;
   } else if (uintwiseExam === true) {
    examheadhtml = ` <tr>
@@ -1169,51 +1487,51 @@ DUInfo.forEach(function (dudata) {
               <td>${UNIVERSITYDTA[duid].examCenter}।</td>
             </tr>`;
   }
-const duexamreusult = UNIVERSITYDTA[duid].examreusult;
-const duexamreusultunit = UNIVERSITYDTA[duid].examreusultUnitwis;
-if (duexamreusult === true && duexamreusultunit === false) {
-  duexamreusultHtml =`<tr>
-              <td>পরীক্ষার ফলাফল</td>
-              <td>${UNIVERSITYDTA[ruid].examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[ruid].examreusulttme} প্রকাাশ করা হবে।</td>
+const duexamresult = UNIVERSITYDTA[duid].examresult;
+const duexamresultunit = UNIVERSITYDTA[duid].examresultUnitwis;
+if (duexamresult === true && duexamresultunit === false) {
+  duexamresultHtml =`<tr>
+              <th colspan="2" style="text-align: center;">পরীক্ষার ফলাফল</th>
+              </tr>
+              <tr>
+              <td colspan="2">আগামী ${UNIVERSITYDTA[duid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[duid].examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
-}else if (duexamreusult === true && duexamreusultunit === true) {
+}else if (duexamresult === true && duexamresultunit === true) {
 
-  duexamreusultHtmlheaad =`<tr>
+  duexamresultHtmlheaad =`<tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার ফলাফল</th>
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিটের নাম</td>
               <td> তারিখ</td>
             </tr>`
-  duexamreusultHtml +=`
+  duexamresultHtml +=`
             
             <tr>
               <td>${dudata.NameofUnit} </td>
-              <td>${dudata.examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${dudata.examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${dudata.examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${dudata.examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
 }
   // exam center
- 
 });
 // const
 // ? table output section
 //du
-document.getElementById("du_table_output").innerHTML =
-  tableHTMLHead +
-  dutableResultHTML + //du reuslt
-  onlineTimeHead +
-  dutimetable + // time table
-  duappdateLine + //time table
-  applyfeeheader +
-  dutaelfee + // fee
-  admitDNHeadhtml +
-  duadmitHTML + // admit downlaod
-  examheadhtml +
-  duexmaHTML + // exam date
-  duexmacenterHTML+
-  duexamreusultHtmlheaad+
-  duexamreusultHtml+
-  tableFooter;
+const /* */ duNoticePUB= UNIVERSITYDTA[duid].noticepub;
+if (duNoticePUB === true) {
+  dufinalopt=
+  universitytableHTMLHead+
+  duapplyResultHTML+
+  dutableapplyfee+ // apply free
+  dutimetable+ //app start and end
+  duappdateLine+ //duddate
+  applyfeeheaderall+
+  tableFooter+
+  note;
+} else {
+  dufinalopt = `${notnoticePUb}`
+}
+document.getElementById("du_table_output").innerHTML =dufinalopt;
 //du
 let rutableResultHTML = "";
 let rutaelfee = "";
@@ -1222,8 +1540,8 @@ let ruadmitHTML = "";
 let ruexamheadhtml = "";
 let ruexmaHTML = "";
 let ruexmacenterHTML = "";
-let ruexamreusultHtml = "";
-let ruexamreusultHtmlheaad = "";
+let ruexamresultHtml = "";
+let ruexamresultHtmlheaad = "";
 
 RUInfo.forEach(function (rudata) {
   // du = 0
@@ -1236,16 +1554,17 @@ RUInfo.forEach(function (rudata) {
       <td style="width: 50%"> ${rudata.applyfee.toLocaleString("bn-BD")} (${rudata.applyfeebd}) </td>
     </tr>`;
   // ?fee section
-  // admitDNUnitwise:true,
-  let uintwiseADRU = UNIVERSITYDTA[ruid].admitDNUnitwise; //admit true flase
-  if (uintwiseADRU === false) {
+  // admitdnunitwise:true,
+  let uintwiseADRU = UNIVERSITYDTA[ruid].admitdnunitwise; //admit true flase
+  let admitcardDNru = UNIVERSITYDTA[ruid].admitdn; //admit true flase
+  console.log(admitcardDNru)
+  if (admitcardDNru ===true && uintwiseADRU === false) {
     ruadmitHTML = `<tr>
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
-            <tr>
-      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[ruid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[ruid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[ruid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[ruid].admitDNUnitwistimeend} পর্যন্ত করা যাবে।</td>
+      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[ruid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[ruid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[ruid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[ruid].admitDNUnitwistimeend} পর্যন্ত প্রবেশপত্র সংগ্রহ করা যাবে।</td>
     </tr>`;
-  } else if (uintwiseADRU === true) {
+  } else if (admitcardDNru ===true && uintwiseADRU === true) {
     ruadmitDNHeadhtml = `
             <tr>
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
@@ -1255,9 +1574,8 @@ RUInfo.forEach(function (rudata) {
               <td> তারিখ  </td>
             </tr>`;
     ruadmitHTML += `<tr>
-<td>${rudata.NameofUnit}</td>
-      <td style="width: 50%"> ${rudata.admitdnstart.toLocaleDateString("bn-BD", dateBangla)} </td>
-      
+          <td>${rudata.NameofUnit}</td>
+      <td style="width: 50%"> ${rudata.admitdnstart.toLocaleDateString("bn-BD", dateBangla)} </td>      
     </tr>`;
   }
   let RUuintwiseExam = UNIVERSITYDTA[ruid].examUnitwise; //admit true flase
@@ -1268,7 +1586,7 @@ RUInfo.forEach(function (rudata) {
               <th colspan="2" style="text-align: center;">  পরীক্ষার  তারিখ</th>
             </tr>
             <tr>
-<td colspan="2">সাকল ইউনিটের পরীক্ষা আগামী ${UNIVERSITYDTA[ruid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${UNIVERSITYDTA[ruid].examtestend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[ruid].examCenter} মধ্যে অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের পরীক্ষা আগামী ${UNIVERSITYDTA[ruid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${UNIVERSITYDTA[ruid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে  ${UNIVERSITYDTA[ruid].examCenter} অনুষ্টিত হবে।  </td>      
     </tr>`;
   } else if (RUuintwiseExam === true) {
     ruexamheadhtml = ` <tr>
@@ -1289,27 +1607,30 @@ RUInfo.forEach(function (rudata) {
               <td>${UNIVERSITYDTA[ruid].examCenter}।</td>
             </tr>`;
   }
-const ruexamreusult = UNIVERSITYDTA[ruid].examreusult;
-const ruexamreusultunit = UNIVERSITYDTA[ruid].examreusultUnitwis;
-if (ruexamreusult === true && ruexamreusultunit === false) {
-  ruexamreusultHtml =`<tr>
-              <td>পরীক্ষার ফলাফল</td>
-              <td>${UNIVERSITYDTA[ruid].examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[ruid].examreusulttme} প্রকাাশ করা হবে।</td>
+const ruexamresult = UNIVERSITYDTA[ruid].examresult;
+const ruexamresultunit = UNIVERSITYDTA[ruid].examresultUnitwis;
+if (ruexamresult === true && ruexamresultunit === false) {
+  ruexamresultHtml =`
+              <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার ফলাফল</th>
+            </tr>
+              <tr>
+              <td colspan="2">আগামী ${UNIVERSITYDTA[ruid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[ruid].examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
-}else if (ruexamreusult === true && ruexamreusultunit === true) {
+}else if (ruexamresult === true && ruexamresultunit === true) {
 
-  ruexamreusultHtmlheaad =`<tr>
+  ruexamresultHtmlheaad =`<tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার ফলাফল</th>
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিটের নাম</td>
               <td> তারিখ</td>
             </tr>`
-  ruexamreusultHtml +=`
+  ruexamresultHtml +=`
             
             <tr>
               <td>${rudata.NameofUnit} </td>
-              <td>${rudata.examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${rudata.examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${rudata.examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${rudata.examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
 }
   // exam center
@@ -1318,22 +1639,30 @@ if (ruexamreusult === true && ruexamreusultunit === false) {
 // const
 // ? table output section
 //du
-document.getElementById("ru_table_output").innerHTML =
-  tableHTMLHead +
-  rutableResultHTML + //du reuslt
-  onlineTimeHead +
+const ruNoticePUB= UNIVERSITYDTA[ruid].noticepub;
+if (ruNoticePUB === true) {
+    RUfinalopt = untableHTMLHead +
+  rutableResultHTML + /* */
+  unonlineTimeHead +
   rutimetable + // time table
   ruappdateLine + //time table
-  applyfeeheader +
+  unapplyfeeheader +
   rutaelfee + // fee
+  ruadmitDNHeadhtml+  
   admitDNHeadhtml +
   ruadmitHTML + // admit downlaod
   ruexamheadhtml +
   ruexmaHTML + // exam date
   ruexmacenterHTML+
-  ruexamreusultHtmlheaad+
-  ruexamreusultHtml+
-  tableFooter;
+  ruexamresultHtmlheaad+
+  ruexamresultHtml+
+  tableFooter+
+  note;
+} else {
+  RUfinalopt = `${notnoticePUb}`
+}
+document.getElementById("ru_table_output").innerHTML =  RUfinalopt;
+
 //ru 
 // ? table output section
 
@@ -1344,8 +1673,8 @@ let jnuadmitHTML = "";
 let jnuexamheadhtml = "";
 let jnuexmaHTML = "";
 let jnuexmacenterHTML = "";
-let jnuexamreusultHtml = "";
-let jnuexamreusultHtmlheaad = "";
+let jnuexamresultHtml = "";
+let jnuexamresultHtmlheaad = "";
 
 JNUInfo.forEach(function (jnudata) {
   // du = 0
@@ -1358,16 +1687,17 @@ JNUInfo.forEach(function (jnudata) {
       <td style="width: 50%"> ${jnudata.applyfee.toLocaleString("bn-BD")} (${jnudata.applyfeebd}) </td>
     </tr>`;
   // ?fee section
-  // admitDNUnitwise:tjnue,
-  let uintwiseADJNU = UNIVERSITYDTA[jnuid].admitDNUnitwise; //admit tjnue flase
-  if (uintwiseADJNU === false) {
+  // admitdnunitwise:tjnue,
+  let uintwiseADJNU = UNIVERSITYDTA[jnuid].admitdnunitwise; //admit tjnue flase
+  let admitdnjnu = UNIVERSITYDTA[jnuid].admitdn; //admit tjnue flase
+  if (admitdnjnu === true && uintwiseADJNU === false) {
     jnuadmitHTML = `<tr>
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
             <tr>
-      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[jnuid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[jnuid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[jnuid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[jnuid].admitDNUnitwistimeend} পর্যন্ত করা যাবে।</td>
+      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[jnuid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[jnuid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[jnuid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[jnuid].admitDNUnitwistimeend} পর্যন্ত প্রবেশপত্র সংগ্রহ করা যাবে।</td>
     </tr>`;
-  } else if (uintwiseADJNU === true) {
+  } else if (admitdnjnu === true && uintwiseADJNU === true) {
     jnuadmitDNHeadhtml = `
             <tr>
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
@@ -1411,49 +1741,56 @@ JNUInfo.forEach(function (jnudata) {
               <td>${UNIVERSITYDTA[jnuid].examCenter} বিশ্ববিদ্যালয়ে অনুষ্ঠিত হবে  ।</td>
             </tr>`;
   }
-  const jnuexamreusult = UNIVERSITYDTA[jnuid].examreusult;
-  const jnuexamreusultunit = UNIVERSITYDTA[jnuid].examreusultUnitwis;
-  if (jnuexamreusult === true && jnuexamreusultunit === false) {
-    jnuexamreusultHtml = `<tr>
+  const jnuexamresult = UNIVERSITYDTA[jnuid].examresult;
+  const jnuexamresultunit = UNIVERSITYDTA[jnuid].examresultUnitwis;
+  if (jnuexamresult === true && jnuexamresultunit === false) {
+    jnuexamresultHtml = `<tr>
               <td>পরীক্ষার ফলাফল</td>
-              <td>${UNIVERSITYDTA[jnuid].examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[jnuid].examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${UNIVERSITYDTA[jnuid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[jnuid].examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
-  } else if (jnuexamreusult === true && jnuexamreusultunit === true) {
-    jnuexamreusultHtmlheaad = `<tr>
+  } else if (jnuexamresult === true && jnuexamresultunit === true) {
+    jnuexamresultHtmlheaad = `<tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার ফলাফল</th>
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিটের নাম</td>
               <td> তারিখ</td>
             </tr>`;
-    jnuexamreusultHtml += `
+    jnuexamresultHtml += `
             
             <tr>
               <td>${jnudata.NameofUnit} </td>
-              <td>${jnudata.examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${jnudata.examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${jnudata.examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${jnudata.examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
   }
   // exam center
 });
 // const
 // ? table output section
-//du
-document.getElementById("jnu_table_output").innerHTML =
-  tableHTMLHead +
+const jnuNoticePUB= UNIVERSITYDTA[jnuid].noticepub;
+if (jnuNoticePUB === true) {
+    jnufinalopt = untableHTMLHead +
   jnutableResultHTML + //du reuslt
-  onlineTimeHead +
+  unonlineTimeHead +
   jnutimetable + // time table
   jnuappdateLine + //time table
-  applyfeeheader +
+  unapplyfeeheader +
   jnutaelfee + // fee
   admitDNHeadhtml +
   jnuadmitHTML + // admit downlaod
   jnuexamheadhtml +
   jnuexmaHTML + // exam date
   jnuexmacenterHTML +
-  jnuexamreusultHtmlheaad +
-  jnuexamreusultHtml +
-  tableFooter;
+  jnuexamresultHtmlheaad +
+  jnuexamresultHtml +
+  tableFooter+
+  note;
+} else {
+  jnufinalopt = notnoticePUb
+}
+
+
+document.getElementById("jnu_table_output").innerHTML =jnufinalopt;
 
 let gsttableResultHTML = "";
 let gsttaelfee = "";
@@ -1462,8 +1799,8 @@ let gstadmitHTML = "";
 let gstexamheadhtml = "";
 let gstexmaHTML = "";
 let gstexmacenterHTML = "";
-let gstexamreusultHtml = "";
-let gstexamreusultHtmlheaad = "";
+let gstexamresultHtml = "";
+let gstexamresultHtmlheaad = "";
 
 GSTInfo.forEach(function (gstdata) {
   // du = 0
@@ -1476,14 +1813,14 @@ GSTInfo.forEach(function (gstdata) {
       <td style="width: 50%"> ${gstdata.applyfee.toLocaleString("bn-BD")} (${gstdata.applyfeebd}) </td>
     </tr>`;
   // ?fee section
-  // admitDNUnitwise:tgste,
-  let uintwiseADGST = UNIVERSITYDTA[gstid].admitDNUnitwise; //admit tgste flase
+  // admitdnunitwise:tgste,
+  let uintwiseADGST = UNIVERSITYDTA[gstid].admitdnunitwise; //admit tgste flase
   if (uintwiseADGST === false) {
     gstadmitHTML = `<tr>
               <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
             </tr>
             <tr>
-      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[gstid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[gstid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[gstid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[gstid].admitDNUnitwistimeend} পর্যন্ত করা যাবে।</td>
+      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[gstid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[gstid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[gstid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[gstid].admitDNUnitwistimeend} পর্যন্ত প্রবেশপত্র সংগ্রহ করা যাবে।</td>
     </tr>`;
   } else if (uintwiseADGST === true) {
     gstadmitDNHeadhtml = `
@@ -1529,26 +1866,26 @@ GSTInfo.forEach(function (gstdata) {
               <td>${UNIVERSITYDTA[gstid].examCenter}।</td>
             </tr>`;
   }
-  const gstexamreusult = UNIVERSITYDTA[gstid].examreusult;
-  const gstexamreusultunit = UNIVERSITYDTA[gstid].examreusultUnitwis;
-  if (gstexamreusult === true && gstexamreusultunit === false) {
-    gstexamreusultHtml = `<tr>
+  const gstexamresult = UNIVERSITYDTA[gstid].examresult;
+  const gstexamresultunit = UNIVERSITYDTA[gstid].examresultUnitwis;
+  if (gstexamresult === true && gstexamresultunit === false) {
+    gstexamresultHtml = `<tr>
               <td>পরীক্ষার ফলাফল</td>
-              <td>${UNIVERSITYDTA[gstid].examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[gstid].examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${UNIVERSITYDTA[gstid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[gstid].examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
-  } else if (gstexamreusult === true && gstexamreusultunit === true) {
-    gstexamreusultHtmlheaad = `<tr>
+  } else if (gstexamresult === true && gstexamresultunit === true) {
+    gstexamresultHtmlheaad = `<tr>
               <th colspan="2" style="text-align: center;"> পরীক্ষার ফলাফল</th>
             </tr>
             <tr style="text-align: center;">
               <td>ইউনিটের নাম</td>
               <td> তারিখ</td>
             </tr>`;
-    gstexamreusultHtml += `
+    gstexamresultHtml += `
             
             <tr>
               <td>${gstdata.NameofUnit} </td>
-              <td>${gstdata.examreusultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${gstdata.examreusulttme} প্রকাাশ করা হবে।</td>
+              <td>${gstdata.examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${gstdata.examresulttme} প্রকাাশ করা হবে।</td>
             </tr>`;
   }
   // exam center
@@ -1556,20 +1893,147 @@ GSTInfo.forEach(function (gstdata) {
 // const
 // ? table output section
 //du
-document.getElementById("gst_table_output").innerHTML =
-  tableHTMLHead +
+const gstNoticePUB= UNIVERSITYDTA[gstid].noticepub;
+if (gstNoticePUB === true) {
+  gstfinalopt=  untableHTMLHead +
   gsttableResultHTML + //du reuslt
-  onlineTimeHead +
+  unonlineTimeHead +
   gsttimetable + // time table
   gstappdateLine + //time table
-  applyfeeheader +
+  unapplyfeeheader +
   gsttaelfee + // fee
   admitDNHeadhtml +
   gstadmitHTML + // admit downlaod
   gstexamheadhtml +
   gstexmaHTML + // exam date
   gstexmacenterHTML +
-  gstexamreusultHtmlheaad +
-  gstexamreusultHtml +
-  tableFooter;
+  gstexamresultHtmlheaad +
+  gstexamresultHtml +
+  tableFooter+
+  note;
+} else {
+  gstfinalopt = `${notnoticePUb}`
+}
+document.getElementById("gst_table_output").innerHTML =gstfinalopt;
 //gst
+
+let jutableResultHTML = "";
+let jutaelfee = "";
+let juadmitDNHeadhtml = "";
+let juadmitHTML = "";
+let juexamheadhtml = "";
+let juexmaHTML = "";
+let juexmacenterHTML = "";
+let juexamresultHtml = "";
+let juexamresultHtmlheaad = "";
+
+JUInfo.forEach(function (judata) {
+  // du = 0
+  jutableResultHTML += `<tr>
+      <td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.result}</td>
+    </tr>  <!-- Result-->`;
+  jutaelfee += `<tr>
+      <td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.applyfee.toLocaleString("bn-BD")} (${judata.applyfeebd}) </td>
+    </tr>`;
+  // ?fee section
+  // admitdnunitwise:true,
+  let uintwiseADJU = UNIVERSITYDTA[juid].admitdnunitwise; //admit true flase
+  if (uintwiseADJU === false) {
+    juadmitHTML = `
+            <tr>
+      <td colspan="2">সাকল ইউনিটের প্রবেশপত্র ডাউনলোডের আগামী ${UNIVERSITYDTA[juid].admitDNUnitwisdatestart.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[juid].admitDNUnitwistimestart} হতে ${UNIVERSITYDTA[juid].admitDNUnitwisdateend.toLocaleDateString("bn-BD", dateBangla)} ${UNIVERSITYDTA[juid].admitDNUnitwistimeend} পর্যন্ত প্রবেশপত্র সংগ্রহ করা যাবে।</td>
+    </tr>`;
+  } else if (uintwiseADJU === true) {
+    juadmitDNHeadhtml = `
+            <tr>
+              <th colspan="2" style="text-align: center;"> প্রবেশপত্র সংগ্রহের তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিটের নাম</td>
+              <td> তারিখ  </td>
+            </tr>`;
+    juadmitHTML += `<tr>
+<td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.admitdnstart.toLocaleDateString("bn-BD", dateBangla)} </td>
+      
+    </tr>`;
+  }
+  let JUuintwiseExam = UNIVERSITYDTA[juid].examUnitwise; //admit true flase
+  // * False for Unit-wise NO , true for Unit-wise yes
+  if (JUuintwiseExam === false) {
+    juexmaHTML = `
+            <tr>
+              <th colspan="2" style="text-align: center;">  পরীক্ষার  তারিখ</th>
+            </tr>
+            <tr>
+<td colspan="2">সাকল ইউনিটের পরীক্ষা আগামী ${UNIVERSITYDTA[juid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${UNIVERSITYDTA[juid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে অনুষ্টিত হবে।  </td>      
+    </tr>`;
+  } else if (JUuintwiseExam === true) {
+    juexamheadhtml = ` <tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার তারিখ</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিটের নাম</td>
+              <td> তারিখ</td>
+            </tr>`;
+
+    juexmaHTML += `<tr>
+<td>${judata.NameofUnit}</td>
+      <td style="width: 50%"> ${judata.examdate.toLocaleDateString("bn-BD", dateBangla)} ${judata.examtime}  অনুষ্টিত হবে।  </td>
+      
+    </tr>`;
+    juexmacenterHTML = `<tr>
+              <td>পরীক্ষার কেন্দ্র</td>
+              <td>${UNIVERSITYDTA[juid].examCenter}।</td>
+            </tr>`;
+  }
+  const juexamresult = UNIVERSITYDTA[juid].examresult;
+  const juexamresultunit = UNIVERSITYDTA[juid].examresultUnitwis;
+  if (juexamresult === true && juexamresultunit === false) {
+    juexamresultHtml = `<tr>
+              <td>পরীক্ষার ফলাফল</td>
+              <td>${UNIVERSITYDTA[juid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${UNIVERSITYDTA[juid].examresulttme} প্রকাাশ করা হবে।</td>
+            </tr>`;
+  } else if (juexamresult === true && juexamresultunit === true) {
+    juexamresultHtmlheaad = `<tr>
+              <th colspan="2" style="text-align: center;"> পরীক্ষার ফলাফল</th>
+            </tr>
+            <tr style="text-align: center;">
+              <td>ইউনিটের নাম</td>
+              <td> তারিখ</td>
+            </tr>`;
+    juexamresultHtml += `
+            
+            <tr>
+              <td>${judata.NameofUnit} </td>
+              <td>${judata.examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে ${judata.examresulttme} প্রকাাশ করা হবে।</td>
+            </tr>`;
+  }
+  // exam center
+});
+const juNoticePUB= UNIVERSITYDTA[juid].noticepub;
+if (juNoticePUB === true) {
+  jufinalopt=
+  untableHTMLHead +
+  jutableResultHTML + //du reuslt
+  unonlineTimeHead +
+  jutimetable + // time table
+  juappdateLine + //time table
+  unapplyfeeheader +
+  jutaelfee + // fee
+  admitDNHeadhtml +
+  juadmitHTML + // admit downlaod
+  juexamheadhtml +
+  juexmaHTML + // exam date
+  juexmacenterHTML +
+  juexamresultHtmlheaad +
+  juexamresultHtml +
+  tableFooter+
+  note;
+} else {
+  jufinalopt = `${notnoticePUb}`
+}
+document.getElementById("ju_table_output").innerHTML =jufinalopt;
+//ju

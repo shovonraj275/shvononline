@@ -10,7 +10,10 @@
 #qr,
 #input,
 #footer{
- display: block !important;
+ display: none !important;
+}
+#du_output{
+  display: block !important;
 }
 
 #info #school {
@@ -31,6 +34,9 @@
 
 .duadmitdnsection{
   /* display: none; */
+  
+  font-weight: lighter;
+  
 }.ruadmitdnsection{
   /* display: none; */
 }
@@ -342,22 +348,6 @@ nav#nav {
   text-align: center;
   font-size: 20px;
   text-transform: capitalize;
-}
-
-#info #school {
-  display: none;
-}
-#info #college {
-  display: none;
-}
-#info #university {
-  display: block;
-}
-#info #job {
-  display: none;
-}
-#info #medical {
-  display: none;
 }
 
 .Organtion {
