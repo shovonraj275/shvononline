@@ -14,7 +14,7 @@
 #qr,
 #input,
 #footer{
-  display: none !important;
+  /* display: none !important; */
 }
 #du_output{
   /* display: block !important; */
@@ -27,7 +27,7 @@
   display: none;
 }
 #info #university {
-  /* display: block; */
+  display: block;
 }
 #info #job {
   display: none;
