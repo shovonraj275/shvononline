@@ -111,12 +111,34 @@
     <h1>Recent Notice</h1>
     <div class="notice_area">
       <!--  -->
-      <button class="button" onclick="school()">School</button><!-- School -->
-      <button class="button" onclick="college()">College</button><!-- college -->
-      <button class="button" onclick="university()">University</button><!-- university -->
-      <button class="button" onclick="medical()">medical</button><!-- medical -->
-      <button class="button" onclick="engineering()">engineering</button><!--engineering  -->
-      <button class="button" onclick="job()">Job</button><!--  -->
+      <div class="notice_area">
+
+  <button class="button active"
+          onclick="showSection('school', this)">
+    School
+  </button>
+
+  <button class="button"
+          onclick="showSection('college', this)">
+    College
+  </button>
+
+  <button class="button active"
+          onclick="showSection('university', this)">
+    University
+  </button>
+
+  <button class="button"
+          onclick="showSection('medical', this)">
+    Medical
+  </button>
+
+  <button class="button"
+          onclick="showSection('job', this)">
+    Job
+  </button>
+
+</div>
     </div>
     <div id="school" class="Organtion">
       <h1>All School Notice</h1>
@@ -208,6 +230,9 @@
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script  src="./src/js/function.js"></script>
+  <script  src="./src/js/bangla.js"></script>
+  <script  src="./src/js/info.js"></script>
   <script  src="./src/js/main.js"></script>
   
 </body>

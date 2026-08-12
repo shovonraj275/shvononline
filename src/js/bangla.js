@@ -1,5 +1,40 @@
-// taka to word
-export function numberToBanglaWords(r) {
+function BanglaNumber(number) {
+  const banglaDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+
+  return number.toString().replace(/\d/g, (digit) => banglaDigits[digit]);
+}
+
+function BanglaTime(time) {
+  const [hour24, minute] = time.split(":").map(Number);
+
+  let period;
+  let hour12;
+
+  // সময়ের ধরন
+  if (hour24 >= 0 && hour24 <= 4) {
+    period = "রাত";
+  } else if (hour24 >= 5 && hour24 <= 6) {
+    period = "ভোর";
+  } else if (hour24 >= 7 && hour24 <= 11) {
+    period = "সকাল";
+  } else if (hour24 >= 12 && hour24 <= 16) {
+    period = "দুপুর";
+  } else if (hour24 >= 17 && hour24 <= 19) {
+    period = "সন্ধ্যা";
+  } else {
+    period = "রাত";
+  }
+
+  // 24-hour → 12-hour
+  hour12 = hour24 % 12;
+
+  if (hour12 === 0) {
+    hour12 = 12;
+  }
+
+  return `${period} ${BanglaNumber(hour12)} টা ${BanglaNumber(minute)} মিনিট`;
+}
+function BanglaWordstaka(r) {
   const t = [
     "শূন্য",
     "এক",
@@ -135,3 +170,5 @@ export function numberToBanglaWords(r) {
     f + " মাত্র।"
   );
 }
+
+console.log(BanglaWordstaka(1258.55))
