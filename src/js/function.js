@@ -6,11 +6,11 @@ function dateCalculator(newdate) {
   targetDate.setHours(0, 0, 0, 0);
 
   if (targetDate < today) {
-    return "তারিখটি পার হয়ে গেছে";
+    return "আবেদনের সময় শেষ।";
   }
 
   if (targetDate.getTime() === today.getTime()) {
-    return "আজ";
+    return "আজকেই শেষ দিন।";
   }
 
   let years = targetDate.getFullYear() - today.getFullYear();
@@ -40,7 +40,7 @@ function dateCalculator(newdate) {
   let result = [];
 
   if (years > 0) {
-    result.push(`${banglaNumber(years)} বছর`);
+    result.push(`আবেদন চলমান এবং ${banglaNumber(years)} বছর`);
   }
 
   if (months > 0) {
@@ -51,10 +51,11 @@ function dateCalculator(newdate) {
     result.push(`${banglaNumber(days)} দিন`);
   }
 
-  return result.join(" ") + " বাকি ";
+  return result.join(" ") + " বাকি আছে";
 }
 
 console.log(dateCalculator("2028-10-25"));
+//bangla dat
 const dateBangla = {
   year: "numeric",
   month: "long",

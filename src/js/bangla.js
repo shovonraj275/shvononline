@@ -17,8 +17,10 @@ function BanglaTime(time) {
     period = "ভোর";
   } else if (hour24 >= 7 && hour24 <= 11) {
     period = "সকাল";
-  } else if (hour24 >= 12 && hour24 <= 16) {
+  } else if (hour24 >= 12 && hour24 <= 15) {
     period = "দুপুর";
+  } else if (hour24 === 16) {
+    period = "বিকাল";
   } else if (hour24 >= 17 && hour24 <= 19) {
     period = "সন্ধ্যা";
   } else {
@@ -32,7 +34,12 @@ function BanglaTime(time) {
     hour12 = 12;
   }
 
-  return `${period} ${BanglaNumber(hour12)} টা ${BanglaNumber(minute)} মিনিট`;
+  // মিনিট 00 হলে মিনিট দেখাবে না
+  if (minute === 0) {
+    return `${period} ${BanglaNumber(hour12)}টা`;
+  }
+
+  return `${period} ${BanglaNumber(hour12)}টা ${BanglaNumber(minute)} মিনিট`;
 }
 function BanglaWordstaka(r) {
   const t = [
