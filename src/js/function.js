@@ -53,7 +53,27 @@ function dateCalculator(newdate) {
 
   return result.join(" ") + " বাকি আছে";
 }
+function toggleOutput(outputId, iconId) {
+  const output = document.getElementById(outputId);
+  const icon = document.getElementById(iconId);
 
+  if (!output || !icon) {
+    console.error("Output অথবা Icon পাওয়া যায়নি:", outputId, iconId);
+    return;
+  }
+
+  if (output.style.display === "none") {
+    output.style.display = "block";
+
+    icon.classList.remove("fa-plus");
+    icon.classList.add("fa-minus");
+  } else {
+    output.style.display = "none";
+
+    icon.classList.remove("fa-minus");
+    icon.classList.add("fa-plus");
+  }
+}
 console.log(dateCalculator("2028-10-25"));
 //bangla dat
 const dateBangla = {

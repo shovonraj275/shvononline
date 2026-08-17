@@ -2623,3 +2623,5 @@ if (juNoticePUB === true) {
 document.getElementById("ju_table_output").innerHTML = jufinalopt;
 //ju
 
+
+

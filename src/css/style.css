@@ -8,16 +8,19 @@
   background: #007bff;
   color: white;
 }
+a{
+  text-decoration:none;
+}
 #head,
 #banner,
 #MyInfo,
 #qr,
 #input,
 #footer{
-  /* display: none !important; */
+  display: none !important;
 }
-#mbbs_output{
-  /* display: block !important; */
+#bnnc_output{
+  display: block !important;
   
 }
 
@@ -28,13 +31,13 @@
   display: none;
 }
 #info #university {
-  display: block;
+  display: none;
 }
 #info #job {
   display: none;
 }
 #info #medical {
-  display: none;
+  display: block;
 }
 
 .duadmitdnsection{

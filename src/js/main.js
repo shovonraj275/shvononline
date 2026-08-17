@@ -284,6 +284,7 @@ const notnoticePUb = `<h1 ‍style="font-size: 40px;font-weight: lighter;text-al
 
 let madicalOPTmian = "";
 MADICALADDATA.forEach(function (madicaldata) {
+  
   madicalOPTmian += `<div class="NotiecList">
         <div class="nameofevent" onclick="toggleOutput('${madicaldata.OutptuID}','${madicaldata.IconID}' )"> <!-- on click-->
           <div class="nameofevent_content icons"><i id="${madicaldata.IconID}" class="fa-solid fa-plus"> </i></div> <!-- icon-->
@@ -310,33 +311,165 @@ MADICALADDATA.forEach(function (madicaldata) {
         </div> <!-- output div-->
         
         `;
-  // mdddd = `<h1>${madicaldata.NameBng}</h1>
-  // <p>${madicaldata.NameEng}</p>
-  // `
-  //   const madicaldatanotice = madicaldata.noticepub;
+  
 });
 document.getElementById("madicalOPTmian").innerHTML = madicalOPTmian; //medical main output
-function toggleOutput(outputId, iconId) {
-  const output = document.getElementById(outputId);
-  const icon = document.getElementById(iconId);
+// mediacl teble
+let mbbsnotivcepub = MADICALADDATA[mbbsid].noticepub;
+let mbbsadmitdn = MADICALADDATA[mbbsid].admitdn;
+if (mbbsadmitdn ===true) {
+  admitmbbs= ` ${admitcardheaderall}
+  <td colspan="2"> ${MADICALADDATA[mbbsid].NameBng} এর প্রবেশপত্র আগামী  ${MADICALADDATA[mbbsid].admitdndatestart.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[mbbsid].admitdntimestart} হতে ${MADICALADDATA[mbbsid].admitdndateend.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[mbbsid].admitdntimeend} পর্যন্ত প্রবেশপত্র ডাউনলোড করা যাবে।</td>`
+} else {
+  admitmbbs= ``
+}  mbbsresult = MADICALADDATA[mbbsid].examresult 
+  if(mbbsresult === true){
+    mbbsresulthtml = `${reusltheaderall}
+     <tr>
+      <td colspan="2"> ${MADICALADDATA[mbbsid].NameBng} এর ভর্তি পরীক্ষার ফলাফল  ${MADICALADDATA[mbbsid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে  ${MADICALADDATA[mbbsid].examresulttme} এর এ প্রকাাশ করা হবে।</td>
+    </tr> `
+  }else{mbbsresulthtml=``}
+if (mbbsnotivcepub === true) {
+  mbbsmianopt = `${tableHTMLHeadall}
+  </tr><td colspan="2" sytle="text-align: justify;">
+  ২০২৫-২০২৬ খ্রি. শিক্ষাবর্ষে ভর্তি পরীক্ষায় অংশগ্রহণে ইচ্ছুক প্রার্থীকে ২০২৪ সাল অথবা ২০২৫ সালে এইচএসসি/'এ' লেভেল/সমমান পরীক্ষায় উত্তীর্ণ হতে হবে। ২০২২ সালের পূর্বে এসএসসি/ 'ও' লেভেল/সমমান পরীক্ষায় উত্তীর্ণ শিক্ষার্থীরা আবেদনের যোগ্য বলে বিবেচিত হবেন না।প্রার্থীকে এসএসসি /'ও' লেভেল/সমমান পরীক্ষায় বিজ্ঞান বিভাগে উত্তীর্ণ হতে হবে এবং এইচএসসি/'এ' লেভেল/সমমান পরীক্ষায় বিজ্ঞান বিভাগসহ অবশ্যই জীববিজ্ঞান, পদার্থবিজ্ঞান ও রসায়ন থাকতে হবে।
+<b>এসএসসি/ 'ও' লেভেল/সমমান এবং এইচএসসি /'এ' লেভেল/সমমান দুটি পরীক্ষায় মোট জিপিএ কমপক্ষে ৮.৫০ পয়েন্ট হতে হবে। তবে এককভাবে কোনো পরীক্ষায় জিপিএ ৪.০০ পয়েন্ট এর কম থাকলে আবেদনের যোগ্য বলে বিবেচিত হবেন না।</b>
+  </td></tr>
+  ${timetablehead}
+  
+  <tr>
+      <td>আবদেন শুরুর তারিখ ও সময়</td>
+      <td style="width: 50%"> ${MADICALADDATA[mbbsid].appDateStart.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[mbbsid].appstarttime}</td>
+    </tr> 
+    <tr>
+      <td>আবদেন শেষের তারিখ</td>
+      <td style="width: 50%"> ${MADICALADDATA[mbbsid].appDateend.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[mbbsid].appendtime}</td>
+    </tr> 
+    <tr>
+      <td>আবদেন বর্তমান অবস্থান</td>
+      <td style="width: 50%">${MADICALADDATA[mbbsid].datecount}।</td>
+    </tr> 
+    ${applyfeeheader}
+  <tr>
+      <td colspan="2"> ${MADICALADDATA[mbbsid].NameBng} এর আবেদন ফি ${MADICALADDATA[mbbsid].applyfee.toLocaleString("bn-BD")} (${MADICALADDATA[mbbsid].applyfeebd})।</td>
+    </tr> 
+    ${admitmbbs}
+    ${examheaderall}
+    <td colspan="2"> ${MADICALADDATA[mbbsid].NameBng} এর পরীক্ষা আগামী  ${MADICALADDATA[mbbsid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[mbbsid].examtesttime} অনুষ্টিত হবে। এবং <b> <a style="color:#000;" href="./src/noticfile/${MADICALADDATA[mbbsid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${MADICALADDATA[mbbsid].examCenter}</a> </b>  </td>
+    ${mbbsresulthtml}
+  `
 
-  if (!output || !icon) {
-    console.error("Output অথবা Icon পাওয়া যায়নি:", outputId, iconId);
-    return;
-  }
-
-  if (output.style.display === "none") {
-    output.style.display = "block";
-
-    icon.classList.remove("fa-plus");
-    icon.classList.add("fa-minus");
-  } else {
-    output.style.display = "none";
-
-    icon.classList.remove("fa-minus");
-    icon.classList.add("fa-plus");
-  }
+} else {
+  mbbsmianopt =`${notnoticePUb}`
 }
+document.getElementById("mbbs_table_output").innerHTML=mbbsmianopt +tableFooter
+// mediacl teble
+
+let afmcnotivcepub = MADICALADDATA[afmcid].noticepub;
+let afmcadmitdn = MADICALADDATA[afmcid].admitdn;
+if (afmcadmitdn ===true) {
+  admitafmc= ` ${admitcardheaderall}
+  <td colspan="2"> ${MADICALADDATA[afmcid].NameBng} এর প্রবেশপত্র আগামী  ${MADICALADDATA[afmcid].admitdndatestart.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[afmcid].admitdntimestart} হতে ${MADICALADDATA[afmcid].admitdndateend.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[afmcid].admitdntimeend} পর্যন্ত প্রবেশপত্র ডাউনলোড করা যাবে।</td>`
+} else {
+  admitafmc= ``
+}  afmcresult = MADICALADDATA[afmcid].examresult 
+  if(afmcresult === true){
+    afmcresulthtml = `${reusltheaderall}
+     <tr>
+      <td colspan="2"> ${MADICALADDATA[afmcid].NameBng} এর ভর্তি পরীক্ষার ফলাফল  ${MADICALADDATA[afmcid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে  ${MADICALADDATA[afmcid].examresulttme} এ প্রকাাশ করা হবে।</td>
+    </tr> `
+  }else{afmcresulthtml=``}
+if (afmcnotivcepub === true) {
+  afmcmianopt = `${tableHTMLHeadall}
+  </tr><td colspan="2" sytle="text-align: justify;">
+  ২০২৫-২০২৬ খ্রি. শিক্ষাবর্ষে ভর্তি পরীক্ষায় অংশগ্রহণে ইচ্ছুক প্রার্থীকে ২০২৪ সাল অথবা ২০২৫ সালে এইচএসসি/'এ' লেভেল/সমমান পরীক্ষায় উত্তীর্ণ হতে হবে। ২০২২ সালের পূর্বে এসএসসি/ 'ও' লেভেল/সমমান পরীক্ষায় উত্তীর্ণ শিক্ষার্থীরা আবেদনের যোগ্য বলে বিবেচিত হবেন না।প্রার্থীকে এসএসসি /'ও' লেভেল/সমমান পরীক্ষায় বিজ্ঞান বিভাগে উত্তীর্ণ হতে হবে এবং এইচএসসি/'এ' লেভেল/সমমান পরীক্ষায় বিজ্ঞান বিভাগসহ অবশ্যই জীববিজ্ঞান, পদার্থবিজ্ঞান ও রসায়ন থাকতে হবে।
+<b>এসএসসি/ 'ও' লেভেল/সমমান এবং এইচএসসি /'এ' লেভেল/সমমান দুটি পরীক্ষায় মোট জিপিএ কমপক্ষে ৮.৫০ পয়েন্ট হতে হবে। তবে এককভাবে কোনো পরীক্ষায় জিপিএ ৪.০০ পয়েন্ট এর কম থাকলে আবেদনের যোগ্য বলে বিবেচিত হবেন না। সকলের ক্ষেত্রে এইচএসসি/‘এ’ লেভেল/সমমান পরীক্ষায় জীববিজ্ঞানে (Biology) ন্যূনতম গ্রেড পয়েন্ট ৩.৫০
+না থাকলে আবেদনের যোগ্য বলে বিবেচিত হবে না।</b>
+  </td></tr>
+  ${timetablehead}
+  
+  <tr>
+      <td>আবদেন শুরুর তারিখ ও সময়</td>
+      <td style="width: 50%"> ${MADICALADDATA[afmcid].appDateStart.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[afmcid].appstarttime}</td>
+    </tr> 
+    <tr>
+      <td>আবদেন শেষের তারিখ</td>
+      <td style="width: 50%"> ${MADICALADDATA[afmcid].appDateend.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[afmcid].appendtime}</td>
+    </tr> 
+    <tr>
+      <td>আবদেন বর্তমান অবস্থান</td>
+      <td style="width: 50%">${MADICALADDATA[afmcid].datecount}।</td>
+    </tr> 
+    ${applyfeeheader}
+  <tr>
+      <td colspan="2"> ${MADICALADDATA[afmcid].NameBng} এর আবেদন ফি ${MADICALADDATA[afmcid].applyfee.toLocaleString("bn-BD")} (${MADICALADDATA[afmcid].applyfeebd})।</td>
+    </tr> 
+    ${admitafmc}
+    ${examheaderall}
+    <td colspan="2"> ${MADICALADDATA[afmcid].NameBng} এর পরীক্ষা আগামী  ${MADICALADDATA[afmcid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[afmcid].examtesttime} এর অনুষ্টিত হবে। এবং <b> <a style="color:#000;" href="./src/noticfile/${MADICALADDATA[afmcid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${MADICALADDATA[afmcid].examCenter}</a> </b>  </td>
+    ${afmcresulthtml}
+  `
+
+} else {
+  afmcmianopt =`${notnoticePUb}`
+}
+document.getElementById("afmc_table_output").innerHTML=afmcmianopt +tableFooter
+
+
+let bnmcotpcourse ="";
+let bnnmcapplyfee ="";
+bnncdata.forEach(function(bnmcata){
+  bnmcotpcourse +=` <tr>
+          <td>${bnmcata.Nameofcourse}</td>
+          <td style="width: 50%;text-align: justify;">${bnmcata.result}</td>
+          </tr>
+          
+          `
+          bnnmcapplyfee += `<tr>
+          <td>${bnmcata.Nameofcourse}</td>
+          <td style="width: 50%;text-align: justify;">${bnmcata.applyfee.toLocaleString("bn-BD")} (${bnmcata.applyfeebd})</td>
+          </tr>`
+})
+bnmctime = `
+    ${timetablehead}
+    <tr>
+      <td>আবদেন শুরুর তারিখ ও সময়</td>
+      <td style="width: 50%"> ${MADICALADDATA[bnmcid].appDateStart.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[bnmcid].appstarttime}</td>
+    </tr> 
+    <tr>
+      <td>আবদেন শেষের তারিখ</td>
+      <td style="width: 50%"> ${MADICALADDATA[bnmcid].appDateend.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[bnmcid].appendtime}</td>
+    </tr> 
+    <tr>
+      <td>আবদেন বর্তমান অবস্থান</td>
+      <td style="width: 50%">${MADICALADDATA[bnmcid].datecount}।</td>
+    </tr>
+    ${applyfeeheader} `
+    bnmcotherhhtml =`
+    ${admitcardheaderall}
+    <tr>
+      <td colspan="2"> ${MADICALADDATA[bnmcid].NameBng} এর প্রবেশপত্র আগামী  ${MADICALADDATA[bnmcid].admitdndatestart.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[bnmcid].admitdntimestart} হতে ${MADICALADDATA[bnmcid].admitdndateend.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[bnmcid].admitdntimeend} পর্যন্ত প্রবেশপত্র ডাউনলোড করা যাবে। <td>
+    </tr>
+    ${examheaderall}
+    <tr>
+      <td colspan="2"> ${MADICALADDATA[bnmcid].NameBng} এর পরীক্ষা আগামী  ${MADICALADDATA[bnmcid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[bnmcid].examtesttime} এর অনুষ্টিত হবে। এবং <b> <a style="color:#000;" href="./src/noticfile/${MADICALADDATA[bnmcid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${MADICALADDATA[bnmcid].examCenter}</a> </b>  <td>
+    </tr>
+    ${examheaderall}
+    <tr>
+      <td colspan="2">${MADICALADDATA[bnmcid].NameBng} এর ভর্তি পরীক্ষার ফলাফল  ${MADICALADDATA[bnmcid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে  ${MADICALADDATA[bnmcid].examresulttme} এ প্রকাাশ করা হবে।<td>
+      </tr>
+    `
+
+    /*
+     ${MADICALADDATA[bnmcid].NameBng} এর প্রবেশপত্র আগামী  ${MADICALADDATA[afmcid].admitdndatestart.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[afmcid].admitdntimestart} হতে ${MADICALADDATA[afmcid].admitdndateend.toLocaleDateString("bn-BD", dateBangla)} ${MADICALADDATA[afmcid].admitdntimeend} পর্যন্ত প্রবেশপত্র ডাউনলোড করা যাবে।
+     */
+bnmcnoticpub = MADICALADDATA[bnmcid].noticepub;
+if (bnmcnoticpub === true) {
+  bnmcotp =tableHTMLHeadall+bnmcotpcourse  +bnmctime+bnnmcapplyfee+bnmcotherhhtml+tableFooter
+} else {
+  bnmcotp = `${notnoticePUb}`
+}
+document.getElementById("bnnc_table_output").innerHTML = bnmcotp;
 
 let universityOPTmian = "";
 UNIVERSITYDTA.forEach(function (universitydata) {
@@ -354,9 +487,7 @@ UNIVERSITYDTA.forEach(function (universitydata) {
           </div>
           <div id="${universitydata.outmain}">
             <div id="${universitydata.tabeloutputId}" clsss="noticepubliceture"></div><!-- table section -->
-            
-              
-              <div class="button_section">
+            <div class="button_section">
               <a href="./src/noticfile/${universitydata.notice}" target="_blank">সাধারণ নেটিশ</a>
               <a href="${universitydata.appweb}" target="_blank">আবেদনের ওয়েবসাইটে</a>
               <a href="${universitydata.mainweb}" target="_blank">অফিসিয়াল ওয়েবসাইটে</a>

@@ -2,8 +2,8 @@
 const MADICALADDATA = [
   {
     id:0,
-    NameEng: "bangladesh medical admission", // name of english
-    NameBng: "মেডিকেল কলেজ ভর্তি পরীক্ষা", // name of bangla
+    NameEng: "bangladesh medical & Dental admission", // name of english
+    NameBng: "মেডিকেল কলেজ এন্ড ডেন্টাল ", // name of bangla
     Images: "mbbsbds.png", //logo
     onclick: "mbbs()", // onclick
     OutptuID: "mbbs_output", // output div
@@ -16,55 +16,116 @@ const MADICALADDATA = [
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
-    appDateend: new Date("2026-08-10"), // date end
+    appstarttime: BanglaTime("10:00"),
+    datecount : dateCalculator("2026-08-19"), // start date
+    appDateend: new Date("2026-08-19"), // date end
+    appendtime: BanglaTime("23:59"),
+    applyfee : 1000,
+    applyfeebd : BanglaWordstaka(1000),
     admitdn: true,
-    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
-    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
-    admitDNUnitwistimestart: BanglaTime("16:30"), // start time
-    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
-    admitDNUnitwistimeend: BanglaTime("23:59"), // start date
-    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    admitdndatestart: new Date("2026-08-15"), // start date
+    admitdntimestart: BanglaTime("16:30"), // start time
+    admitdndateend: new Date("2026-08-18"), // start date
+    admitdntimeend: BanglaTime("23:59"), // start date
+    examCenter: "অফিসিয়াল নেটিশে দেখুন", //exam center.
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
-    examteststart: new Date("2026-08-20"), // examdate start
-    examtestend: new Date("2026-08-22"), // examdate end
+    examtestdate: new Date("2026-08-20"), // examdate start   
+    examtesttime: BanglaTime("10:00"), // examdate start   
     examresult :true,
-    examresultUnitwis :true,
-    examresultdate : new Date("2026-09-20"),
+    examresultdate : new Date("2026-10-20"),
     examresulttme : "",
+    examresulttme : BanglaTime("18:30"),
   },
   {
     id:1,
     NameEng: "Armed Forces Medical College", // name of english
     NameBng: "আর্মড ফোর্সেস মেডিকেল কলেজ", // name of bangla
-    Images: "bnmc.png", //logo
+    Images: "afmc.png", //logo
     onclick: "afmc()", // onclick
     OutptuID: "afmc_output", // output div
     IconID: "afmc_icon", //icon
     tabeloutputId: "afmc_table_output", //table id
-     outmain: "mbbs_output_main", //main out put
+     outmain: "afmc_output_main", //main out put
     notice: "AFMC.pdf", // notce
-    noticepub : false,
+    noticepub : true,
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
-    appDateStart: new Date("2026-08-01"), // date start
-    appDateend: new Date("2026-08-10"), // date end
+     appDateStart: new Date("2026-08-01"), // date start
+    appstarttime: BanglaTime("10:00"),
+    datecount : dateCalculator("2026-08-19"), // start date
+    appDateend: new Date("2026-08-19"), // date end
+    appendtime: BanglaTime("23:59"),
+    applyfee : 1000,
+    applyfeebd : BanglaWordstaka(1000),
     admitdn: true,
-    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
-    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
-    admitDNUnitwistimestart: ``, // start time
-    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
-    admitDNUnitwistimeend: "", // start date
-    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
-    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
-    examteststart: new Date("2026-08-20"), // examdate start
-    examtestend: new Date("2026-08-22"), // examdate end
+    admitdndatestart: new Date("2026-08-15"), // start date
+    admitdntimestart: BanglaTime("16:30"), // start time
+    admitdndateend: new Date("2026-08-18"), // start date
+    admitdntimeend: BanglaTime("23:59"), // start date
+    examCenter: "অফিসিয়াল নেটিশে দেখুন", //exam center.
+    examtestdate: new Date("2026-08-20"), // examdate start   
+    examtesttime: BanglaTime("10:00"), // examdate start   
     examresult :true,
-    examresultUnitwis :true,
-    examresultdate : new Date("2026-09-20"),
+    examresultdate : new Date("2026-10-20"),
     examresulttme : "",
+    examresulttme : BanglaTime("18:30"),
+  },
+  {
+    id:2,
+     NameEng: "Bangladesh Nursing and Midwifery Counci", // name of english
+    NameBng: "বাংলাদেশ নার্সিং ও মিডওয়াইফারি কাউন্সিল", // name of bangla
+    Images: "bnmc.png", //logo
+    onclick: "bnnc()", // onclick
+    OutptuID: "bnnc_output", // output div
+    IconID: "bnnc_icon", //icon
+    tabeloutputId: "bnnc_table_output", //table id
+     outmain: "bnnc_output_main", //main out put
+    notice: "bnmc.pdf", // notce
+    noticepub : true,
+    appweb:
+      "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
+    mainweb: "https://www.du.ac.bd/", //main web
+      appDateStart: new Date("2026-08-01"), // date start
+    appstarttime: BanglaTime("10:00"),
+    datecount : dateCalculator("2026-08-19"), // start date
+    appDateend: new Date("2026-08-19"), // date end
+    appendtime: BanglaTime("23:59"),
+    // applyfee : 1000,
+    // applyfeebd : BanglaWordstaka(1000),
+    admitdn: true,
+    admitdndatestart: new Date("2026-08-15"), // start date
+    admitdntimestart: BanglaTime("16:30"), // start time
+    admitdndateend: new Date("2026-08-18"), // start date
+    admitdntimeend: BanglaTime("23:59"), // start date
+    examCenter: "অফিসিয়াল নেটিশে দেখুন", //exam center.
+    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examtestdate: new Date("2026-08-20"), // examdate start   
+    examtesttime: BanglaTime("10:00"), // examdate start   
+    examresult :true,
+    examresultdate : new Date("2026-10-20"),
+    examresulttme : "",
+    examresulttme : BanglaTime("18:30"),
   },
 ]
+
+const bnncdata =[
+  {
+    Nameofcourse :"০৪ বছর মেয়াদি বিএসসি ইন নার্সিং",
+    result: " ৪ বছর মেয়াদি ব্যাচেলর অব সায়েন্স ইন নার্সিং (বিএসসি ইন নার্সিং কোর্স): আবেদনকারীকে বিজ্ঞান বিভাগে এসএসসি/সমমান ও এইচএসসি/সমমানের পরীক্ষায় উত্তীর্ণ হতে হবে। দুটি পরীক্ষায় মোট জিপিএ ন্যূনতম ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় জিপিএ ৩.০০ এর কম হবে না। আবেদনকারীকে এইচএসসি/সমমান পরীক্ষায় জীববিজ্ঞানে ন্যূনতম জিপিএ ২.৫০ থাকতে হবে।",
+    applyfee:700,
+    applyfeebd:BanglaWordstaka(700),
+  },
+  {
+    Nameofcourse :"০৩ বছর মেয়াদি ডিপ্লোমা ইন নার্সিং সায়েন্স এন্ড মিডওয়াইফারি এবং ০৩ বছর মেয়াদি ডিপ্লোমা ইন মিডওয়াইফারি কোর্সে ",
+    result: "৩ বছর মেয়াদি ডিপ্লোমা ইন নার্সিং সায়েন্স এন্ড মিডওয়াইফারি ও ডিপ্লোমা ইন মিডওয়াইফারি: আবেদনকারীকে যে কোনো বিভাগে এসএসসি বা সমমান ও এইচএসসি বা সমমানের পরীক্ষায় উত্তীর্ণ হতে হবে। দুটি পরীক্ষায় মোট জিপিএ ন্যূনতম ৬.০০ থাকতে হবে। তবে কোনো একটি পরীক্ষায় জিপিএ ২.৫০ এরকম হবে না।",
+    applyfee:500,
+    applyfeebd:BanglaWordstaka(500),
+  },
+]
+const mbbsid =MADICALADDATA[0].id
+const afmcid =MADICALADDATA[1].id
+const bnmcid =MADICALADDATA[2].id
 //! universtiuy data
 const UNIVERSITYDTA = [
   {
@@ -292,6 +353,7 @@ const ruid = UNIVERSITYDTA[1].id;
 const jnuid = UNIVERSITYDTA[2].id;
 const gstid = UNIVERSITYDTA[3].id;
 const juid = UNIVERSITYDTA[4].id;
+const cuid = UNIVERSITYDTA[5].id;
  const DUInfo = [
   {
     NameofUnit: "ক - ইউনিট (বিজ্ঞান শাখা)", // name of unit
