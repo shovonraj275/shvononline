@@ -1,5 +1,156 @@
 
-const MADICALADDATA = [
+const ADDMISSIONDATA = {
+ENGINEERING:[
+  {
+    id:0,
+    NameEng: "Bangladesh University of Engineering and Technology (BUET)", // name of english
+    NameBng: " বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়", // name of bangla
+    Images: "bute.png", //logo
+    onclick: "bute()", // onclick
+    OutptuID: "bute_output", // output div
+    IconID: "bute_icon", //icon
+    tabeloutputId: "bute_table_output", //table id
+    outmain: "bute_output_main", //main out put
+    noticepub : true,
+    notice: "DU.jpg.jpeg", // notce
+    appweb:
+      "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
+    mainweb: "https://www.du.ac.bd/", //main web
+    appDateStart: new Date("2026-08-01"), // date start
+    appstarttime :"",
+    datecount : dateCalculator("2026-08-19"),
+    appDateend: new Date("2026-09-30"), // date end
+    appendtime: BanglaTime("23:59"),
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
+    admitDNUnitwistimestart: BanglaTime("16:30"), // start time
+    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
+    admitDNUnitwistimeend: BanglaTime("23:59"), // start date
+    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examteststart: new Date("2026-08-20"), // examdate start
+    examtestend: new Date("2026-08-22"), // examdate end
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme :'',
+    examrestultafter: true,
+    examrestultafterday:2,
+  },
+  {
+    id:1,
+    NameEng: "Rajshahi University of Engineering and Technology ((KUET))", // name of english
+    NameBng: "রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়", // name of bangla
+    Images: "rute.png", //logo
+    onclick: "rute()", // onclick
+    OutptuID: "rute_output", // output div
+    IconID: "rute_icon", //icon
+    tabeloutputId: "rute_table_output", //table id
+    outmain: "rute_output_main", //main out put
+    noticepub : true,
+    notice: "DU.jpg.jpeg", // notce
+    appweb:
+      "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
+    mainweb: "https://www.du.ac.bd/", //main web
+    appDateStart: new Date("2026-08-01"), // date start
+    appstarttime :"",
+    datecount : dateCalculator("2026-09-19"),
+    appDateend: new Date("2026-09-29"), // date end
+    appendtime: BanglaTime("23:59"),
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
+    admitDNUnitwistimestart: BanglaTime("16:30"), // start time
+    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
+    admitDNUnitwistimeend: BanglaTime("23:59"), // start date
+    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examteststart: new Date("2026-08-20"), // examdate start
+    examtestend: new Date("2026-08-22"), // examdate end
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme :'',
+    examrestultafter: true,
+    examrestultafterday:2,
+  },
+  {
+    id:2,
+    NameEng: "Chittagong University of Engineering and Technology (CUET)", // name of english
+    NameBng: "ঢাকা বিশ্ববিদ্যালয়", // name of bangla
+    Images: "du.png", //logo
+    onclick: "cute()", // onclick
+    OutptuID: "cute_output", // output div
+    IconID: "cute_icon", //icon
+    tabeloutputId: "cute_table_output", //table id
+    outmain: "cute_output_main", //main out put
+    noticepub : true,
+    notice: "DU.jpg.jpeg", // notce
+    appweb:
+      "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
+    mainweb: "https://www.du.ac.bd/", //main web
+    appDateStart: new Date("2026-08-01"), // date start
+    appstarttime :"",
+    datecount : dateCalculator("2026-09-28"),
+    appDateend: new Date("2026-09-19"), // date end
+    appendtime: BanglaTime("23:59"),
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
+    admitDNUnitwistimestart: BanglaTime("16:30"), // start time
+    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
+    admitDNUnitwistimeend: BanglaTime("23:59"), // start date
+    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examteststart: new Date("2026-08-20"), // examdate start
+    examtestend: new Date("2026-08-22"), // examdate end
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme :'',
+    examrestultafter: true,
+    examrestultafterday:2,
+  },
+  {
+    id:3,
+    NameEng: "Khulna University of Engineering and Technology (KUET)", // name of english
+    NameBng: "ঢাকা বিশ্ববিদ্যালয়", // name of bangla
+    Images: "du.png", //logo
+    onclick: ",ute()", // onclick
+    OutptuID: ",ute_output", // output div
+    IconID: ",ute_icon", //icon
+    tabeloutputId: ",ute_table_output", //table id
+    outmain: ",ute_output_main", //main out put
+    noticepub : true,
+    notice: "DU.jpg.jpeg", // notce
+    appweb:
+      "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
+    mainweb: "https://www.du.ac.bd/", //main web
+    appDateStart: new Date("2026-08-01"), // date start
+    appstarttime :"",
+    datecount : dateCalculator("2026-09-19"),
+    appDateend: new Date("2026-09-19"), // date end
+    appendtime: BanglaTime("23:59"),
+    admitdn: true,
+    admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
+    admitDNUnitwisdatestart: new Date("2026-08-15"), // start date
+    admitDNUnitwistimestart: BanglaTime("16:30"), // start time
+    admitDNUnitwisdateend: new Date("2026-08-18"), // start date
+    admitDNUnitwistimeend: BanglaTime("23:59"), // start date
+    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examteststart: new Date("2026-08-20"), // examdate start
+    examtestend: new Date("2026-09-22"), // examdate end
+    examresult :true,
+    examresultUnitwis :true,
+    examresultdate : new Date("2026-09-20"),
+    examresulttme :'',
+    examrestultafter: true,
+    examrestultafterday:2,
+  },
+],
+  MADICALADDATA:[
   {
     id:0,
     NameEng: "bangladesh medical & Dental admission", // name of english
@@ -18,7 +169,7 @@ const MADICALADDATA = [
     appDateStart: new Date("2026-08-01"), // date start
     appstarttime: BanglaTime("10:00"),
     datecount : dateCalculator("2026-08-19"), // start date
-    appDateend: new Date("2026-08-19"), // date end
+    appDateend: new Date("2026-08-28"), // date end
     appendtime: BanglaTime("23:59"),
     applyfee : 1000,
     applyfeebd : BanglaWordstaka(1000),
@@ -106,28 +257,11 @@ const MADICALADDATA = [
     examresultdate : new Date("2026-10-20"),
     examresulttme : "",
     examresulttme : BanglaTime("18:30"),
-  },
-]
 
-const bnncdata =[
-  {
-    Nameofcourse :"০৪ বছর মেয়াদি বিএসসি ইন নার্সিং",
-    result: " ৪ বছর মেয়াদি ব্যাচেলর অব সায়েন্স ইন নার্সিং (বিএসসি ইন নার্সিং কোর্স): আবেদনকারীকে বিজ্ঞান বিভাগে এসএসসি/সমমান ও এইচএসসি/সমমানের পরীক্ষায় উত্তীর্ণ হতে হবে। দুটি পরীক্ষায় মোট জিপিএ ন্যূনতম ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় জিপিএ ৩.০০ এর কম হবে না। আবেদনকারীকে এইচএসসি/সমমান পরীক্ষায় জীববিজ্ঞানে ন্যূনতম জিপিএ ২.৫০ থাকতে হবে।",
-    applyfee:700,
-    applyfeebd:BanglaWordstaka(700),
   },
-  {
-    Nameofcourse :"০৩ বছর মেয়াদি ডিপ্লোমা ইন নার্সিং সায়েন্স এন্ড মিডওয়াইফারি এবং ০৩ বছর মেয়াদি ডিপ্লোমা ইন মিডওয়াইফারি কোর্সে ",
-    result: "৩ বছর মেয়াদি ডিপ্লোমা ইন নার্সিং সায়েন্স এন্ড মিডওয়াইফারি ও ডিপ্লোমা ইন মিডওয়াইফারি: আবেদনকারীকে যে কোনো বিভাগে এসএসসি বা সমমান ও এইচএসসি বা সমমানের পরীক্ষায় উত্তীর্ণ হতে হবে। দুটি পরীক্ষায় মোট জিপিএ ন্যূনতম ৬.০০ থাকতে হবে। তবে কোনো একটি পরীক্ষায় জিপিএ ২.৫০ এরকম হবে না।",
-    applyfee:500,
-    applyfeebd:BanglaWordstaka(500),
-  },
-]
-const mbbsid =MADICALADDATA[0].id
-const afmcid =MADICALADDATA[1].id
-const bnmcid =MADICALADDATA[2].id
-//! universtiuy data
-const UNIVERSITYDTA = [
+],
+
+  UNIVERSITYDTA: [
   {
     id:0,
     NameEng: "Dhaka university", // name of english
@@ -137,6 +271,7 @@ const UNIVERSITYDTA = [
     OutptuID: "du_output", // output div
     IconID: "du_icon", //icon
     tabeloutputId: "du_table_output", //table id
+    htmlOPT :"dufinalopt",
     outmain: "du_output_main", //main out put
     noticepub : true,
     notice: "DU.jpg.jpeg", // notce
@@ -145,7 +280,7 @@ const UNIVERSITYDTA = [
     mainweb: "https://www.du.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
     appstarttime :"",
-    datecount : dateCalculator("2026-09-19"),
+    datecount : dateCalculator("1996-09-19"),
     appDateend: new Date("2026-09-19"), // date end
     appendtime: BanglaTime("23:59"),
     admitdn: true,
@@ -176,6 +311,7 @@ const UNIVERSITYDTA = [
     outmain: "ru_output_main", //main out put
     noticepub : true,
     tabeloutputId: "ru_table_output", //table id
+    htmlOPT :"rufinalopt",
     notice: "ru.pdf", // notce
     appweb: "https://application.ru.ac.bd/", //main web
     mainweb: "https://www.ru.ac.bd/", //main web
@@ -209,6 +345,7 @@ const UNIVERSITYDTA = [
     onclick: "jnu()",
     OutptuID: "jnu_output",
     tabeloutputId: "jnu_table_output", //table id
+    htmlOPT :"jnufinalopt",
     IconID: "jnu_icon",
     outmain: "jnu_output_main", //main out put
     noticepub : true,
@@ -239,12 +376,13 @@ const UNIVERSITYDTA = [
   },
   {
     id:3,
-    NameEng: "General, Science and Technology",
+    NameEng: "General, Science and Technology (GST)",
     NameBng: "গুচ্ছভুক্ত  বিশ্ববিদ্যালয়",
     Images: "gst.png",
     onclick: "gst()",
     OutptuID: "gst_output",
     tabeloutputId: "gst_table_output", //table id
+    htmlOPT :"gstfinalopt",
     IconID: "gst_icon",
     outmain: "gst_output_main", //main out put
     // *  notice
@@ -282,6 +420,7 @@ const UNIVERSITYDTA = [
     onclick: "ju()",
     OutptuID: "ju_output",
     tabeloutputId: "ju_table_output", //table id
+    htmlOPT :"jufinalopt",
     IconID: "ju_icon",
     outmain: "ju_output_main", //main out put
     noticepub : true,
@@ -312,8 +451,8 @@ const UNIVERSITYDTA = [
     },
   {
     id:5,
-    NameEng: " university",
-    NameBng: " বিশ্ববিদ্যালয়",
+    NameEng: "university",
+    NameBng: "বিশ্ববিদ্যালয়",
     Images: "cu.png",
     onclick: "cu()",
     OutptuID: "cu_output",
@@ -346,15 +485,54 @@ const UNIVERSITYDTA = [
     examrestultafter: true,
     examrestultafterday:2,
     },
-];
-//! universtiuy data
-const duid = UNIVERSITYDTA[0].id;
-const ruid = UNIVERSITYDTA[1].id;
-const jnuid = UNIVERSITYDTA[2].id;
-const gstid = UNIVERSITYDTA[3].id;
-const juid = UNIVERSITYDTA[4].id;
-const cuid = UNIVERSITYDTA[5].id;
- const DUInfo = [
+],
+COLLEGE:[
+    {id:5,
+    NameEng: "XI Class Admiission",
+    NameBng: "একাদশ শ্রেণীর ভর্তি  ",
+    Images: "xi.png",
+    onclick: "xi()",
+    OutptuID: "xi_output",
+    tabeloutputId: "xi_table_output", //table id
+    IconID: "xi_icon",
+    outmain: "xi_output_main", //main out put
+    noticepub : false,
+    notice: "CU.pdf", // notce
+    appweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
+    mainweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
+    appDateStart: new Date("2026-08-01"), // date start
+    appstarttime :"",
+    datecount : dateCalculator("2026-09-19"),
+    appDateend: new Date("2026-09-19"), // date end
+    appendtime: BanglaTime("23:59"),},
+],
+}
+const mbbsid =ADDMISSIONDATA.MADICALADDATA[0].id
+const afmcid =ADDMISSIONDATA.MADICALADDATA[1].id
+const bnmcid =ADDMISSIONDATA.MADICALADDATA[2].id
+const duid = ADDMISSIONDATA.UNIVERSITYDTA[0].id;
+const ruid = ADDMISSIONDATA.UNIVERSITYDTA[1].id;
+const jnuid = ADDMISSIONDATA.UNIVERSITYDTA[2].id;
+const gstid = ADDMISSIONDATA.UNIVERSITYDTA[3].id;
+const juid = ADDMISSIONDATA.UNIVERSITYDTA[4].id;
+const cuid = ADDMISSIONDATA.UNIVERSITYDTA[5].id;
+const bnncdata =[
+  {
+    Nameofcourse :"০৪ বছর মেয়াদি বিএসসি ইন নার্সিং",
+    result: " ৪ বছর মেয়াদি ব্যাচেলর অব সায়েন্স ইন নার্সিং (বিএসসি ইন নার্সিং কোর্স): আবেদনকারীকে বিজ্ঞান বিভাগে এসএসসি/সমমান ও এইচএসসি/সমমানের পরীক্ষায় উত্তীর্ণ হতে হবে। দুটি পরীক্ষায় মোট জিপিএ ন্যূনতম ৬.৫০ থাকতে হবে। তবে কোনো পরীক্ষায় জিপিএ ৩.০০ এর কম হবে না। আবেদনকারীকে এইচএসসি/সমমান পরীক্ষায় জীববিজ্ঞানে ন্যূনতম জিপিএ ২.৫০ থাকতে হবে।",
+    applyfee:700,
+    applyfeebd:BanglaWordstaka(700),
+  },
+  {
+    Nameofcourse :"০৩ বছর মেয়াদি ডিপ্লোমা ইন নার্সিং সায়েন্স এন্ড মিডওয়াইফারি এবং ০৩ বছর মেয়াদি ডিপ্লোমা ইন মিডওয়াইফারি কোর্সে ",
+    result: "৩ বছর মেয়াদি ডিপ্লোমা ইন নার্সিং সায়েন্স এন্ড মিডওয়াইফারি ও ডিপ্লোমা ইন মিডওয়াইফারি: আবেদনকারীকে যে কোনো বিভাগে এসএসসি বা সমমান ও এইচএসসি বা সমমানের পরীক্ষায় উত্তীর্ণ হতে হবে। দুটি পরীক্ষায় মোট জিপিএ ন্যূনতম ৬.০০ থাকতে হবে। তবে কোনো একটি পরীক্ষায় জিপিএ ২.৫০ এরকম হবে না।",
+    applyfee:500,
+    applyfeebd:BanglaWordstaka(500),
+  },
+  
+]
+
+const DUInfo = [
   {
     NameofUnit: "ক - ইউনিট (বিজ্ঞান শাখা)", // name of unit
     result:
@@ -693,3 +871,14 @@ const JUInfo = [
     examresulttme : "",
   },
 ];
+// const maundata = 
+//   {
+//     ADDMISSIONDATA.UNIVERSITYDTA:ADDMISSIONDATA.UNIVERSITYDTA,
+//     ADDMISSIONDATA.MADICALADDATA:ADDMISSIONDATA.MADICALADDATA
+//   }
+// console.log(maundata)
+// let all="";
+// maundata.forEach(function(xxxxx){
+//   all+= `<p>${xxxxx.NameBng}</p>`
+//   console.log(all)
+// })

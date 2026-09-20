@@ -109,10 +109,21 @@
   <!-- =================== Contact info ======================= -->
   <section id="info">
     <h1>Recent Notice</h1>
+  <input type="text" id="searchjs" placeholder="Search admission...">
+
+<select id="sortjs">
+  <option value="">Default</option>
+  <option value="az" selected>A → Z</option>
+  <option value="date">Date অনুযায়ী</option>
+</select>
+
     <div class="notice_area">
       <!--  -->
       <div class="notice_area">
 
+        <button class="button active" onclick="showSection('All', this)">
+          All
+        </button>
         <button class="button =" onclick="showSection('school', this)">
           School
         </button>
@@ -125,8 +136,11 @@
           University
         </button>
 
-        <button class="button active" onclick="showSection('medical', this)">
+        <button class="button " onclick="showSection('medical', this)">
           Medical
+        </button>
+        <button class="button" onclick="showSection('engineering', this)">
+          engineering
         </button>
 
         <button class="button" onclick="showSection('job', this)">
@@ -135,21 +149,32 @@
       
       </div>
     </div>
+    <div id="all" class="Organtion">
+      <h1>All Notice</h1>
+      <!-- <div class="grid_all">
+       
+      </div> -->
+      <div id="all_opt"></div>
+    </div><!--  -->
     <div id="school" class="Organtion">
       <h1>All School Notice</h1>
       <img src="./src/img/du.png" alt="">
     </div><!--  -->
     <div id="college" class="Organtion">
       <h1>All College Notice</h1>
-
+        <div id="college_opt"></div>
     </div><!--  -->
     <div id="university" class="Organtion">
-      <h1>All University Notice</h1>
+      <h1>All University Admission Notice</h1>
       <div id="university_opt"></div>
     </div><!-- university output section -->
     <div id="medical" class="Organtion">
-      <h1>All Medical Notice</h1>
+      <h1>All Medical Admission Notice</h1>
       <div id="madicalOPTmian"></div>
+    </div><!-- university output section -->
+    <div id="engineering" class="Organtion">
+      <h1 style="text-transform: capitalize;">All Engineering Admission Notice</h1>
+      <div id="engineeringOPTmian"></div>
     </div><!-- university output section -->
     <div id="job" class="Organtion">
       <h1>All Job Notice</h1>
