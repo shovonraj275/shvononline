@@ -17,11 +17,11 @@ a{
 #qr,
 #input,
 #footer{
-  display: none !important;
+  /* display: none !important; */
 }
 #all_ju_output,
 #du_output{
-  display: block !important;
+  /* display: block !important; */
   
 }
 
