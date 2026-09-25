@@ -260,7 +260,7 @@ const admitcardheaderall = `
 // all exam head
 const examheaderall = `
             <tr>
-              <th colspan="2" style="text-align: center;">ভর্তি পরীক্ষার সময়সৃচী</th>
+              <th colspan="2" style="text-align: center;">ভর্তি পরীক্ষার সময়সৃচী ও পরীক্ষার ধরণ</th>
             </tr>`;
 // all result hed
 const reusltheaderall = `
@@ -323,8 +323,17 @@ function sortAdmissionData(data, type) {
   if (type === "date") {
 
     return list.sort((a, b) =>
-      new Date(a.appDateStart) -
-      new Date(b.appDateStart)
+      new Date(b.appDateend)-
+    new Date(a.appDateend) 
+      
+    );
+
+  }
+
+  if (type === "date2") {
+
+    return list.sort((a, b) =>
+             new Date(b.noticepubdate)-new Date(a.noticepubdate)
     );
 
   }
@@ -335,19 +344,9 @@ function sortAdmissionData(data, type) {
 
 }
 
-
-
-// ========================================
 // SEARCH + SORT FUNCTION
-// ========================================
-
 function filterAdmission() {
-
-
-  // ======================================
   // 1. Search value
-  // ======================================
-
   const searchInput =
     document.getElementById("searchjs");
 
@@ -355,13 +354,7 @@ function filterAdmission() {
     searchInput
       ? searchInput.value.trim().toLowerCase()
       : "";
-
-
-
-  // ======================================
   // 2. Sort value
-  // ======================================
-
   const sortInput =
     document.getElementById("sortjs");
 
@@ -369,25 +362,20 @@ function filterAdmission() {
     sortInput
       ? sortInput.value
       : "";
-
-
-
-  // ======================================
   // 3. Search / Filter
-  // ======================================
+
 
   const filteredData = allData.filter(data => {
-
     const nameEng =
       data.NameEng?.toLowerCase() || "";
-
     const nameBng =
       data.NameBng || "";
-
-
+    const sortname =
+      data.Sortname || "";
     return (
       nameEng.includes(searchValue) ||
-      nameBng.includes(searchValue)
+      nameBng.includes(searchValue) ||
+      sortname.includes(searchValue) 
     );
 
   });
@@ -430,33 +418,25 @@ function filterAdmission() {
 
   const allOutput =
     document.getElementById("all_opt");
-
-
-  if (allOutput) {
-
+      if (allOutput) {
     allOutput.innerHTML =
       alloptp;
-
   }
   const mbbsOutput =
     document.getElementById(
       "all_result_mbbs_table_output"
     );
   if (mbbsOutput) {
-
     mbbsOutput.innerHTML =
       mbbsmianopt + tableFooter;
-
   }
   const afmcOutput =
     document.getElementById(
       "all_result_afmc_table_output"
     );
   if (afmcOutput) {
-
     afmcOutput.innerHTML =
       afmcmianopt + tableFooter;
-
   }
   const bnmcOutput =
     document.getElementById(
@@ -465,45 +445,66 @@ function filterAdmission() {
 
 
   if (bnmcOutput) {
-
     bnmcOutput.innerHTML =
       bnmcotp;
-
   }
   const juOutput =
     document.getElementById(
       "all_result_ju_table_output"
     );
-
-
   if (juOutput) {
 
     juOutput.innerHTML =
       jufinalopt;
-
   }
   const DUOutput =
     document.getElementById(
       "all_result_du_table_output"
     );
-
-
   if (DUOutput) {
-
     DUOutput.innerHTML =
       dufinalopt;
-
   }
   const RUOutput =
     document.getElementById(
       "all_result_ru_table_output"
     );
-
-
   if (RUOutput) {
-
     RUOutput.innerHTML =
       rufinalopt;
+  }
+  const GSTOutput =
+    document.getElementById(
+      "all_result_gst_table_output"
+    );
+
+
+  if (GSTOutput) {
+
+    GSTOutput.innerHTML =
+      gstfinalopt;
+
+  }
+  const JUOutput =
+    document.getElementById(
+      "all_result_ju_table_output"
+    );
+
+
+  if (JUOutput) {
+
+    JUOutput.innerHTML =
+      jufinalopt;
+
+  } 
+  const jnuOutput =
+    document.getElementById(
+      "all_result_jnu_table_output"
+    );
+  if (jnuOutput) {
+
+    jnuOutput.innerHTML =
+      jnufinalopt;
 
   }
 
@@ -601,8 +602,7 @@ ADDMISSIONDATA.ENGINEERING.forEach(function (data) {
 
 });
 
-document.getElementById("engineeringOPTmian").innerHTML =
-  engineeringOPTmian;
+document.getElementById("engineeringOPTmian").innerHTML =  engineeringOPTmian;
 let collegeOPTmian = "";
 
 ADDMISSIONDATA.COLLEGE.forEach(function (data) {
@@ -612,21 +612,7 @@ ADDMISSIONDATA.COLLEGE.forEach(function (data) {
 });
 
 document.getElementById("college_opt").innerHTML =
-  collegeOPTmian;
-
-// const allData = Object.entries(ADDMISSIONDATA)
-//   .flatMap(([category, data]) => {
-
-//     const list = Array.isArray(data) ? data : [data];
-
-//     return list.map(item => ({
-//       ...item,
-//       category: category
-//     }));
-
-//   });
-
-console.log(allData);
+  collegeOPTmian;;
 let mbbsnotivcepub = ADDMISSIONDATA.MADICALADDATA[mbbsid].noticepub;
 let mbbsadmitdn = ADDMISSIONDATA.MADICALADDATA[mbbsid].admitdn;
 if (mbbsadmitdn ===true) {
@@ -667,15 +653,27 @@ if (mbbsnotivcepub === true) {
     </tr> 
     ${admitmbbs}
     ${examheaderall}
-    <td colspan="2"> ${ADDMISSIONDATA.MADICALADDATA[mbbsid].NameBng} এর পরীক্ষা আগামী  ${ADDMISSIONDATA.MADICALADDATA[mbbsid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[mbbsid].examtesttime} অনুষ্টিত হবে। এবং <b> <a style="color:#000;" href="./src/noticfile/${ADDMISSIONDATA.MADICALADDATA[mbbsid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${ADDMISSIONDATA.MADICALADDATA[mbbsid].examCenter}</a> </b>  </td>
+    <tr>
+    <td>পরীক্ষার তারিখ ও সময়</td>
+    <td> ${ADDMISSIONDATA.MADICALADDATA[mbbsid].NameBng} এর পরীক্ষা আগামী  ${ADDMISSIONDATA.MADICALADDATA[mbbsid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[mbbsid].examtesttime} অনুষ্টিত হবে।
+    </tr>
+    <tr>
+    <td>পরীক্ষার কেন্দ্র  </td>
+    <td> <u> <a style="color:#000;" href="./src/noticfile/${ADDMISSIONDATA.MADICALADDATA[mbbsid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${ADDMISSIONDATA.MADICALADDATA[afmcid].examCenter}</a> </u> </td>
+    </tr>
+    <tr>
+    <td>পরীক্ষার ধরণ</td>
+    <td>${ADDMISSIONDATA.MADICALADDATA[mbbsid].examtype}</td>
+    </tr>
     ${mbbsresulthtml}
+    ${tableFooter}<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.MADICALADDATA[mbbsid].noticepubdate.toLocaleDateString("bn-BD", dateBangla)} </p> ${note}
   `
 
 } else {
   mbbsmianopt =`${notnoticePUb}`
 }
 document.getElementById("all_mbbs_table_output").innerHTML=mbbsmianopt +tableFooter
-document.getElementById("medical_mbbs_table_output").innerHTML=mbbsmianopt +tableFooter
+document.getElementById("medical_mbbs_table_output").innerHTML=mbbsmianopt;
 // mediacl teble
 
 let afmcnotivcepub = ADDMISSIONDATA.MADICALADDATA[afmcid].noticepub;
@@ -719,15 +717,26 @@ if (afmcnotivcepub === true) {
     </tr> 
     ${admitafmc}
     ${examheaderall}
-    <td colspan="2"> ${ADDMISSIONDATA.MADICALADDATA[afmcid].NameBng} এর পরীক্ষা আগামী  ${ADDMISSIONDATA.MADICALADDATA[afmcid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[afmcid].examtesttime} এর অনুষ্টিত হবে। এবং <b> <a style="color:#000;" href="./src/noticfile/${ADDMISSIONDATA.MADICALADDATA[afmcid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${ADDMISSIONDATA.MADICALADDATA[afmcid].examCenter}</a> </b>  </td>
-    ${afmcresulthtml}
+
+    <tr>
+    <td>পরীক্ষার তারিখ ও সময়</td>
+    <td> ${ADDMISSIONDATA.MADICALADDATA[afmcid].NameBng} এর পরীক্ষা আগামী  ${ADDMISSIONDATA.MADICALADDATA[afmcid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[afmcid].examtesttime} অনুষ্টিত হবে।
+    </tr>
+    <tr>
+    <td>পরীক্ষার কেন্দ্র  </td>
+    <td> <u> <a style="color:#000;" href="./src/noticfile/${ADDMISSIONDATA.MADICALADDATA[afmcid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${ADDMISSIONDATA.MADICALADDATA[afmcid].examCenter}</a> </u> </td>
+    </tr>
+    <tr>
+    <td>পরীক্ষার ধরণ</td>
+    <td>${ADDMISSIONDATA.MADICALADDATA[afmcid].examtype}</td>
+    ${afmcresulthtml}${tableFooter}<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.MADICALADDATA[afmcid].noticepubdate.toLocaleDateString("bn-BD", dateBangla)} </p> ${note}
   `
 
 } else {
   afmcmianopt =`${notnoticePUb}`
 }
-document.getElementById("all_afmc_table_output").innerHTML=afmcmianopt +tableFooter
-document.getElementById("medical_afmc_table_output").innerHTML=afmcmianopt +tableFooter
+document.getElementById("all_afmc_table_output").innerHTML=afmcmianopt ;
+document.getElementById("medical_afmc_table_output").innerHTML=afmcmianopt;
 
 
 let bnmcotpcourse ="";
@@ -759,34 +768,52 @@ bnmctime = `
       <td style="width: 50%">${ADDMISSIONDATA.MADICALADDATA[bnmcid].datecount}।</td>
     </tr>
     ${applyfeeheader} `
-    bnmcotherhhtml =`
+
+
+
+   bnmcotherhhtml =`
     ${admitcardheaderall}
     <tr>
-      <td colspan="2"> ${ADDMISSIONDATA.MADICALADDATA[bnmcid].NameBng} এর প্রবেশপত্র আগামী  ${ADDMISSIONDATA.MADICALADDATA[bnmcid].admitdndatestart.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[bnmcid].admitdntimestart} হতে ${ADDMISSIONDATA.MADICALADDATA[bnmcid].admitdndateend.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[bnmcid].admitdntimeend} পর্যন্ত প্রবেশপত্র ডাউনলোড করা যাবে। <td>
+      <td colspan="2">এর প্রবেশপত্র আগামী শনিবার, ১৫ আগস্ট, ২০২৬ বিকাল ৪টা ৩০ মিনিট হতে মঙ্গলবার, ১৮ আগস্ট, ২০২৬ রাত ১১টা ৫৯ মিনিট পর্যন্ত প্রবেশপত্র ডাউনলোড করা যাবে।  </td>
     </tr>
     ${examheaderall}
     <tr>
-      <td colspan="2"> ${ADDMISSIONDATA.MADICALADDATA[bnmcid].NameBng} এর পরীক্ষা আগামী  ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examtesttime} এর অনুষ্টিত হবে। এবং <b> <a style="color:#000;" href="./src/noticfile/${ADDMISSIONDATA.MADICALADDATA[bnmcid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examCenter}</a> </b>  <td>
+    <td>পরীক্ষার তারিখ ও সময়</td>
+    <td> ${ADDMISSIONDATA.MADICALADDATA[bnmcid].NameBng} এর পরীক্ষা আগামী  ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examtestdate.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examtesttime} অনুষ্টিত হবে।
     </tr>
+    <tr>
+    <td>পরীক্ষার কেন্দ্র  </td>
+    <td> <u> <a style="color:#000;" href="./src/noticfile/${ADDMISSIONDATA.MADICALADDATA[bnmcid].notice}" target="_blank" >পরীক্ষার কেন্দ্র ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examCenter}</a> </u> </td>
+    </tr>
+    <tr>
+    <td>পরীক্ষার ধরণ</td>
+    <td>${ADDMISSIONDATA.MADICALADDATA[bnmcid].examtype}</td>
+
+
     ${examheaderall}
     <tr>
-      <td colspan="2">${ADDMISSIONDATA.MADICALADDATA[bnmcid].NameBng} এর ভর্তি পরীক্ষার ফলাফল  ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে  ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examresulttme} এ প্রকাাশ করা হবে।<td>
-      </tr>
+      <td colspan="2">${ADDMISSIONDATA.MADICALADDATA[bnmcid].NameBng} এর ভর্তি পরীক্ষার ফলাফল  ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examresultdate.toLocaleDateString("bn-BD", dateBangla)} তারিখে  ${ADDMISSIONDATA.MADICALADDATA[bnmcid].examresulttme} এ প্রকাাশ করা হবে।
+      </td>
+    </tr>
+  
     `
 
-    /*
-     ${ADDMISSIONDATA.MADICALADDATA[bnmcid].NameBng} এর প্রবেশপত্র আগামী  ${ADDMISSIONDATA.MADICALADDATA[afmcid].admitdndatestart.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[afmcid].admitdntimestart} হতে ${ADDMISSIONDATA.MADICALADDATA[afmcid].admitdndateend.toLocaleDateString("bn-BD", dateBangla)} ${ADDMISSIONDATA.MADICALADDATA[afmcid].admitdntimeend} পর্যন্ত প্রবেশপত্র ডাউনলোড করা যাবে।
-     */
+
+
+    
 bnmcnoticpub = ADDMISSIONDATA.MADICALADDATA[bnmcid].noticepub;
+
+bnmcfiOPT = `${tableHTMLHeadall} ${bnmcotpcourse}${bnmctime}${bnnmcapplyfee}${bnmcotherhhtml}${tableFooter} <p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.MADICALADDATA[bnmcid].noticepubdate.toLocaleDateString("bn-BD", dateBangla)} </p>${note}` ;
+
 if (bnmcnoticpub === true) {
-  bnmcotp =tableHTMLHeadall+bnmcotpcourse  +bnmctime+bnnmcapplyfee+bnmcotherhhtml+tableFooter
+  bnmcotp =`${bnmcfiOPT}`;
 } else {
   bnmcotp = `${notnoticePUb}`
 }
 document.getElementById("all_bnnc_table_output").innerHTML = bnmcotp;
 document.getElementById("medical_bnnc_table_output").innerHTML = bnmcotp;
 
-
+// +`<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.MADICALADDATA[bnmcid].noticepubdate.toLocaleDateString("bn-BD", dateBangla)} </p> ${note}
 // !
 let applyfeeunithtml = "";
 // * coad for all
@@ -799,8 +826,6 @@ let dutableexam = "";
 let dutableexmacente = "";
 let dutableexamresulthead = "";
 let dutableexamresult = "";
-
-
 
 DUInfo.forEach(function (dudata) {
   // * result srction 
@@ -839,7 +864,7 @@ DUInfo.forEach(function (dudata) {
   if (uintwiseExam === false) {
     dutableexam = ` 
             ${examheaderall}
-<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examCenter}  অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examCenter}  অনুষ্টিত হবে। উক্ত ভর্তি পরীক্ষাটি ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examtype} প্রশ্নে অনুষ্টিত হবে। </td>      
     </tr>`;
   } else if (uintwiseExam === true) {
     duexamheadunit=  `${examheaderall}${universityunitdatetime}`
@@ -848,10 +873,16 @@ DUInfo.forEach(function (dudata) {
       <td style="width: 50%"> ${dudata.examdate.toLocaleDateString("bn-BD", dateBangla)} ${dudata.examtime} ।  </td>
       
     </tr>`;
-    dutableexmacente= `<tr>
+    dutableexmacente= `
+            <tr>
               <td>পরীক্ষার কেন্দ্র</td>
               <td>${ADDMISSIONDATA.UNIVERSITYDTA[duid].examCenter} অনুষ্টিত হবে।</td>
-            </tr>`;
+            </tr>
+            <tr>
+              <td>পরীক্ষার ধরণ</td>
+              <td>${ADDMISSIONDATA.UNIVERSITYDTA[duid].examtype} প্রশ্নে অনুষ্টিত হবে।</td>
+            </tr>
+            `;
   }
   //* result section ;
   const duexamresult = ADDMISSIONDATA.UNIVERSITYDTA[duid].examresult;
@@ -897,6 +928,8 @@ const dutimetable = `
     </tr> 
 `;
 
+const duNoticePUBDate = `<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.UNIVERSITYDTA[duid].noticepubdate.toLocaleDateString("bn-BD", dateBangla)} </p>`;
+
 const duNoticePUB = ADDMISSIONDATA.UNIVERSITYDTA[duid].noticepub;
 if (duNoticePUB === true) {
   dufinalopt =
@@ -915,6 +948,7 @@ if (duNoticePUB === true) {
     dutableexamresulthead+
     dutableexamresult+
     tableFooter +
+    duNoticePUBDate+
     note;
 } else {
   dufinalopt = `${notnoticePUb}`;
@@ -971,7 +1005,7 @@ RUInfo.forEach(function (rudata) {
   if (uintwiseExam === false) {
     rutableexam = ` 
             ${examheaderall}
-<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examCenter}  অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examCenter}  অনুষ্টিত হবে। উক্ত ভর্তি পরীক্ষাটি ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examtype} প্রশ্নতে অনুষ্টিত হবে।  </td>      
     </tr>`;
   } else if (uintwiseExam === true) {
     ruexamhearunit=  `${examheaderall}${universityunitdatetime}`
@@ -983,6 +1017,10 @@ RUInfo.forEach(function (rudata) {
     rutableexmacente= `<tr>
               <td>পরীক্ষার কেন্দ্র</td>
               <td>${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examCenter} অনুষ্টিত হবে।</td>
+            </tr>
+            <tr>
+              <td>পরীক্ষার ধরণ</td>
+              <td>${ADDMISSIONDATA.UNIVERSITYDTA[ruid].examtype} অনুষ্টিত হবে।</td>
             </tr>`;
   }
   //* result section ;
@@ -1029,6 +1067,9 @@ const rutimetable = `
     </tr> 
 `;
 
+const ruNoticePUBDate =`<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].noticepubdate.toLocaleDateString("bn-BN",dateBangla)} </p>` ;
+// const ruNoticePUBDate = ;
+
 const ruNoticePUB = ADDMISSIONDATA.UNIVERSITYDTA[ruid].noticepub;
 if (ruNoticePUB === true) {
   rufinalopt =
@@ -1047,6 +1088,7 @@ if (ruNoticePUB === true) {
     rutableexamresulthead+
     rutableexamresult+
     tableFooter +
+    ruNoticePUBDate+
     note;
 } else {
   rufinalopt = `${notnoticePUb}`;
@@ -1064,9 +1106,6 @@ let jnutableexam = "";
 let jnutableexmacente = "";
 let jnutableexamresulthead = "";
 let jnutableexamresult = "";
-
-
-
 JNUInfo.forEach(function (jnudata) {
   // * result srction 
   jnutableResult += `<tr>
@@ -1104,7 +1143,7 @@ JNUInfo.forEach(function (jnudata) {
   if (uintwiseExam === false) {
     jnutableexam = ` 
             ${examheaderall}
-<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examCenter}  অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examCenter}  অনুষ্টিত হবে।এবং উক্ত ভর্তি পরীক্ষাটি ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examtype} প্রশ্নতে পরীক্ষা দিতে হবে।   </td>      
     </tr>`;
   } else if (uintwiseExam === true) {
     jnuexamheajnunit=  `${examheaderall}${universityunitdatetime}`
@@ -1116,6 +1155,10 @@ JNUInfo.forEach(function (jnudata) {
     jnutableexmacente= `<tr>
               <td>পরীক্ষার কেন্দ্র</td>
               <td>${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examCenter} অনুষ্টিত হবে।</td>
+            </tr>
+            <tr>
+              <td>পরীক্ষার ধরণ</td>
+              <td>${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].examtype} অনুষ্টিত হবে।</td>
             </tr>`;
   }
   //* result section ;
@@ -1161,6 +1204,7 @@ const jnutimetable = `
       <td style="width: 50%"> ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].datecount}।</td>
     </tr> 
 `;
+const jnunoticepubdate = `<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.UNIVERSITYDTA[jnuid].noticepubdate.toLocaleDateString("bn-BN",dateBangla)} </p>`;
 
 const jnuNoticePUB = ADDMISSIONDATA.UNIVERSITYDTA[jnuid].noticepub;
 if (jnuNoticePUB === true) {
@@ -1180,6 +1224,7 @@ if (jnuNoticePUB === true) {
     jnutableexamresulthead+
     jnutableexamresult+
     tableFooter +
+    jnunoticepubdate+
     note;
 } else {
   jnufinalopt = `${notnoticePUb}`;
@@ -1236,7 +1281,7 @@ GSTInfo.forEach(function (gstdata) {
   if (uintwiseExam === false) {
     gsttableexam = ` 
             ${examheaderall}
-<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examCenter}  অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examCenter}  অনুষ্টিত হবে। ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examtype}  </td>      
     </tr>`;
   } else if (uintwiseExam === true) {
     gstexamheagstnit=  `${examheaderall}${universityunitdatetime}`
@@ -1247,7 +1292,11 @@ GSTInfo.forEach(function (gstdata) {
     </tr>`;
     gsttableexmacente= `<tr>
               <td>পরীক্ষার কেন্দ্র</td>
-              <td>${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examCenter} অনুষ্টিত হবে।</td>
+              <td>${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examCenter}।</td>
+            </tr>
+            <tr>
+              <td>পরীক্ষার ধরণ</td>
+              <td>${ADDMISSIONDATA.UNIVERSITYDTA[gstid].examtype} ।</td>
             </tr>`;
   }
   //* result section ;
@@ -1293,6 +1342,10 @@ const gsttimetable = `
       <td style="width: 50%"> ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].datecount}।</td>
     </tr> 
 `;
+const gstNoticePUBDate = `<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.UNIVERSITYDTA[gstid].noticepubdate.toLocaleDateString("bn-BN",dateBangla)} </p>`
+
+
+// ADDMISSIONDATA.UNIVERSITYDTA[gstid].noticepubdate.toLocaleDateString("bn-BD", dateBangla)
 
 const gstNoticePUB = ADDMISSIONDATA.UNIVERSITYDTA[gstid].noticepub;
 if (gstNoticePUB === true) {
@@ -1312,6 +1365,7 @@ if (gstNoticePUB === true) {
     gsttableexamresulthead+
     gsttableexamresult+
     tableFooter +
+    gstNoticePUBDate+
     note;
 } else {
   gstfinalopt = `${notnoticePUb}`;
@@ -1368,7 +1422,7 @@ JUInfo.forEach(function (judata) {
   if (uintwiseExam === false) {
     jutableexam = ` 
             ${examheaderall}
-<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[juid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[juid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[juid].examCenter}  অনুষ্টিত হবে।  </td>      
+<td colspan="2">সাকল ইউনিটের ভর্তি  পরীক্ষা আগামী ${ADDMISSIONDATA.UNIVERSITYDTA[juid].examteststart.toLocaleDateString("bn-BD", dateBangla)} হতে ${ADDMISSIONDATA.UNIVERSITYDTA[juid].examtestend.toLocaleDateString("bn-BD", dateBangla)} মধ্যে ${ADDMISSIONDATA.UNIVERSITYDTA[juid].examCenter}  অনুষ্টিত হবে। উক্ত ভর্তি পরীক্ষাটি ${ADDMISSIONDATA.UNIVERSITYDTA[juid].examtype} প্রশ্নতে অনুষ্টিত হবে।  </td>      
     </tr>`;
   } else if (uintwiseExam === true) {
     juexamheajunit=  `${examheaderall}${universityunitdatetime}`
@@ -1377,10 +1431,16 @@ JUInfo.forEach(function (judata) {
       <td style="width: 50%"> ${judata.examdate.toLocaleDateString("bn-BD", dateBangla)} ${judata.examtime}।  </td>
       
     </tr>`;
-    jutableexmacente= `<tr>
+    jutableexmacente= `
+    <tr>
               <td>পরীক্ষার কেন্দ্র</td>
               <td>${ADDMISSIONDATA.UNIVERSITYDTA[juid].examCenter} অনুষ্টিত হবে।</td>
-            </tr>`;
+            </tr>
+    <tr>
+              <td>পরীক্ষার ধরণ</td>
+              <td>${ADDMISSIONDATA.UNIVERSITYDTA[juid].examtype}</td>
+            </tr>
+            `;
   }
   //* result section ;
   const juexamresult = ADDMISSIONDATA.UNIVERSITYDTA[juid].examresult;
@@ -1425,7 +1485,7 @@ const jutimetable = `
       <td style="width: 50%"> ${ADDMISSIONDATA.UNIVERSITYDTA[juid].datecount}।</td>
     </tr> 
 `;
-
+const junoticepubdate = `<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.UNIVERSITYDTA[juid].noticepubdate.toLocaleDateString("bn-BN",dateBangla)} </p>`
 const juNoticePUB = ADDMISSIONDATA.UNIVERSITYDTA[juid].noticepub;
 if (juNoticePUB === true) {
   jufinalopt =
@@ -1444,6 +1504,7 @@ if (juNoticePUB === true) {
     jutableexamresulthead+
     jutableexamresult+
     tableFooter +
+    junoticepubdate+
     note;
 } else {
   jufinalopt = `${notnoticePUb}`;

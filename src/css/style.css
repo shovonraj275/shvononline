@@ -17,10 +17,11 @@ a{
 #qr,
 #input,
 #footer{
-  /* display: none !important; */
+  display: none !important;
 }
-#bnnc_output{
-  /* display: block !important; */
+#all_ju_output,
+#du_output{
+  display: block !important;
   
 }
 
@@ -70,6 +71,10 @@ a{
 }
 .dateInactive{
   color: red;
+}
+.notice_date{
+  font-weight: bold;
+  padding:  20px 20px 0 20px ;
 }
 
 /***** Section *****/
@@ -343,6 +348,8 @@ nav#nav {
 #info {
     background: #e7eaea;
     padding: 20px 0;
+    font-size: 20px;
+    text-align: justify;
 }
 #info h1 {
   text-align: center;
@@ -438,6 +445,7 @@ table {
 }
 th {
   font-size: 20px;
+  background-color: rgb(195, 193, 193);
 }
 tr,
 td {

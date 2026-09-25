@@ -12,14 +12,16 @@ ENGINEERING:[
     tabeloutputId: "bute_table_output", //table id
     outmain: "bute_output_main", //main out put
     noticepub : true,
+    noticepubdate : new Date("2026-09-01"),
     notice: "DU.jpg.jpeg", // notce
+
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
     appstarttime :"",
     datecount : dateCalculator("2026-08-19"),
-    appDateend: new Date("2026-09-30"), // date end
+    appDateend: new Date("2026-09-25"), // date end
     appendtime: BanglaTime("23:59"),
     admitdn: true,
     admitdnunitwise: false, // False for Unit-wise NO , true for Unit-wise yes  Unit-wise Admit Card Download
@@ -50,6 +52,7 @@ ENGINEERING:[
     outmain: "rute_output_main", //main out put
     noticepub : true,
     notice: "DU.jpg.jpeg", // notce
+    noticepubdate : new Date("2026-09-01"),
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
@@ -87,6 +90,7 @@ ENGINEERING:[
     outmain: "cute_output_main", //main out put
     noticepub : true,
     notice: "DU.jpg.jpeg", // notce
+    noticepubdate : new Date("2026-09-01"),
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
@@ -123,6 +127,7 @@ ENGINEERING:[
     tabeloutputId: ",ute_table_output", //table id
     outmain: ",ute_output_main", //main out put
     noticepub : true,
+    noticepubdate : new Date("2026-09-01"),
     notice: "DU.jpg.jpeg", // notce
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
@@ -155,6 +160,7 @@ ENGINEERING:[
     id:0,
     NameEng: "bangladesh medical & Dental admission", // name of english
     NameBng: "মেডিকেল কলেজ এন্ড ডেন্টাল ", // name of bangla
+    Sortname : "mbbs", 
     Images: "mbbsbds.png", //logo
     onclick: "mbbs()", // onclick
     OutptuID: "mbbs_output", // output div
@@ -163,13 +169,14 @@ ENGINEERING:[
     outmain: "mbbs_output_main", //main out put
     notice: "MBBS.pdf", // notce
     noticepub : true,
+    noticepubdate : new Date("2026-09-18"),
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
     appstarttime: BanglaTime("10:00"),
-    datecount : dateCalculator("2026-08-19"), // start date
-    appDateend: new Date("2026-08-28"), // date end
+    datecount : dateCalculator("2026-09-28"), // start date
+    appDateend: new Date("2026-09-28"), // date end
     appendtime: BanglaTime("23:59"),
     applyfee : 1000,
     applyfeebd : BanglaWordstaka(1000),
@@ -179,7 +186,7 @@ ENGINEERING:[
     admitdndateend: new Date("2026-08-18"), // start date
     admitdntimeend: BanglaTime("23:59"), // start date
     examCenter: "অফিসিয়াল নেটিশে দেখুন", //exam center.
-    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examtype: "নৈবেত্তিক (MCQ)",
     examtestdate: new Date("2026-08-20"), // examdate start   
     examtesttime: BanglaTime("10:00"), // examdate start   
     examresult :true,
@@ -191,7 +198,8 @@ ENGINEERING:[
     id:1,
     NameEng: "Armed Forces Medical College", // name of english
     NameBng: "আর্মড ফোর্সেস মেডিকেল কলেজ", // name of bangla
-    Images: "afmc.png", //logo
+    Images: "afmc.png", //logo]
+    Sortname : "afmc", 
     onclick: "afmc()", // onclick
     OutptuID: "afmc_output", // output div
     IconID: "afmc_icon", //icon
@@ -199,6 +207,7 @@ ENGINEERING:[
      outmain: "afmc_output_main", //main out put
     notice: "AFMC.pdf", // notce
     noticepub : true,
+    noticepubdate : new Date("2026-09-20"),
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
@@ -215,6 +224,7 @@ ENGINEERING:[
     admitdndateend: new Date("2026-08-18"), // start date
     admitdntimeend: BanglaTime("23:59"), // start date
     examCenter: "অফিসিয়াল নেটিশে দেখুন", //exam center.
+    examtype: "নৈবেত্তিক (MCQ)",
     examtestdate: new Date("2026-08-20"), // examdate start   
     examtesttime: BanglaTime("10:00"), // examdate start   
     examresult :true,
@@ -227,6 +237,8 @@ ENGINEERING:[
      NameEng: "Bangladesh Nursing and Midwifery Counci", // name of english
     NameBng: "বাংলাদেশ নার্সিং ও মিডওয়াইফারি কাউন্সিল", // name of bangla
     Images: "bnmc.png", //logo
+    Sortname : "bnmc", 
+
     onclick: "bnnc()", // onclick
     OutptuID: "bnnc_output", // output div
     IconID: "bnnc_icon", //icon
@@ -234,6 +246,7 @@ ENGINEERING:[
      outmain: "bnnc_output_main", //main out put
     notice: "bnmc.pdf", // notce
     noticepub : true,
+    noticepubdate : new Date("2026-09-22"),
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
     mainweb: "https://www.du.ac.bd/", //main web
@@ -249,13 +262,12 @@ ENGINEERING:[
     admitdntimestart: BanglaTime("16:30"), // start time
     admitdndateend: new Date("2026-08-18"), // start date
     admitdntimeend: BanglaTime("23:59"), // start date
+    examtype: "নৈবেত্তিক (MCQ)",
     examCenter: "অফিসিয়াল নেটিশে দেখুন", //exam center.
-    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examtestdate: new Date("2026-08-20"), // examdate start   
     examtesttime: BanglaTime("10:00"), // examdate start   
     examresult :true,
     examresultdate : new Date("2026-10-20"),
-    examresulttme : "",
     examresulttme : BanglaTime("18:30"),
 
   },
@@ -270,10 +282,12 @@ ENGINEERING:[
     onclick: "du()", // onclick
     OutptuID: "du_output", // output div
     IconID: "du_icon", //icon
+   Sortname : "du",
     tabeloutputId: "du_table_output", //table id
     htmlOPT :"dufinalopt",
     outmain: "du_output_main", //main out put
     noticepub : true,
+   noticepubdate : new Date("2026-09-23"),
     notice: "DU.jpg.jpeg", // notce
     appweb:
       "https://admission.eis.du.ac.bd/bn/408b7c8ad06e4d9954fa2d948a01f508", //main web
@@ -290,6 +304,7 @@ ENGINEERING:[
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
     admitDNUnitwistimeend: BanglaTime("23:59"), // start date
     examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examtype: "নৈবেত্তিক (MCQ) ও লিখিত",
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
@@ -306,6 +321,7 @@ ENGINEERING:[
     NameBng: "রাজশাহী বিশ্ববিদ্যালয়", // name of bangla
     Images: "ru.png", // logo
     onclick: "ru()", // onclick
+    Sortname : "ru", 
     OutptuID: "ru_output", // output div
     IconID: "ru_icon",
     outmain: "ru_output_main", //main out put
@@ -313,6 +329,7 @@ ENGINEERING:[
     tabeloutputId: "ru_table_output", //table id
     htmlOPT :"rufinalopt",
     notice: "ru.pdf", // notce
+    noticepubdate : new Date("2026-09-24"),
     appweb: "https://application.ru.ac.bd/", //main web
     mainweb: "https://www.ru.ac.bd/", //main web
     appDateStart: new Date("2026-08-01"), // date start
@@ -327,7 +344,8 @@ ENGINEERING:[
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
     admitDNUnitwistimeend: BanglaTime("23:59"), // start date
     examCenter: "রাজশাহী বিশ্ববিদ্যালয়ে নিজস্ব ক্যাম্পাসে ", //exam center.
-    examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
+    examtype: "নৈবেত্তিক (MCQ)",
+    examUnitwise: true , // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
     examresult :true,
@@ -342,6 +360,7 @@ ENGINEERING:[
     NameEng: "Jagannath  university",
     NameBng: "জগন্নাথ  বিশ্ববিদ্যালয়",
     Images: "jnu.png",
+    Sortname : "jnu", 
     onclick: "jnu()",
     OutptuID: "jnu_output",
     tabeloutputId: "jnu_table_output", //table id
@@ -349,6 +368,7 @@ ENGINEERING:[
     IconID: "jnu_icon",
     outmain: "jnu_output_main", //main out put
     noticepub : true,
+    noticepubdate : new Date("2026-09-25"),
     notice: "JNU.pdf", // notce
     appweb: "https://bachelor.ju-admission.com/", //main web
     mainweb: "https://www.juniv.edu/", //main web
@@ -363,7 +383,8 @@ ENGINEERING:[
     admitDNUnitwistimestart: BanglaTime("16:30"), // start time
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
     admitDNUnitwistimeend: BanglaTime("23:59"), // start date
-    examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examCenter: "বিভাগীয় শহরে", //exam center.
+    examtype: "নৈবেত্তিক (MCQ)",
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
@@ -378,6 +399,7 @@ ENGINEERING:[
     id:3,
     NameEng: "General, Science and Technology (GST)",
     NameBng: "গুচ্ছভুক্ত  বিশ্ববিদ্যালয়",
+    Sortname : "gst", 
     Images: "gst.png",
     onclick: "gst()",
     OutptuID: "gst_output",
@@ -387,6 +409,7 @@ ENGINEERING:[
     outmain: "gst_output_main", //main out put
     // *  notice
     noticepub : true,
+    noticepubdate : new Date("2026-09-26"),
     notice: "GST.pdf", // notce
     appweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
     mainweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
@@ -402,6 +425,7 @@ ENGINEERING:[
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
     admitDNUnitwistimeend: BanglaTime("23:59"), // start date
     examCenter: "বিভাগীয় শহরে অনুষ্ঠিত হবে", //exam center.
+    examtype: "সকল ইউনিটের পরীক্ষা নৈবেত্তিক (MCQ) হবে তবে ইউনিট—A (বিজ্ঞান অনুষদ) ইজ্ঞিনিয়ারিং এর জন্য  আকিটেচার ব্যাবহারিরক (ঐচ্ছিক) পরীক্ষা দিতে পারবে",
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end
@@ -409,22 +433,24 @@ ENGINEERING:[
     examresultUnitwis :true,
     examresultdate : new Date("2026-09-20"),
     examresulttme :'',
-    examrestultafter: true,
+    examrestultafter: false,
     examrestultafterday:2,
   },
   {
     id:4,
-    NameEng: "jahangirnagar university",
+    NameEng: "0 jahangirnagar university",
     NameBng: "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়",
     Images: "ju.png",
     onclick: "ju()",
     OutptuID: "ju_output",
+    Sortname : "ju", 
     tabeloutputId: "ju_table_output", //table id
     htmlOPT :"jufinalopt",
     IconID: "ju_icon",
     outmain: "ju_output_main", //main out put
     noticepub : true,
     notice: "JU.pdf", // notce
+    noticepubdate : new Date("2026-09-28"),
     appweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
     mainweb: "https://gstadmission.ac.bd/site/gst-universities", //main web
     appDateStart: new Date("2026-08-01"), // date start
@@ -439,6 +465,7 @@ ENGINEERING:[
     admitDNUnitwisdateend: new Date("2026-08-18"), // start date
     admitDNUnitwistimeend: BanglaTime("23:59"), // start date
     examCenter: "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়ে  নিজস্ব ক্যাম্পাসে", //exam center.
+    examtype: "নৈবেত্তিক (MCQ)",
     examUnitwise: true, // False for Unit-wise NO , true for Unit-wise yes
     examteststart: new Date("2026-08-20"), // examdate start
     examtestend: new Date("2026-08-22"), // examdate end

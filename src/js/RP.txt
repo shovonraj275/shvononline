@@ -1,12 +1,33 @@
-const RUOutput =
+const jnuOutput =
     document.getElementById(
-      "all_result_RU_table_output"
+      "all_result_jnu_table_output"
     );
 
 
-  if (RUOutput) {
+  if (jnuOutput) {
 
-    RUOutput.innerHTML =
-      RUfinalopt;
+    jnuOutput.innerHTML =
+      jnufinalopt;
 
   }
+scarch ===  471
+
+  
+`<p class="notice_date"> নোটিশ প্রকাশের তারিখ : ${ADDMISSIONDATA.UNIVERSITYDTA[ruid].noticepubdate.toLocaleDateString("bn-BN",dateBangla)} </p>`
+
+
+
+ 
+    
+    
+    `
+
+
+
+Sortname : "", 
+
+noticepubdate : new Date("2026-09-01"),
+  examtype: "নৈবেত্তিক (MCQ)",
+
+
+  উক্ত ভর্তি পরীক্ষাটি ${ADDMISSIONDATA.UNIVERSITYDTA[duid].examtype} প্রশ্নতে অনুষ্টিত হবে। 
